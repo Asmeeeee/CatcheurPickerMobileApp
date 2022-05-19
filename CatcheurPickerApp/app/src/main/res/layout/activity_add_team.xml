@@ -37,120 +37,69 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/titleAddCatcheur"
+                android:id="@+id/titleAddTeam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:text="Ajouter un catcheur"
+                android:text="Ajouter une Team"
                 android:textAlignment="center"
                 android:textColor="@color/teal_700"
                 android:textSize="30dp"
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/nomCatcheur"
+                android:id="@+id/nomTeam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Nom du catcheur" />
+                android:text="Nom de la team" />
 
             <EditText
-                android:id="@+id/fieldNomCatcheur"
+                android:id="@+id/fieldNomTeam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="85dp"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="192dp"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/taille"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Taille (en m)" />
-
-                    <EditText
-                        android:id="@+id/fieldTaille"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:id="@+id/poids"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Poids (en Kg)" />
-
-                    <EditText
-                        android:id="@+id/fieldPoids"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:ems="10"
-                        android:inputType="textPersonName" />
-                </LinearLayout>
-
-            </LinearLayout>
-
             <TextView
-                android:id="@+id/sexe"
+                android:id="@+id/imageTeam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Sexe" />
-
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <RadioButton
-                    android:id="@+id/rbMale"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mâle" />
-
-                <RadioButton
-                    android:id="@+id/rbFemelle"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Femelle" />
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/ImageCatcheur"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Image du catcheur" />
+                android:text="Image de la Team" />
 
             <ImageButton
-                android:id="@+id/imageButton"
+                android:id="@+id/imageButton2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars" />
 
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="370dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/addCatcheurTeam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:background="#8CADBC"
+                        android:text="+ Ajouter un catcheur"
+                        android:textAlignment="textStart" />
+                </LinearLayout>
+            </ScrollView>
+
             <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/validerCatcheur"
+                android:id="@+id/validerTeam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#3F51B5"
-                android:text="Ajouter le catcheur"
+                android:text="Ajouter la Team"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
-
-
         </LinearLayout>
 
         <LinearLayout
@@ -162,10 +111,10 @@
                 android:id="@+id/AddCatcheur"
                 android:layout_width="400px"
                 android:layout_height="match_parent"
-                android:background="#FFEB3B"
+                android:background="@color/teal_700"
                 android:text="Ajouter un Catcheur
                  + "
-                android:textColor="@color/black" />
+                android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/homeButton"
@@ -180,9 +129,10 @@
                 android:id="@+id/AddTeam"
                 android:layout_width="400px"
                 android:layout_height="match_parent"
-                android:background="@color/teal_700"
+                android:background="#FFEB3B"
                 android:text="Ajouter une Team
-                +"/>
+                +"
+                android:textColor="@color/black" />
 
         </LinearLayout>
 
