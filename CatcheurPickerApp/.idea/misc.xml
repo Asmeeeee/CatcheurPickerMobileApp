@@ -8,6 +8,7 @@
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2985" />
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2985" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_add_catcheur.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_add_team.xml" value="0.2222222222222222" />
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_catcheurs.xml" value="0.264" />
@@ -20,6 +21,16 @@
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
 >>>>>>> 732b206 (er)
         <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2985" />
+=======
+        <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/maxse/OneDrive/Documents/Cours DUT/DUT 2e annee/Android/projet-android/CatcheurPickerApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.2985" />
+        <entry key="..\:/Work/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_add_catcheur.xml" value="0.358695652173913" />
+        <entry key="..\:/Work/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_add_team.xml" value="0.3625" />
+        <entry key="..\:/Work/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
+        <entry key="..\:/Work/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_show_catcheurs.xml" value="0.3625" />
+        <entry key="..\:/Work/projet-android/CatcheurPickerApp/app/src/main/res/layout/activity_show_teams.xml" value="0.3625" />
+        <entry key="..\:/Work/projet-android/CatcheurPickerApp/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.3435" />
+>>>>>>> 6034f18df11b0f52c4a7f4abf41924058e538d04
       </map>
     </option>
   </component>
