@@ -13,9 +13,9 @@ public class Catcheur {
     private int poids;
     private float taille;
     private String image;
-    private Date dateNaissance;
+    private String dateNaissance;
 
-    public Catcheur(String nomScene, int poids, float taille, String image, Date dateNaissance) {
+    public Catcheur(String nomScene, int poids, float taille, String image, String dateNaissance) {
         this.nomScene = nomScene;
         this.poids = poids;
         this.taille = taille;
@@ -63,11 +63,11 @@ public class Catcheur {
         this.image = image;
     }
 
-    public Date getDateNaissance() {
+    public String getDateNaissance() {
         return dateNaissance;
     }
 
-    public void setDateNaissance(Date dateNaissance) {
+    public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
     }
 }
