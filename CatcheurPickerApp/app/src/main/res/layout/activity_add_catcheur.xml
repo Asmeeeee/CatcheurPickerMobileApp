@@ -130,6 +130,19 @@
             </RadioGroup>
 
             <TextView
+                android:id="@+id/DateNaiss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Date de Naissance" />
+
+            <EditText
+                android:id="@+id/fieldDateNaiss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="date" />
+
+            <TextView
                 android:id="@+id/ImageCatcheur"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
