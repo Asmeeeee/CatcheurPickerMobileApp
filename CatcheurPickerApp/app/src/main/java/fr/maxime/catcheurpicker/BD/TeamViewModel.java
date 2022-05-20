@@ -34,7 +34,7 @@ public class TeamViewModel extends AndroidViewModel {
         teamRepository.deleteAll();
     }
 
-    public void deleteOneCatcheur(Team team){
+    public void deleteOneTeam(Team team){
         teamRepository.delete(team);
     }
 

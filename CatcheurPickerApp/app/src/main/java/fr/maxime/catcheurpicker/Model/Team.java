@@ -1,7 +1,10 @@
 package fr.maxime.catcheurpicker.Model;
 
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
+
+import java.util.List;
 
 @Entity(tableName = "teamTable")
 public class Team {

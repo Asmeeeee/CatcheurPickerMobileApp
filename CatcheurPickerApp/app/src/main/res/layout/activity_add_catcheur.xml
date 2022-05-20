@@ -148,7 +148,9 @@
                 android:background="#3F51B5"
                 android:text="Ajouter le catcheur"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="addCatcheur"
+                />
 
 
         </LinearLayout>
