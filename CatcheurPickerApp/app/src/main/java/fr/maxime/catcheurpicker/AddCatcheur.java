@@ -28,9 +28,7 @@ public class AddCatcheur extends AppCompatActivity {
     private List<Team> dataTeam = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
-    private CustomAdapterTeam customAdapterTeam;
     private CatcheurViewModel catcheurViewModel;
-    private TeamViewModel teamViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,17 +37,15 @@ public class AddCatcheur extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_add_catcheur);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
-        teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
-        customAdapterTeam = new CustomAdapterTeam(dataTeam);
 
 
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
         @Override
         public void onItemClick(int position, View v) {
-            Log.d("MesLogs","onItemClick MainActivity");
+            Log.d("MesLogs","onItemClick ShowCatcheurs");
             Catcheur catcheur = dataCatcheur.get(position);
             new AlertDialog.Builder(v.getContext())
                     .setTitle(catcheur.getNomScene())
@@ -62,30 +58,13 @@ public class AddCatcheur extends AppCompatActivity {
             catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
         }
     });
-
-        CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
-        @Override
-        public void onItemClick(int position, View v) {
-            Log.d("MesLogs","onItemClick ShowCatcheurs");
-            Team team = dataTeam.get(position);
-            new AlertDialog.Builder(v.getContext())
-                    .setTitle(team.getNomTeam())
-                    .setMessage("Nom de la team: "+team.getNomTeam())
-                    .show();
-        }
-
-        @Override
-        public void onItemLongClick(int position, View view) {
-            teamViewModel.deleteOneTeam(dataTeam.get(position));
-        }
-    });
 }
 
     public void addCatcheur(View view) {
         System.out.println("ICICICICICIICICICICI " + R.id.fieldNomCatcheur);
         catcheurViewModel.insert(new Catcheur(R.id.fieldNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
     }
-
+//-------------------------------------------------------------------------------------
 
     public void goToAddTeam(View view){
         Intent intent = new Intent(this, AddTeam.class);
