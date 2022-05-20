@@ -3,8 +3,6 @@ package fr.maxime.catcheurpicker.Model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-import java.util.Date;
-
 @Entity(tableName = "catcheurTable")
 public class Catcheur {
     @PrimaryKey(autoGenerate = true)
