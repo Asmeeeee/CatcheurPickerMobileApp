@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -61,8 +62,10 @@ public class AddCatcheur extends AppCompatActivity {
 }
 
     public void addCatcheur(View view) {
-        System.out.println("ICICICICICIICICICICI " + R.id.fieldNomCatcheur);
-        catcheurViewModel.insert(new Catcheur(R.id.fieldNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
+        EditText fieldNomCatcheur = findViewById(R.id.fieldNomCatcheur);
+        String strNomCatcheur = fieldNomCatcheur.getText().toString();
+        System.out.println("ICICICICICIICICICICI " + strNomCatcheur);
+        catcheurViewModel.insert(new Catcheur(strNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
     }
 //-------------------------------------------------------------------------------------
 
