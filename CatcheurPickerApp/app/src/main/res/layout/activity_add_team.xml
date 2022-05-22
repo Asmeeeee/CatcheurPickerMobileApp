@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".AddTeam">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -99,7 +99,9 @@
                 android:background="#3F51B5"
                 android:text="Ajouter la Team"
                 android:textColor="@color/white"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="addTeam"
+                />
         </LinearLayout>
 
         <LinearLayout
@@ -114,6 +116,7 @@
                 android:background="@color/teal_700"
                 android:text="Ajouter un Catcheur
                  + "
+                android:onClick="goToAddCatcheur"
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -122,6 +125,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
                 android:text="Accueil"
+                android:onClick="goToShowCatcheurs"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
@@ -132,6 +136,7 @@
                 android:background="#FFEB3B"
                 android:text="Ajouter une Team
                 +"
+
                 android:textColor="@color/black" />
 
         </LinearLayout>

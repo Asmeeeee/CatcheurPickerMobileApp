@@ -4,13 +4,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.Button;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +23,7 @@ import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
-public class MainActivity extends AppCompatActivity {
+public class ShowCatcheurs extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
     private List<Team> dataTeam = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_add_catcheur);
+        setContentView(R.layout.activity_show_catcheurs);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
@@ -83,4 +83,29 @@ public class MainActivity extends AppCompatActivity {
     public void addCatcheur(View view) {
         catcheurViewModel.insert(new Catcheur(R.id.fieldNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
     }
+
+    public void goToAddCatcheur(View view){
+        Intent intent = new Intent(this, AddCatcheur.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToAddTeam(View view){
+        Intent intent = new Intent(this, AddTeam.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToShowTeams(View view){
+        Intent intent = new Intent(this, ShowTeams.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToShowCatcheurs(View view){
+        Intent intent = new Intent(this, ShowCatcheurs.class);
+        startActivity(intent);
+        finish();
+    }
+
 }
