@@ -9,6 +9,7 @@ import java.util.List;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 
 public class TeamViewModel extends AndroidViewModel {
     private TeamRepository teamRepository;
@@ -21,6 +22,10 @@ public class TeamViewModel extends AndroidViewModel {
         nbTeamsLD = teamRepository.getNbTeamLD();
         allTeamsLD = teamRepository.getAllTeamsLD();
     }
+
+    public List<TeamWithCatcheurs> getCatcheursWithTeam(){return teamRepository.getTeamsWithCatcheurs();}
+
+    public Team getTeamById(String id){ return teamRepository.getTeamById(id);}
 
     public LiveData<Integer> getNbTeamsLD() {
         return nbTeamsLD;

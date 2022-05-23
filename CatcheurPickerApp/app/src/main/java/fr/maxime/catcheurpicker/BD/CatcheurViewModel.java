@@ -8,6 +8,7 @@ import androidx.lifecycle.LiveData;
 import java.util.List;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
+import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
 
 public class CatcheurViewModel extends AndroidViewModel {
     private CatcheurRepository catcheurRepository;
@@ -20,6 +21,10 @@ public class CatcheurViewModel extends AndroidViewModel {
         nbCatcheursLD = catcheurRepository.getNbCatcheurLD();
         allCatcheursLD = catcheurRepository.getAllCatcheursLD();
     }
+
+    public List<CatcheurWithTeams> getCatcheursWithTeams(){ return catcheurRepository.getCatcheursWithTeams();}
+
+    public Catcheur getCatcheurById(String id){ return catcheurRepository.getCatcheurById(id);}
 
     public LiveData<Integer> getNbCatcheursLD() {
         return nbCatcheursLD;

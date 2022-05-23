@@ -9,17 +9,92 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2d4114d-d4d1-44a6-8a57-feac2fea6b1c" name="Changes" comment="" />
+    <list default="true" id="e2d4114d-d4d1-44a6-8a57-feac2fea6b1c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CatcheurPickerApp/.idea/deploymentTargetDropDown.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CatcheurPickerApp/app/src/main/java/fr/maxime/catcheurpicker/AddCatcheur.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CatcheurPickerApp/app/src/main/java/fr/maxime/catcheurpicker/AddCatcheur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.0.2/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/7.3.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/file-system.probe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/MyRecyclerView2A2122.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/MyRecyclerView2A2122.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/modules/app/MyRecyclerView2A2122.app.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../MyRecyclerView2A2122/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/dependencies-accessors/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MyRecyclerView2A2122.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MyRecyclerView2A2122.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/MyRecyclerView2A2122.app.unitTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[R5CR41MSBKP]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="MyRecyclerView2A2122" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
@@ -37,7 +112,10 @@
     <property name="android-custom-viewC:/Users/jerem/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_RecyclerView_DIMENSIONS" value="1080&#10;1920" />
     <property name="android-custom-viewC:/Users/jerem/.gradle/caches/modules-2/files-2.1/androidx.recyclerview/recyclerview/1.1.0/f2bdf79e1977939817f54a9d3e2f6bc52b63bdd0/recyclerview-1.1.0-sources.jar!/androidx/recyclerview/widget/RecyclerView.java_SELECTED" value="RecyclerView" />
     <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CatcheurPickerApp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RunManager">
     <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">

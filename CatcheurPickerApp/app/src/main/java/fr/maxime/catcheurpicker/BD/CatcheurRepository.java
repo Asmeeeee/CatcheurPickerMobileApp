@@ -12,6 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
+import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
 
 public class CatcheurRepository {
     private CatcheurDao catcheurDao;
@@ -24,6 +25,10 @@ public class CatcheurRepository {
         nbCatcheurLD = catcheurDao.nbCatcheurLD();
         allCatcheursLD = catcheurDao.getAllCatcheurLD();
     }
+
+    public List<CatcheurWithTeams> getCatcheursWithTeams(){return catcheurDao.getCatcheursWithTeams();}
+
+    public Catcheur getCatcheurById(String id){ return  catcheurDao.getCatcheurById(id);}
 
     public LiveData<Integer> getNbCatcheurLD() {
         return nbCatcheurLD;
