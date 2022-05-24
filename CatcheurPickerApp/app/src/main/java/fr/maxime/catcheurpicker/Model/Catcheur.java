@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "catcheurTable")
 public class Catcheur {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int catcheurId;
     private String nomScene;
     private int poids;
     private float taille;
@@ -21,12 +21,12 @@ public class Catcheur {
         this.dateNaissance = dateNaissance;
     }
 
-    public int getId() {
-        return id;
+    public int getCatcheurId() {
+        return catcheurId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCatcheurId(int catcheurId) {
+        this.catcheurId = catcheurId;
     }
 
     public String getNomScene() {

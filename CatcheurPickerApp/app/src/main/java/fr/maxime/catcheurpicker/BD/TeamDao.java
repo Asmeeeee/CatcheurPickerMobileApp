@@ -36,7 +36,7 @@ public interface TeamDao{
     LiveData<List<Team>> getAllTeamLD();
 
     @Transaction
-    @Query("SELECT * from teamTable where id = :id")
+    @Query("SELECT * from teamTable where teamId = :id")
     Team getTeamById(String id);
 
     @Transaction

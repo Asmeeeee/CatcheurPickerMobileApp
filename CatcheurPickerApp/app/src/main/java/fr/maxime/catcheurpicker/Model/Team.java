@@ -9,7 +9,7 @@ import java.util.List;
 @Entity(tableName = "teamTable")
 public class Team {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int teamId;
     private String nomTeam;
     private String image;
 
@@ -18,12 +18,12 @@ public class Team {
         this.image = image;
     }
 
-    public int getId() {
-        return id;
+    public int getTeamId() {
+        return teamId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTeamId(int teamId) {
+        this.teamId = teamId;
     }
 
     public String getNomTeam() {

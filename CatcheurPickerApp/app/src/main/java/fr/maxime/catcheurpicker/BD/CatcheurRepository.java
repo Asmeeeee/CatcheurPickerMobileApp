@@ -55,15 +55,19 @@ public class CatcheurRepository {
     }
 
     public void insert(Catcheur catcheur){
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
+        new insertAsyncTask(catcheurDao, catcheur).execute();
+    }
 
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                catcheurDao.insert(catcheur);
-            }
-        });
+    public static class insertAsyncTask extends  AsyncTask<Void, Void, Void>{
+        private CatcheurDao catcheurDao;
+        private Catcheur catcheur;
+        insertAsyncTask(CatcheurDao catcheurDao, Catcheur catcheur){this.catcheurDao = catcheurDao; this.catcheur = catcheur;}
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+            catcheurDao.insert(catcheur);
+            return null;
+        }
     }
 
     public void delete(Catcheur catcheur){
@@ -77,6 +81,4 @@ public class CatcheurRepository {
             }
         });
     }
-
-
 }

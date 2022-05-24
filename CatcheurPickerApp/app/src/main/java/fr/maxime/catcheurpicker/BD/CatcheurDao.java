@@ -37,7 +37,7 @@ public interface CatcheurDao {
     LiveData<List<Catcheur>> getAllCatcheurLD();
 
     @Transaction
-    @Query("SELECT * from catcheurTable where id = :id")
+    @Query("SELECT * from catcheurTable where catcheurId = :id")
     Catcheur getCatcheurById(String id);
 
     @Transaction
