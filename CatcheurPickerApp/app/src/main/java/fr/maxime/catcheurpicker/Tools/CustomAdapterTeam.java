@@ -1,6 +1,7 @@
 package fr.maxime.catcheurpicker.Tools;
 
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
@@ -32,8 +33,8 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            tvNomTeam = itemView.findViewById(R.id.textView);
-            tvImage = itemView.findViewById(R.id.textView);
+            tvNomTeam = itemView.findViewById(R.id.textViewNomTeam);
+            tvImage = itemView.findViewById(R.id.textViewImage);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
@@ -56,15 +57,12 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
         }
     }
 
-    //TODO
-
     @NonNull
     @Override
     public CustomAdapterTeam.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // View view = LayoutInflater.from(parent.getContext())
-        //        .inflate(R.layout.itemlayout,parent,false);
-        //return new MyViewHolder(view);
-        return null;
+        View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_team,parent,false);
+        return new MyViewHolder(view);
     }
 
     @Override

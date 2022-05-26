@@ -89,7 +89,6 @@ public class ShowCatcheurs extends AppCompatActivity {
                 textView.setText("nb Catcheurs LD: "+ integer);
             }
         });
-        /*
         catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
             @Override
             public void onChanged(List<Catcheur> catcheurs) {
@@ -98,8 +97,6 @@ public class ShowCatcheurs extends AppCompatActivity {
                 customAdapterCatcheur.notifyDataSetChanged();
             }
         });
-
-         */
     }
 
     public void goToAddCatcheur(View view){
