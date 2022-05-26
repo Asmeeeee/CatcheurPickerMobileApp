@@ -38,6 +38,7 @@ public class CatcheurRepository {
         return allCatcheursLD;
     }
 
+
     public void deleteAll(){
         new deleteAsyncTask(catcheurDao).execute();
     }

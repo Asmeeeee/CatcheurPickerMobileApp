@@ -44,4 +44,7 @@ public interface CatcheurDao {
     @Query("SELECT * FROM catcheurTable")
     List<CatcheurWithTeams> getCatcheursWithTeams();
 
+    @Query("SELECT * FROM catcheurTable")
+    List<Catcheur> getAllCatcheurs();
+
 }

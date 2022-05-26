@@ -2,8 +2,10 @@ package fr.maxime.catcheurpicker;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -40,11 +42,10 @@ public class ShowCatcheurs extends AppCompatActivity {
         setContentView(R.layout.activity_show_catcheurs);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
-        //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
+        RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
         customAdapterTeam = new CustomAdapterTeam(dataTeam);
-
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -61,7 +62,6 @@ public class ShowCatcheurs extends AppCompatActivity {
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
         });
-
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -78,6 +78,28 @@ public class ShowCatcheurs extends AppCompatActivity {
                 teamViewModel.deleteOneTeam(dataTeam.get(position));
             }
         });
+        recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
+        recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
+
+
+        catcheurViewModel.getNbCatcheursLD().observe(this, new Observer<Integer>(){
+            @Override
+            public void onChanged(Integer integer) {
+                TextView textView = findViewById(R.id.textViewNbLD);
+                textView.setText("nb Catcheurs LD: "+ integer);
+            }
+        });
+        /*
+        catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
+            @Override
+            public void onChanged(List<Catcheur> catcheurs) {
+                dataCatcheur = catcheurs;
+                customAdapterCatcheur.setData(catcheurs);
+                customAdapterCatcheur.notifyDataSetChanged();
+            }
+        });
+
+         */
     }
 
     public void goToAddCatcheur(View view){
