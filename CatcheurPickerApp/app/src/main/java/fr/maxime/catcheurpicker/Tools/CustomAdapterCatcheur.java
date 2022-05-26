@@ -31,6 +31,7 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
     implements View.OnClickListener, View.OnLongClickListener{
         private TextView tvNomScene, tvPoids, tvTaille, tvImage, tvDateNaissance;
 
+
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             tvNomScene = itemView.findViewById(R.id.textView);
