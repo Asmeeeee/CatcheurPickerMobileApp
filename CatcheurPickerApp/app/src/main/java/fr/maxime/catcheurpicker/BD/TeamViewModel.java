@@ -44,6 +44,7 @@ public class TeamViewModel extends AndroidViewModel {
     }
 
     public void insert(Team team){
+        System.out.println("Je passe dans ViewModel");
         teamRepository.insert(team);
     }
 }

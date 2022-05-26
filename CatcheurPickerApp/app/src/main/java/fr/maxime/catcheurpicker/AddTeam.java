@@ -61,7 +61,8 @@ public class AddTeam extends AppCompatActivity {
     }
 
     public void addTeam(View view){
-        EditText fieldNomTeam = findViewById(R.id.fieldNomCatcheur);
+        System.out.println("Je passe dans addTeam");
+        EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
         String strNomTeam = fieldNomTeam.getText().toString();
         teamViewModel.insert(new Team(strNomTeam, "image"));
     }

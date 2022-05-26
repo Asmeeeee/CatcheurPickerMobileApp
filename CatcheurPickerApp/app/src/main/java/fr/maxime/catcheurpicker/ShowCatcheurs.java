@@ -80,10 +80,6 @@ public class ShowCatcheurs extends AppCompatActivity {
         });
     }
 
-    public void addCatcheur(View view) {
-        catcheurViewModel.insert(new Catcheur(R.id.fieldNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
-    }
-
     public void goToAddCatcheur(View view){
         Intent intent = new Intent(this, AddCatcheur.class);
         startActivity(intent);

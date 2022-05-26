@@ -55,17 +55,18 @@ public class CatcheurRepository {
     }
 
     public void insert(Catcheur catcheur){
-        new insertAsyncTask(catcheurDao, catcheur).execute();
+        System.out.println("C est l'insertion du" + catcheur);
+        new insertAsyncTask(catcheurDao).execute(catcheur);
     }
 
-    public static class insertAsyncTask extends  AsyncTask<Void, Void, Void>{
+    public static class insertAsyncTask extends  AsyncTask<Catcheur, Void, Void>{
         private CatcheurDao catcheurDao;
-        private Catcheur catcheur;
-        insertAsyncTask(CatcheurDao catcheurDao, Catcheur catcheur){this.catcheurDao = catcheurDao; this.catcheur = catcheur;}
+        insertAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
 
         @Override
-        protected Void doInBackground(Void... voids) {
-            catcheurDao.insert(catcheur);
+        protected Void doInBackground(Catcheur... catcheurs) {
+            System.out.println("insertion");
+            catcheurDao.insert(catcheurs[0]);
             return null;
         }
     }
