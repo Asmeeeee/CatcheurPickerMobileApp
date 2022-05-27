@@ -80,4 +80,10 @@ public class AddTeam extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void goToLinkCatcheursToTeam(View view) {
+        Intent intent = new Intent(this, LinkCatcheursToTeam.class);
+        startActivity(intent);
+        finish();
+    }
 }

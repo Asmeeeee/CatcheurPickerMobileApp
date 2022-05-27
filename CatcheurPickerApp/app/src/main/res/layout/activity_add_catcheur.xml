@@ -154,6 +154,7 @@
                 android:layout_height="wrap_content"
                 tools:srcCompat="@tools:sample/avatars" />
 
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/validerCatcheur"
                 android:layout_width="match_parent"

@@ -1,5 +1,7 @@
 package fr.maxime.catcheurpicker.BD;
 
+import static androidx.room.OnConflictStrategy.REPLACE;
+
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -20,7 +22,7 @@ public interface TeamDao{
     void delete(Team team);
 
     @Transaction
-    @Insert
+    @Insert(onConflict = REPLACE)
     void insert(Team catcheur);
 
     @Transaction

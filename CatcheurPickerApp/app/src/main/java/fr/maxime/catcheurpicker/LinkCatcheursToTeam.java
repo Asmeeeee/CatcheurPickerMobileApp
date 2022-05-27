@@ -1,18 +1,18 @@
 package fr.maxime.catcheurpicker;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,20 +25,23 @@ import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
-public class ShowCatcheurs extends AppCompatActivity {
+public class LinkCatcheursToTeam extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
+    private CustomAdapterTeam customAdapterTeam;
     private CatcheurViewModel catcheurViewModel;
+    private TeamViewModel teamViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        System.out.println("j'arrive dans le LinkCatcheursToTeam");
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_show_catcheurs);
+        setContentView(R.layout.link_catcheurs_to_team);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
-        RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
+        RecyclerView recyclerViewLinkCatcheursToTeam = findViewById(R.id.recyclerViewLinkCatcheursToTeam);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
@@ -56,17 +59,9 @@ public class ShowCatcheurs extends AppCompatActivity {
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
         });
-        recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
-        recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
+        recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterCatcheur);
+        recyclerViewLinkCatcheursToTeam.setLayoutManager(linearLayoutManager);
 
-
-        catcheurViewModel.getNbCatcheursLD().observe(this, new Observer<Integer>(){
-            @Override
-            public void onChanged(Integer integer) {
-                TextView textView = findViewById(R.id.textViewNbLD);
-                textView.setText("nb Catcheurs LD: "+ integer);
-            }
-        });
         catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
             @Override
             public void onChanged(List<Catcheur> catcheurs) {
@@ -100,5 +95,4 @@ public class ShowCatcheurs extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
 }
