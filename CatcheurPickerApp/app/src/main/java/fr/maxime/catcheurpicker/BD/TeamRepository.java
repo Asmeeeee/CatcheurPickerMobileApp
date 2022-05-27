@@ -8,11 +8,13 @@ import android.os.Looper;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 
 public class TeamRepository {
     private TeamDao teamDao;
@@ -27,16 +29,44 @@ public class TeamRepository {
 
     }
 
+    public List<TeamWithCatcheurs> getTeamsWithCatcheurs() throws ExecutionException, InterruptedException {
+        return new getTeamsWithCatcheursAsyncTask(teamDao).execute().get();
+    }
+
+    public static class getTeamsWithCatcheursAsyncTask extends  AsyncTask<Void, Void, List<TeamWithCatcheurs>>{
+        private TeamDao teamDao;
+        getTeamsWithCatcheursAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected List<TeamWithCatcheurs> doInBackground(Void... voids) {
+            return teamDao.getTeamsWithCatcheurs();
+        }
+    }
+
+    public Team getTeamById(String id) throws  ExecutionException, InterruptedException{
+        return new getTeamByIdAsyncTask(teamDao).execute().get();
+    }
+
+    public static class getTeamByIdAsyncTask extends  AsyncTask<String, Void, Team>{
+        private TeamDao teamDao;
+        getTeamByIdAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected Team doInBackground(String... strings) {
+            return teamDao.getTeamById(strings[0]);
+        }
+    }
+
     public LiveData<Integer> getNbTeamLD(){return  this.nbTeamLD;}
 
     public LiveData<List<Team>> getAllTeamsLD(){return this.allTeamsLD;}
 
-    public void deleteAll(){ new TeamRepository.deleteAsyncTask(teamDao).execute();}
+    public void deleteAll(){ new deleteAllAsyncTask(teamDao).execute();}
 
-    private static class deleteAsyncTask extends AsyncTask<Void, Void, Void>{
+    private static class deleteAllAsyncTask extends AsyncTask<Void, Void, Void>{
         private TeamDao teamDao;
 
-        public deleteAsyncTask(TeamDao teamDao){ this.teamDao = teamDao;}
+        public deleteAllAsyncTask(TeamDao teamDao){ this.teamDao = teamDao;}
 
         @Override
         protected Void doInBackground(Void... voids) {
@@ -46,27 +76,33 @@ public class TeamRepository {
     }
 
     public void insert(Team team){
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
+        new insertAsyncTask(teamDao).execute(team);
+    }
 
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                teamDao.insert(team);
-            }
-        });
+    public static class insertAsyncTask extends  AsyncTask<Team, Void, Void>{
+        private TeamDao teamDao;
+        insertAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected Void doInBackground(Team... teams) {
+            teamDao.insert(teams[0]);
+            return null;
+        }
     }
 
     public void delete(Team team){
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
+        new deleteAsyncTask(teamDao).execute(team);
+    }
 
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                teamDao.delete(team);
-            }
-        });
+    public static class deleteAsyncTask extends  AsyncTask<Team, Void, Void>{
+        private TeamDao teamDao;
+        deleteAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected Void doInBackground(Team... teams) {
+            teamDao.delete(teams[0]);
+            return null;
+        }
     }
 
 }

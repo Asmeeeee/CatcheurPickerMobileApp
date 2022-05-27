@@ -4,29 +4,36 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
+import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheursSelected;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
 public class AddTeam extends AppCompatActivity {
 
     private List<Team> dataTeam = new ArrayList<>();
-    private List<Catcheur> dataCatcheur = new ArrayList<>();
+    private List<Catcheur> catcheursSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterTeam customAdapterTeam;
+    private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
     private TeamViewModel teamViewModel;
+    private CatcheurViewModel catcheurViewModel;
 
 
 
@@ -36,11 +43,24 @@ public class AddTeam extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_add_team);
+        RecyclerView recyclerViewAddTeamCatcheursSelected = findViewById(R.id.recyclerViewAddTeamCatcheursSelected);
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
-        //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
+        catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterTeam = new CustomAdapterTeam(dataTeam);
+        customAdapterCatcheursSelected = new CustomAdapterCatcheursSelected(catcheursSelected);
 
+        try {
+            Bundle bundle = this.getIntent().getExtras();
+            catcheursSelected = (List<Catcheur>) bundle.get("catcheursSelected");
+            System.out.println("Resultat");
+            System.out.println(catcheursSelected);
+            customAdapterCatcheursSelected.setData(catcheursSelected);
+            customAdapterCatcheursSelected.notifyDataSetChanged();
+        }
+        catch (NullPointerException nullPointerException){
+            nullPointerException.printStackTrace();
+        }
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -57,11 +77,31 @@ public class AddTeam extends AppCompatActivity {
                 teamViewModel.deleteOneTeam(dataTeam.get(position));
             }
         });
+        CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
+            @Override
+            public void onItemClick(int position, View v) {
+                Log.d("MesLogs","onItemClick MainActivity");
+                Catcheur catcheur = catcheursSelected.get(position);
+                new AlertDialog.Builder(v.getContext())
+                        .setTitle(catcheur.getNomScene())
+                        .setMessage("Poids: "+catcheur.getTaille() + " Taille : "+catcheur.getTaille())
+                        .show();
+            }
+            @Override
+            public void onItemLongClick(int position, View view) {
+                catcheurViewModel.deleteOneCatcheur(catcheursSelected.get(position));
+            }
+        });
+
+        recyclerViewAddTeamCatcheursSelected.setAdapter(customAdapterCatcheursSelected);
+        recyclerViewAddTeamCatcheursSelected.setLayoutManager(linearLayoutManager);
     }
 
     public void addTeam(View view){
-        System.out.println("ICICICICICIICICICICI " + R.id.fieldNomTeam);
-        teamViewModel.insert(new Team(R.id.fieldNomTeam+"", "image"));
+        System.out.println("Je passe dans addTeam");
+        EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
+        String strNomTeam = fieldNomTeam.getText().toString();
+        teamViewModel.insert(new Team(strNomTeam, "image"));
     }
 
     //-------------------------------------------------------------------------------------
@@ -74,6 +114,12 @@ public class AddTeam extends AppCompatActivity {
 
     public void goToShowCatcheurs(View view){
         Intent intent = new Intent(this, ShowCatcheurs.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToLinkCatcheursToTeam(View view) {
+        Intent intent = new Intent(this, LinkCatcheursToTeam.class);
         startActivity(intent);
         finish();
     }

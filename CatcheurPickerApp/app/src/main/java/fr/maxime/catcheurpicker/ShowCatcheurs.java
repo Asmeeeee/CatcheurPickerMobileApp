@@ -2,8 +2,10 @@ package fr.maxime.catcheurpicker;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -25,12 +27,9 @@ import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
 public class ShowCatcheurs extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
-    private List<Team> dataTeam = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
-    private CustomAdapterTeam customAdapterTeam;
     private CatcheurViewModel catcheurViewModel;
-    private TeamViewModel teamViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +38,9 @@ public class ShowCatcheurs extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_show_catcheurs);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
-        teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
-        //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
+        RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
-        customAdapterTeam = new CustomAdapterTeam(dataTeam);
-
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -55,33 +51,30 @@ public class ShowCatcheurs extends AppCompatActivity {
                         .setMessage("Poids: "+catcheur.getTaille() + " Taille : "+catcheur.getTaille())
                         .show();
             }
-
             @Override
             public void onItemLongClick(int position, View view) {
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
         });
+        recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
+        recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
 
-        CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
-            @Override
-            public void onItemClick(int position, View v) {
-                Log.d("MesLogs","onItemClick MainActivity");
-                Team team = dataTeam.get(position);
-                new AlertDialog.Builder(v.getContext())
-                        .setTitle(team.getNomTeam())
-                        .setMessage("Nom de la team: "+team.getNomTeam())
-                        .show();
-            }
 
+        catcheurViewModel.getNbCatcheursLD().observe(this, new Observer<Integer>(){
             @Override
-            public void onItemLongClick(int position, View view) {
-                teamViewModel.deleteOneTeam(dataTeam.get(position));
+            public void onChanged(Integer integer) {
+                TextView textView = findViewById(R.id.textViewNbLD);
+                textView.setText("nb Catcheurs LD: "+ integer);
             }
         });
-    }
-
-    public void addCatcheur(View view) {
-        catcheurViewModel.insert(new Catcheur(R.id.fieldNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
+        catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
+            @Override
+            public void onChanged(List<Catcheur> catcheurs) {
+                dataCatcheur = catcheurs;
+                customAdapterCatcheur.setData(catcheurs);
+                customAdapterCatcheur.notifyDataSetChanged();
+            }
+        });
     }
 
     public void goToAddCatcheur(View view){
