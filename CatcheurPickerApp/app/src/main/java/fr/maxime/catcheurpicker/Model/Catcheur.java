@@ -1,10 +1,13 @@
 package fr.maxime.catcheurpicker.Model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity(tableName = "catcheurTable")
-public class Catcheur {
+public class Catcheur implements Parcelable{
     @PrimaryKey(autoGenerate = true)
     private int catcheurId;
     private String nomScene;
@@ -20,6 +23,27 @@ public class Catcheur {
         this.image = image;
         this.dateNaissance = dateNaissance;
     }
+
+    protected Catcheur(Parcel in) {
+        catcheurId = in.readInt();
+        nomScene = in.readString();
+        poids = in.readInt();
+        taille = in.readFloat();
+        image = in.readString();
+        dateNaissance = in.readString();
+    }
+
+    public static final Creator<Catcheur> CREATOR = new Creator<Catcheur>() {
+        @Override
+        public Catcheur createFromParcel(Parcel in) {
+            return new Catcheur(in);
+        }
+
+        @Override
+        public Catcheur[] newArray(int size) {
+            return new Catcheur[size];
+        }
+    };
 
     public int getCatcheurId() {
         return catcheurId;
@@ -67,5 +91,20 @@ public class Catcheur {
 
     public void setDateNaissance(String dateNaissance) {
         this.dateNaissance = dateNaissance;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(this.catcheurId);
+        dest.writeString(this.nomScene);
+        dest.writeInt(this.poids);
+        dest.writeFloat(this.taille);
+        dest.writeString(this.image);
+        dest.writeString(this.dateNaissance);
     }
 }

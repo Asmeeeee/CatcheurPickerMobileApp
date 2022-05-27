@@ -41,7 +41,16 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewLinkCatcheursToTeam"
             android:layout_width="match_parent"
-            android:layout_height="651dp" />
+            android:layout_height="603dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goToAddTeam"
+            android:text="Valider" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"

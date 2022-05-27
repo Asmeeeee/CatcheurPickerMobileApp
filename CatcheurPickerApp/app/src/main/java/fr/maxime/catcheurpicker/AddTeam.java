@@ -24,7 +24,7 @@ import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 public class AddTeam extends AppCompatActivity {
 
     private List<Team> dataTeam = new ArrayList<>();
-    private List<Catcheur> dataCatcheur = new ArrayList<>();
+    private List<Catcheur> catcheursSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterTeam customAdapterTeam;
     private TeamViewModel teamViewModel;
@@ -38,10 +38,19 @@ public class AddTeam extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_add_team);
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
-        //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterTeam = new CustomAdapterTeam(dataTeam);
 
+
+        try {
+            Bundle bundle = this.getIntent().getExtras();
+            catcheursSelected = (List<Catcheur>) bundle.get("catcheursSelected");
+            System.out.println("Resultat");
+            System.out.println(catcheursSelected);
+        }
+        catch (NullPointerException nullPointerException){
+            nullPointerException.printStackTrace();
+        }
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {

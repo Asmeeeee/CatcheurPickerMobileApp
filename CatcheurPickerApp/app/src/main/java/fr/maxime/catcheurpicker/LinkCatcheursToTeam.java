@@ -2,6 +2,7 @@ package fr.maxime.catcheurpicker;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -27,6 +28,7 @@ import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
 public class LinkCatcheursToTeam extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
+    private List<Catcheur> catcheursSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
     private CustomAdapterTeam customAdapterTeam;
@@ -80,6 +82,8 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
 
     public void goToAddTeam(View view){
         Intent intent = new Intent(this, AddTeam.class);
+        catcheursSelected.add(dataCatcheur.get(0));
+        intent.putParcelableArrayListExtra("catcheursSelected", (ArrayList<? extends Parcelable>) catcheursSelected);
         startActivity(intent);
         finish();
     }
