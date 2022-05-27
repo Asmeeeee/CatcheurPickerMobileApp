@@ -66,7 +66,7 @@ public class CustomAdapterCatcheursSelected extends RecyclerView.Adapter<CustomA
     @Override
     public CustomAdapterCatcheursSelected.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_catcheur,parent,false);
+                .inflate(R.layout.item_catcheurs_selected,parent,false);
         return new CustomAdapterCatcheursSelected.MyViewHolder(view);
     }
 
