@@ -33,7 +33,7 @@
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="660dp">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -43,6 +43,7 @@
                     android:id="@+id/textView2"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
+                    android:onClick="goToShowCatcheurs"
                     android:text="Catcheurs"
                     android:onClick="goToShowCatcheurs"
                     android:textAlignment="center"
@@ -61,6 +62,17 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </ScrollView>
+        <TextView
+            android:id="@+id/textViewNbTeamLD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewTeams"
+            android:layout_width="match_parent"
+            android:layout_height="600dp" />
+
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -69,18 +81,25 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddCatcheur"
-                android:layout_width="400px"
+                android:layout_width="0dp"
+                android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
+<<<<<<< HEAD
                 android:text="Ajouter un Catcheur
                  + "
                 android:onClick="goToAddCatcheur"
 
+=======
+                android:text="Ajouter un Catcheur \n+ "
+                android:onClick="goToAddCatcheur"
+>>>>>>> jeremy
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/homeButton"
-                android:layout_width="290px"
+                android:layout_width="0dp"
+                android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
                 android:text="Accueil"
@@ -89,11 +108,16 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddTeam"
-                android:layout_width="400px"
+                android:layout_width="0dp"
+                android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
+<<<<<<< HEAD
                 android:text="Ajouter une Team
                 +"
+=======
+                android:text="Ajouter une Team \n+"
+>>>>>>> jeremy
                 android:onClick="goToAddTeam"
                 android:textColor="@color/white" />
 

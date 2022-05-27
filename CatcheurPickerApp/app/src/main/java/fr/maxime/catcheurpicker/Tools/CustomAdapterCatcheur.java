@@ -31,22 +31,21 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
     implements View.OnClickListener, View.OnLongClickListener{
         private TextView tvNomScene, tvPoids, tvTaille, tvImage, tvDateNaissance;
 
+
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            tvNomScene = itemView.findViewById(R.id.textView);
-            tvPoids = itemView.findViewById(R.id.textView);
-            tvTaille = itemView.findViewById(R.id.textView);
-            tvImage = itemView.findViewById(R.id.textView);
-            tvDateNaissance = itemView.findViewById(R.id.textView);
+            tvNomScene = itemView.findViewById(R.id.textViewNomScene);
+            tvPoids = itemView.findViewById(R.id.textViewPoids);
+            tvTaille = itemView.findViewById(R.id.textViewTaille);
+            tvDateNaissance = itemView.findViewById(R.id.textViewDateNaissance);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
 
         public void display(Catcheur c){
             tvNomScene.setText(c.getNomScene());
-            tvPoids.setText(c.getPoids());
-            tvTaille.setText((int) c.getTaille());
-            tvImage.setText(c.getImage());
+            tvPoids.setText(c.getPoids()+"");
+            tvTaille.setText(c.getTaille()+"");
             tvDateNaissance.setText(c.getDateNaissance());
         }
 
@@ -63,15 +62,12 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
         }
     }
 
-    //TODO
-
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       // View view = LayoutInflater.from(parent.getContext())
-        //        .inflate(R.layout.itemlayout,parent,false);
-        //return new MyViewHolder(view);
-        return null;
+       View view = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_catcheur,parent,false);
+        return new MyViewHolder(view);
     }
 
     @Override

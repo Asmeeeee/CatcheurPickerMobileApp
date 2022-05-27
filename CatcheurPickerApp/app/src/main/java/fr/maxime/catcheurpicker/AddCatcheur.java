@@ -4,6 +4,10 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+<<<<<<< HEAD
+=======
+import androidx.room.Transaction;
+>>>>>>> jeremy
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -60,12 +64,26 @@ public class AddCatcheur extends AppCompatActivity {
         }
     });
 }
+<<<<<<< HEAD
 
     public void addCatcheur(View view) {
         EditText fieldNomCatcheur = findViewById(R.id.fieldNomCatcheur);
         String strNomCatcheur = fieldNomCatcheur.getText().toString();
         System.out.println("ICICICICICIICICICICI " + strNomCatcheur);
         catcheurViewModel.insert(new Catcheur(strNomCatcheur+"", R.id.fieldPoids, R.id.fieldTaille, "image", R.id.fieldNomCatcheur+""));
+=======
+        public void addCatcheur(View view) {
+        EditText fieldNomCatcheur = findViewById(R.id.fieldNomCatcheur);
+        String strNomCatcheur = fieldNomCatcheur.getText().toString();
+        EditText fieldPoidsCatcheur = findViewById(R.id.fieldPoids);
+        int intPoidsCatcheur = Integer.parseInt(fieldPoidsCatcheur.getText().toString());
+        EditText fieldTailleCatcheur = findViewById(R.id.fieldTaille);
+        Float floatTailleCatcheur =  Float.parseFloat(fieldTailleCatcheur.getText().toString());
+        EditText fieldDateNaissance = findViewById(R.id.fieldDateNaiss);
+        String strDateNaissance =  fieldDateNaissance.getText().toString();
+        System.out.println(strNomCatcheur+" "+intPoidsCatcheur+" "+ floatTailleCatcheur+" "+ strDateNaissance);
+        catcheurViewModel.insert(new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, "image", strDateNaissance));
+>>>>>>> jeremy
     }
 //-------------------------------------------------------------------------------------
 

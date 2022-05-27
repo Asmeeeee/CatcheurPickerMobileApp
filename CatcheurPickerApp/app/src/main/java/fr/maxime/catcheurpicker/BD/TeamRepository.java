@@ -13,6 +13,7 @@ import java.util.concurrent.Executors;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 
 public class TeamRepository {
     private TeamDao teamDao;
@@ -26,6 +27,10 @@ public class TeamRepository {
         allTeamsLD = teamDao.getAllTeamLD();
 
     }
+
+    public List<TeamWithCatcheurs> getTeamsWithCatcheurs(){ return teamDao.getTeamsWithCatcheurs();}
+
+    public Team getTeamById(String id){return teamDao.getTeamById(id);}
 
     public LiveData<Integer> getNbTeamLD(){return  this.nbTeamLD;}
 

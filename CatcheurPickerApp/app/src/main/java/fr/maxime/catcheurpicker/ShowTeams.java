@@ -1,5 +1,6 @@
 package fr.maxime.catcheurpicker;
 
+<<<<<<< HEAD
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,6 +9,36 @@ import android.view.View;
 import android.view.Window;
 
 public class ShowTeams extends AppCompatActivity {
+=======
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.view.Window;
+import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
+import fr.maxime.catcheurpicker.BD.TeamViewModel;
+import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
+import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
+
+public class ShowTeams extends AppCompatActivity {
+    private List<Team> dataTeam = new ArrayList<>();
+    private LinearLayoutManager linearLayoutManager;
+    private CustomAdapterTeam customAdapterTeam;
+    private TeamViewModel teamViewModel;
+>>>>>>> jeremy
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -15,6 +46,50 @@ public class ShowTeams extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_show_teams);
+<<<<<<< HEAD
+=======
+        teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
+        RecyclerView recyclerViewTeams = findViewById(R.id.recyclerViewTeams);
+        linearLayoutManager = new LinearLayoutManager(this);
+        customAdapterTeam = new CustomAdapterTeam(dataTeam);
+        CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
+            @Override
+            public void onItemClick(int position, View v) {
+                Log.d("MesLogs","onItemClick MainActivity");
+                Team team = dataTeam.get(position);
+                new AlertDialog.Builder(v.getContext())
+                        .setTitle(team.getNomTeam())
+                        .setMessage("Nom de la team: "+team.getNomTeam())
+                        .show();
+            }
+
+            @Override
+            public void onItemLongClick(int position, View view) {
+                teamViewModel.deleteOneTeam(dataTeam.get(position));
+            }
+        });
+        recyclerViewTeams.setAdapter(customAdapterTeam);
+        recyclerViewTeams.setLayoutManager(linearLayoutManager);
+
+
+        teamViewModel.getNbTeamsLD().observe(this, new Observer<Integer>(){
+            @Override
+            public void onChanged(Integer integer) {
+                TextView textView = findViewById(R.id.textViewNbTeamLD);
+                textView.setText("nb Team LD: "+ integer);
+            }
+        });
+
+        teamViewModel.getAllTeamsLD().observe(this, new Observer<List<Team>>() {
+            @Override
+            public void onChanged(List<Team> teams) {
+                dataTeam = teams;
+                customAdapterTeam.setData(teams);
+                customAdapterTeam.notifyDataSetChanged();
+            }
+        });
+
+>>>>>>> jeremy
     }
 
     public void goToAddCatcheur(View view){
