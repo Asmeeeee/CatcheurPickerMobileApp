@@ -43,7 +43,6 @@
                     android:id="@+id/textView2"
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
-                    android:onClick="goToShowCatcheurs"
                     android:text="Catcheurs"
                     android:onClick="goToShowCatcheurs"
                     android:textAlignment="center"
@@ -85,15 +84,8 @@
                 android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-<<<<<<< HEAD
-                android:text="Ajouter un Catcheur
-                 + "
-                android:onClick="goToAddCatcheur"
-
-=======
                 android:text="Ajouter un Catcheur \n+ "
                 android:onClick="goToAddCatcheur"
->>>>>>> jeremy
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -112,12 +104,7 @@
                 android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-<<<<<<< HEAD
-                android:text="Ajouter une Team
-                +"
-=======
                 android:text="Ajouter une Team \n+"
->>>>>>> jeremy
                 android:onClick="goToAddTeam"
                 android:textColor="@color/white" />
 

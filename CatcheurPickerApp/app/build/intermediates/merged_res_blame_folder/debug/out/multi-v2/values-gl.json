@@ -1,27 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.myrecyclerview2a2122.app-mergeDebugResources-43:/values-gl/values-gl.xml",
+            "outputFile": "fr.maxime.catcheurpicker.app-mergeDebugResources-43:/values-gl/values-gl.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\d8338c189490aee58604e111af57865f\\transformed\\core-1.7.0\\res\\values-gl\\values-gl.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "98",
-                        "startColumns": "4",
-                        "startOffsets": "8500",
-                        "endColumns": "100",
-                        "endOffsets": "8596"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -38,7 +21,41 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\0b61725ab4c930b151c4488a893666fd\\transformed\\material-1.5.0\\res\\values-gl\\values-gl.xml",
+                    "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\d8338c189490aee58604e111af57865f\\transformed\\core-1.7.0\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "98",
+                        "startColumns": "4",
+                        "startOffsets": "8500",
+                        "endColumns": "100",
+                        "endOffsets": "8596"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\d52bab26e7b949240a89eb43d22d89ad\\transformed\\ui-1.0.1\\res\\values-gl\\values-gl.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,201,284,393,472,571,663,751,824,894,971,1043",
+                        "endColumns": "95,82,108,78,98,91,87,72,69,76,71,121",
+                        "endOffsets": "196,279,388,467,566,658,746,819,889,966,1038,1160"
+                    },
+                    "to": {
+                        "startLines": "37,38,39,43,44,91,92,93,94,97,99,100",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "3433,3529,3612,3974,4053,7932,8024,8112,8185,8423,8601,8673",
+                        "endColumns": "95,82,108,78,98,91,87,72,69,76,71,121",
+                        "endOffsets": "3524,3607,3716,4048,4147,8019,8107,8180,8250,8495,8668,8790"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\1217d3aa52fa78bda9a0244b3a55003a\\transformed\\material-1.6.0\\res\\values-gl\\values-gl.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -54,23 +71,6 @@
                         "endLines": "5,33,34,35,36,40,41,42,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,95",
                         "endColumns": "12,84,104,132,79,77,95,78,62,94,68,62,73,63,55,120,57,61,55,76,138,87,79,109,79,79,89,66,65,78,80,87,78,76,81,88,83,91,92,100,73,91,101,51,65,91,87,61,63,62,110,101,105,102,84",
                         "endOffsets": "275,3110,3215,3348,3428,3794,3890,3969,4210,4305,4374,4437,4511,4575,4631,4752,4810,4872,4928,5005,5144,5232,5312,5422,5502,5582,5672,5739,5805,5884,5965,6053,6132,6209,6291,6380,6464,6556,6649,6750,6824,6916,7018,7070,7136,7228,7316,7378,7442,7505,7616,7718,7824,7927,8335"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\5c29f9f494d2640dccbf843125b19726\\transformed\\jetified-ui-1.0.1\\res\\values-gl\\values-gl.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "105,201,284,393,472,571,663,751,824,894,971,1043",
-                        "endColumns": "95,82,108,78,98,91,87,72,69,76,71,121",
-                        "endOffsets": "196,279,388,467,566,658,746,819,889,966,1038,1160"
-                    },
-                    "to": {
-                        "startLines": "37,38,39,43,44,91,92,93,94,97,99,100",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3433,3529,3612,3974,4053,7932,8024,8112,8185,8423,8601,8673",
-                        "endColumns": "95,82,108,78,98,91,87,72,69,76,71,121",
-                        "endOffsets": "3524,3607,3716,4048,4147,8019,8107,8180,8250,8495,8668,8790"
                     }
                 }
             ]

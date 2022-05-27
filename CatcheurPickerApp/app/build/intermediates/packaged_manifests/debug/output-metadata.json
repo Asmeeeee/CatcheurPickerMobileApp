@@ -4,7 +4,7 @@
     "type": "PACKAGED_MANIFESTS",
     "kind": "Directory"
   },
-  "applicationId": "com.example.myrecyclerview2a2122",
+  "applicationId": "fr.maxime.catcheurpicker",
   "variantName": "debug",
   "elements": [
     {

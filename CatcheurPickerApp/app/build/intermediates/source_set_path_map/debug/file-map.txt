@@ -1,48 +1,48 @@
-com.example.myrecyclerview2a2122.app-jetified-ui-graphics-1.0.1-0 C:\Users\jerem\.gradle\caches\transforms-3\0143483e8449bc3db2ad7f08c1f78e0d\transformed\jetified-ui-graphics-1.0.1\res
-com.example.myrecyclerview2a2122.app-cardview-1.0.0-1 C:\Users\jerem\.gradle\caches\transforms-3\0751861119962ac0f78d2deaf3a4a68f\transformed\cardview-1.0.0\res
-com.example.myrecyclerview2a2122.app-fragment-1.3.6-2 C:\Users\jerem\.gradle\caches\transforms-3\08be5f2811952d88fdbd324236b15817\transformed\fragment-1.3.6\res
-com.example.myrecyclerview2a2122.app-jetified-ui-unit-1.0.1-3 C:\Users\jerem\.gradle\caches\transforms-3\0a28657ce195c8d74e3a7585a8c6d705\transformed\jetified-ui-unit-1.0.1\res
-com.example.myrecyclerview2a2122.app-recyclerview-1.1.0-4 C:\Users\jerem\.gradle\caches\transforms-3\0a48c48e7ac9cdb1931530cff684f072\transformed\recyclerview-1.1.0\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-runtime-ktx-2.5.0-alpha03-5 C:\Users\jerem\.gradle\caches\transforms-3\0b029d75e07941d700f681233b219d01\transformed\jetified-lifecycle-runtime-ktx-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-material-1.5.0-6 C:\Users\jerem\.gradle\caches\transforms-3\0b61725ab4c930b151c4488a893666fd\transformed\material-1.5.0\res
-com.example.myrecyclerview2a2122.app-jetified-runtime-1.0.1-7 C:\Users\jerem\.gradle\caches\transforms-3\116c5cb2cd6355c15fe7920af80889a2\transformed\jetified-runtime-1.0.1\res
-com.example.myrecyclerview2a2122.app-room-runtime-2.4.2-8 C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-viewmodel-ktx-2.5.0-alpha03-9 C:\Users\jerem\.gradle\caches\transforms-3\3a4a274c3943df449927fefa46744328\transformed\jetified-lifecycle-viewmodel-ktx-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-appcompat-1.4.1-10 C:\Users\jerem\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\res
-com.example.myrecyclerview2a2122.app-lifecycle-runtime-2.5.0-alpha03-11 C:\Users\jerem\.gradle\caches\transforms-3\3e602d81e99493f475d6d53e6d68ca97\transformed\lifecycle-runtime-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-jetified-annotation-experimental-1.1.0-12 C:\Users\jerem\.gradle\caches\transforms-3\528f96469cb86a51f5b29376625b5ce1\transformed\jetified-annotation-experimental-1.1.0\res
-com.example.myrecyclerview2a2122.app-drawerlayout-1.1.1-13 C:\Users\jerem\.gradle\caches\transforms-3\576bbfeb8ca3116493a5dde1a08f50b1\transformed\drawerlayout-1.1.1\res
-com.example.myrecyclerview2a2122.app-jetified-ui-1.0.1-14 C:\Users\jerem\.gradle\caches\transforms-3\5c29f9f494d2640dccbf843125b19726\transformed\jetified-ui-1.0.1\res
-com.example.myrecyclerview2a2122.app-jetified-appcompat-resources-1.4.1-15 C:\Users\jerem\.gradle\caches\transforms-3\648e6efd7a151dc1ed31eee0bed9ce88\transformed\jetified-appcompat-resources-1.4.1\res
-com.example.myrecyclerview2a2122.app-sqlite-framework-2.2.0-16 C:\Users\jerem\.gradle\caches\transforms-3\665b1e26cefcc295f996bebb31deea64\transformed\sqlite-framework-2.2.0\res
-com.example.myrecyclerview2a2122.app-lifecycle-viewmodel-2.5.0-alpha03-17 C:\Users\jerem\.gradle\caches\transforms-3\66dc37afa25a32b1969dbad4243dfe61\transformed\lifecycle-viewmodel-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-jetified-ui-util-1.0.1-18 C:\Users\jerem\.gradle\caches\transforms-3\6bb2ce9067176f514c538d76f92a4679\transformed\jetified-ui-util-1.0.1\res
-com.example.myrecyclerview2a2122.app-jetified-profileinstaller-1.0.1-19 C:\Users\jerem\.gradle\caches\transforms-3\6cc6b7947291421e400e8bf284db0f2f\transformed\jetified-profileinstaller-1.0.1\res
-com.example.myrecyclerview2a2122.app-jetified-ui-geometry-1.0.1-20 C:\Users\jerem\.gradle\caches\transforms-3\6db7eb9749e5644857e8ed0beceba983\transformed\jetified-ui-geometry-1.0.1\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-livedata-ktx-2.5.0-alpha03-21 C:\Users\jerem\.gradle\caches\transforms-3\6eba50002200c4edd41570ea66217a83\transformed\jetified-lifecycle-livedata-ktx-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-jetified-startup-runtime-1.0.0-22 C:\Users\jerem\.gradle\caches\transforms-3\7289baf9a60250fc6044c748072f42fd\transformed\jetified-startup-runtime-1.0.0\res
-com.example.myrecyclerview2a2122.app-jetified-savedstate-1.1.0-23 C:\Users\jerem\.gradle\caches\transforms-3\72bba5287bce37b61ffc9cf1fc73e195\transformed\jetified-savedstate-1.1.0\res
-com.example.myrecyclerview2a2122.app-lifecycle-livedata-2.5.0-alpha03-24 C:\Users\jerem\.gradle\caches\transforms-3\7f01f6baa0cf04d15bce108e7e2982a2\transformed\lifecycle-livedata-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-lifecycle-livedata-core-2.5.0-alpha03-25 C:\Users\jerem\.gradle\caches\transforms-3\89a2ba1a782da91ffad27ec456885372\transformed\lifecycle-livedata-core-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-viewmodel-savedstate-2.5.0-alpha03-26 C:\Users\jerem\.gradle\caches\transforms-3\92f28c7a01488ebc29347f22e88d2244\transformed\jetified-lifecycle-viewmodel-savedstate-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-viewmodel-compose-2.5.0-alpha03-27 C:\Users\jerem\.gradle\caches\transforms-3\9482668d24b0acf8a83b2a7f39988c57\transformed\jetified-lifecycle-viewmodel-compose-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-sqlite-2.2.0-28 C:\Users\jerem\.gradle\caches\transforms-3\ad84d83144cccfb00b5d5fbdc38a01f0\transformed\sqlite-2.2.0\res
-com.example.myrecyclerview2a2122.app-jetified-emoji2-views-helper-1.0.0-29 C:\Users\jerem\.gradle\caches\transforms-3\b5e3385e87e4660c6c5422259887e937\transformed\jetified-emoji2-views-helper-1.0.0\res
-com.example.myrecyclerview2a2122.app-constraintlayout-2.1.3-30 C:\Users\jerem\.gradle\caches\transforms-3\d3afed95d73ad065506e7f132d41fe44\transformed\constraintlayout-2.1.3\res
-com.example.myrecyclerview2a2122.app-jetified-runtime-saveable-1.0.1-31 C:\Users\jerem\.gradle\caches\transforms-3\d75edcb4f44b4bd97cc3c5b3cae9307e\transformed\jetified-runtime-saveable-1.0.1\res
-com.example.myrecyclerview2a2122.app-core-1.7.0-32 C:\Users\jerem\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\res
-com.example.myrecyclerview2a2122.app-jetified-emoji2-1.0.0-33 C:\Users\jerem\.gradle\caches\transforms-3\dafda43020c998140bb590dd363804eb\transformed\jetified-emoji2-1.0.0\res
-com.example.myrecyclerview2a2122.app-transition-1.2.0-34 C:\Users\jerem\.gradle\caches\transforms-3\e353275a5dad5cd7dd5d51284dfd5302\transformed\transition-1.2.0\res
-com.example.myrecyclerview2a2122.app-jetified-viewpager2-1.0.0-35 C:\Users\jerem\.gradle\caches\transforms-3\e9a984f11cfdd45d3f413f1476f7f21f\transformed\jetified-viewpager2-1.0.0\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-livedata-core-ktx-2.5.0-alpha03-36 C:\Users\jerem\.gradle\caches\transforms-3\f1145544f70e02efe942024343cbd03b\transformed\jetified-lifecycle-livedata-core-ktx-2.5.0-alpha03\res
-com.example.myrecyclerview2a2122.app-jetified-ui-text-1.0.1-37 C:\Users\jerem\.gradle\caches\transforms-3\fafcea283a742a77f50a7f2c406cc08d\transformed\jetified-ui-text-1.0.1\res
-com.example.myrecyclerview2a2122.app-coordinatorlayout-1.1.0-38 C:\Users\jerem\.gradle\caches\transforms-3\fafe20f33fc1f1973a5a6b5f88e11979\transformed\coordinatorlayout-1.1.0\res
-com.example.myrecyclerview2a2122.app-jetified-lifecycle-process-2.4.0-39 C:\Users\jerem\.gradle\caches\transforms-3\fb7578b74fadc6b60a379e8d199d207c\transformed\jetified-lifecycle-process-2.4.0\res
-com.example.myrecyclerview2a2122.app-pngs-40 D:\Work\projet-android\MyRecyclerView2A2122\app\build\generated\res\pngs\debug
-com.example.myrecyclerview2a2122.app-resValues-41 D:\Work\projet-android\MyRecyclerView2A2122\app\build\generated\res\resValues\debug
-com.example.myrecyclerview2a2122.app-rs-42 D:\Work\projet-android\MyRecyclerView2A2122\app\build\generated\res\rs\debug
-com.example.myrecyclerview2a2122.app-mergeDebugResources-43 D:\Work\projet-android\MyRecyclerView2A2122\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
-com.example.myrecyclerview2a2122.app-mergeDebugResources-44 D:\Work\projet-android\MyRecyclerView2A2122\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
-com.example.myrecyclerview2a2122.app-merged_res-45 D:\Work\projet-android\MyRecyclerView2A2122\app\build\intermediates\merged_res\debug
-com.example.myrecyclerview2a2122.app-debug-46 D:\Work\projet-android\MyRecyclerView2A2122\app\src\debug\res
-com.example.myrecyclerview2a2122.app-main-47 D:\Work\projet-android\MyRecyclerView2A2122\app\src\main\res
+fr.maxime.catcheurpicker.app-cardview-1.0.0-0 C:\Users\Maxime\.gradle\caches\transforms-3\0751861119962ac0f78d2deaf3a4a68f\transformed\cardview-1.0.0\res
+fr.maxime.catcheurpicker.app-lifecycle-viewmodel-savedstate-2.5.0-alpha03-1 C:\Users\Maxime\.gradle\caches\transforms-3\07524e9650c28c26b90b717892ec1ed8\transformed\lifecycle-viewmodel-savedstate-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-fragment-1.3.6-2 C:\Users\Maxime\.gradle\caches\transforms-3\08be5f2811952d88fdbd324236b15817\transformed\fragment-1.3.6\res
+fr.maxime.catcheurpicker.app-recyclerview-1.1.0-3 C:\Users\Maxime\.gradle\caches\transforms-3\0a48c48e7ac9cdb1931530cff684f072\transformed\recyclerview-1.1.0\res
+fr.maxime.catcheurpicker.app-material-1.6.0-4 C:\Users\Maxime\.gradle\caches\transforms-3\1217d3aa52fa78bda9a0244b3a55003a\transformed\material-1.6.0\res
+fr.maxime.catcheurpicker.app-ui-graphics-1.0.1-5 C:\Users\Maxime\.gradle\caches\transforms-3\1fd09e46b602e7e267ae339b0aecacd2\transformed\ui-graphics-1.0.1\res
+fr.maxime.catcheurpicker.app-runtime-1.0.1-6 C:\Users\Maxime\.gradle\caches\transforms-3\21938628bcde994f9e61ca980684a830\transformed\runtime-1.0.1\res
+fr.maxime.catcheurpicker.app-appcompat-resources-1.4.1-7 C:\Users\Maxime\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\res
+fr.maxime.catcheurpicker.app-room-runtime-2.4.2-8 C:\Users\Maxime\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\res
+fr.maxime.catcheurpicker.app-appcompat-1.4.1-9 C:\Users\Maxime\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\res
+fr.maxime.catcheurpicker.app-lifecycle-runtime-2.5.0-alpha03-10 C:\Users\Maxime\.gradle\caches\transforms-3\3e602d81e99493f475d6d53e6d68ca97\transformed\lifecycle-runtime-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-lifecycle-process-2.4.0-11 C:\Users\Maxime\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\res
+fr.maxime.catcheurpicker.app-lifecycle-runtime-ktx-2.5.0-alpha03-12 C:\Users\Maxime\.gradle\caches\transforms-3\56d70e3189e91760e81ea0e4ea115f68\transformed\lifecycle-runtime-ktx-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-drawerlayout-1.1.1-13 C:\Users\Maxime\.gradle\caches\transforms-3\576bbfeb8ca3116493a5dde1a08f50b1\transformed\drawerlayout-1.1.1\res
+fr.maxime.catcheurpicker.app-lifecycle-livedata-ktx-2.5.0-alpha03-14 C:\Users\Maxime\.gradle\caches\transforms-3\5c0f795142a4f8a39010718fcc30650a\transformed\lifecycle-livedata-ktx-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-ui-geometry-1.0.1-15 C:\Users\Maxime\.gradle\caches\transforms-3\5e509be00f9b0ed048900e3c1ea17711\transformed\ui-geometry-1.0.1\res
+fr.maxime.catcheurpicker.app-sqlite-framework-2.2.0-16 C:\Users\Maxime\.gradle\caches\transforms-3\665b1e26cefcc295f996bebb31deea64\transformed\sqlite-framework-2.2.0\res
+fr.maxime.catcheurpicker.app-lifecycle-viewmodel-2.5.0-alpha03-17 C:\Users\Maxime\.gradle\caches\transforms-3\66dc37afa25a32b1969dbad4243dfe61\transformed\lifecycle-viewmodel-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-runtime-saveable-1.0.1-18 C:\Users\Maxime\.gradle\caches\transforms-3\7126618a73bd454ed9047dc0ba26ef2d\transformed\runtime-saveable-1.0.1\res
+fr.maxime.catcheurpicker.app-profileinstaller-1.0.1-19 C:\Users\Maxime\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\res
+fr.maxime.catcheurpicker.app-savedstate-1.1.0-20 C:\Users\Maxime\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\res
+fr.maxime.catcheurpicker.app-lifecycle-livedata-2.5.0-alpha03-21 C:\Users\Maxime\.gradle\caches\transforms-3\7f01f6baa0cf04d15bce108e7e2982a2\transformed\lifecycle-livedata-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-lifecycle-livedata-core-2.5.0-alpha03-22 C:\Users\Maxime\.gradle\caches\transforms-3\89a2ba1a782da91ffad27ec456885372\transformed\lifecycle-livedata-core-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-lifecycle-viewmodel-ktx-2.5.0-alpha03-23 C:\Users\Maxime\.gradle\caches\transforms-3\9374046ec6b21f43a65fe18d3ac5e2e8\transformed\lifecycle-viewmodel-ktx-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-startup-runtime-1.0.0-24 C:\Users\Maxime\.gradle\caches\transforms-3\9fa37f10845b7601bfb72c090386483f\transformed\startup-runtime-1.0.0\res
+fr.maxime.catcheurpicker.app-sqlite-2.2.0-25 C:\Users\Maxime\.gradle\caches\transforms-3\ad84d83144cccfb00b5d5fbdc38a01f0\transformed\sqlite-2.2.0\res
+fr.maxime.catcheurpicker.app-viewpager2-1.0.0-26 C:\Users\Maxime\.gradle\caches\transforms-3\b4968bffc4d4c41b057d435a194dfa3f\transformed\viewpager2-1.0.0\res
+fr.maxime.catcheurpicker.app-ui-unit-1.0.1-27 C:\Users\Maxime\.gradle\caches\transforms-3\d36e730417c36bc24a1a7edfcd481d0e\transformed\ui-unit-1.0.1\res
+fr.maxime.catcheurpicker.app-constraintlayout-2.1.3-28 C:\Users\Maxime\.gradle\caches\transforms-3\d3afed95d73ad065506e7f132d41fe44\transformed\constraintlayout-2.1.3\res
+fr.maxime.catcheurpicker.app-ui-1.0.1-29 C:\Users\Maxime\.gradle\caches\transforms-3\d52bab26e7b949240a89eb43d22d89ad\transformed\ui-1.0.1\res
+fr.maxime.catcheurpicker.app-core-1.7.0-30 C:\Users\Maxime\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\res
+fr.maxime.catcheurpicker.app-ui-text-1.0.1-31 C:\Users\Maxime\.gradle\caches\transforms-3\da4cec404543adbc1b7832f68e47c0fe\transformed\ui-text-1.0.1\res
+fr.maxime.catcheurpicker.app-emoji2-1.0.0-32 C:\Users\Maxime\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\res
+fr.maxime.catcheurpicker.app-transition-1.2.0-33 C:\Users\Maxime\.gradle\caches\transforms-3\e353275a5dad5cd7dd5d51284dfd5302\transformed\transition-1.2.0\res
+fr.maxime.catcheurpicker.app-annotation-experimental-1.1.0-34 C:\Users\Maxime\.gradle\caches\transforms-3\e36aaea95b1e10850d139e7025f21ff0\transformed\annotation-experimental-1.1.0\res
+fr.maxime.catcheurpicker.app-lifecycle-livedata-core-ktx-2.5.0-alpha03-35 C:\Users\Maxime\.gradle\caches\transforms-3\eacd4afbdb600fe4687a91bba89c71f5\transformed\lifecycle-livedata-core-ktx-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-emoji2-views-helper-1.0.0-36 C:\Users\Maxime\.gradle\caches\transforms-3\ed826fb54ca96a616842741e739e9806\transformed\emoji2-views-helper-1.0.0\res
+fr.maxime.catcheurpicker.app-coordinatorlayout-1.1.0-37 C:\Users\Maxime\.gradle\caches\transforms-3\fafe20f33fc1f1973a5a6b5f88e11979\transformed\coordinatorlayout-1.1.0\res
+fr.maxime.catcheurpicker.app-ui-util-1.0.1-38 C:\Users\Maxime\.gradle\caches\transforms-3\fb91c19d5466d6521e25fdef63dce3c2\transformed\ui-util-1.0.1\res
+fr.maxime.catcheurpicker.app-lifecycle-viewmodel-compose-2.5.0-alpha03-39 C:\Users\Maxime\.gradle\caches\transforms-3\fefbaa5bdbc44fe7f5d705235b0352ee\transformed\lifecycle-viewmodel-compose-2.5.0-alpha03\res
+fr.maxime.catcheurpicker.app-pngs-40 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\build\generated\res\pngs\debug
+fr.maxime.catcheurpicker.app-resValues-41 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\build\generated\res\resValues\debug
+fr.maxime.catcheurpicker.app-rs-42 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\build\generated\res\rs\debug
+fr.maxime.catcheurpicker.app-packageDebugResources-43 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+fr.maxime.catcheurpicker.app-packageDebugResources-44 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+fr.maxime.catcheurpicker.app-merged_res-45 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\build\intermediates\merged_res\debug
+fr.maxime.catcheurpicker.app-debug-46 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\src\debug\res
+fr.maxime.catcheurpicker.app-main-47 C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\src\main\res

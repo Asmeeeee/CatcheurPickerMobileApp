@@ -10,10 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-<<<<<<< HEAD
-=======
 import android.widget.EditText;
->>>>>>> jeremy
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,15 +61,10 @@ public class AddTeam extends AppCompatActivity {
     }
 
     public void addTeam(View view){
-<<<<<<< HEAD
-        System.out.println("ICICICICICIICICICICI " + R.id.fieldNomTeam);
-        teamViewModel.insert(new Team(R.id.fieldNomTeam+"", "image"));
-=======
         System.out.println("Je passe dans addTeam");
         EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
         String strNomTeam = fieldNomTeam.getText().toString();
         teamViewModel.insert(new Team(strNomTeam, "image"));
->>>>>>> jeremy
     }
 
     //-------------------------------------------------------------------------------------

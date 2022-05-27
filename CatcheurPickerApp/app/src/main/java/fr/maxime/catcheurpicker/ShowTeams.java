@@ -1,15 +1,5 @@
 package fr.maxime.catcheurpicker;
 
-<<<<<<< HEAD
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
-import android.view.Window;
-
-public class ShowTeams extends AppCompatActivity {
-=======
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
@@ -38,7 +28,6 @@ public class ShowTeams extends AppCompatActivity {
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterTeam customAdapterTeam;
     private TeamViewModel teamViewModel;
->>>>>>> jeremy
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,8 +35,6 @@ public class ShowTeams extends AppCompatActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_show_teams);
-<<<<<<< HEAD
-=======
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         RecyclerView recyclerViewTeams = findViewById(R.id.recyclerViewTeams);
         linearLayoutManager = new LinearLayoutManager(this);
@@ -89,7 +76,6 @@ public class ShowTeams extends AppCompatActivity {
             }
         });
 
->>>>>>> jeremy
     }
 
     public void goToAddCatcheur(View view){

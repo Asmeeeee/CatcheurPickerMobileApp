@@ -42,15 +42,6 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-<<<<<<< HEAD
-                    android:layout_height="wrap_content"
-                    android:text="Team"
-                    android:onClick="goToShowTeams"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-=======
                     android:layout_height="wrap_content">
 
                     <TextView
@@ -83,7 +74,6 @@
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 
->>>>>>> jeremy
             </LinearLayout>
         </ScrollView>
 
@@ -104,12 +94,7 @@
                 android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-<<<<<<< HEAD
-                android:text="Ajouter un Catcheur
-                 + "
-=======
                 android:text="Ajouter un Catcheur \n+ "
->>>>>>> jeremy
                 android:onClick="goToAddCatcheur"
                 android:textColor="@color/white" />
 
@@ -129,12 +114,7 @@
                 android:layout_weight="33.33"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-<<<<<<< HEAD
-                android:text="Ajouter une Team
-                +"
-=======
                 android:text="Ajouter une Team \n+"
->>>>>>> jeremy
                 android:onClick="goToAddTeam"
                 android:textColor="@color/white" />
 

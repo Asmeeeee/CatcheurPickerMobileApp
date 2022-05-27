@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -104,15 +105,6 @@ public class ShowCatcheurs extends AppCompatActivity {
         finish();
     }
 
-<<<<<<< HEAD
-    public void goToAddCatcheur(View view){
-        Intent intent = new Intent(this, AddCatcheur.class);
-        startActivity(intent);
-        finish();
-    }
-
-=======
->>>>>>> jeremy
     public void goToAddTeam(View view){
         Intent intent = new Intent(this, AddTeam.class);
         startActivity(intent);
