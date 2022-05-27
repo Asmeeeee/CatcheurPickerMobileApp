@@ -14,7 +14,16 @@
         android:theme="@style/Theme.CatcheurPicker"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".AddTeam"
+            android:exported="false" />
+        <activity
+            android:name=".AddCatcheur"
+            android:exported="false" />
+        <activity
+            android:name=".ShowTeams"
+            android:exported="false" />
+        <activity
+            android:name=".ShowCatcheurs"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
