@@ -4,6 +4,12 @@ import androidx.room.Entity;
 
 @Entity(primaryKeys = {"teamId", "catcheurId"})
 public class TeamCatcheurCrossRef {
+
+    public TeamCatcheurCrossRef(int teamId, int catcheurId){
+        this.teamId = teamId;
+        this.catcheurId = catcheurId;
+    }
+
     private int teamId;
     private int catcheurId;
 

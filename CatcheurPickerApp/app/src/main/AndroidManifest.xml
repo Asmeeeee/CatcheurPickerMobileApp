@@ -23,6 +23,9 @@
             android:name=".ShowTeams"
             android:exported="false" />
         <activity
+            android:name=".LinkCatcheursToTeam"
+            android:exported="false" />
+        <activity
             android:name=".ShowCatcheurs"
             android:exported="true">
             <intent-filter>

@@ -8,11 +8,17 @@ import android.os.Looper;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
+<<<<<<< HEAD
+=======
+import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamCatcheurCrossRef;
+>>>>>>> jeremy
 
 public class CatcheurRepository {
     private CatcheurDao catcheurDao;
@@ -38,15 +44,72 @@ public class CatcheurRepository {
         return allCatcheursLD;
     }
 
+<<<<<<< HEAD
 
     public void deleteAll(){
         new deleteAsyncTask(catcheurDao).execute();
+=======
+    public static class AsyncTaskTwoParams{
+        private Catcheur catcheur;
+        private Team team;
+
+        AsyncTaskTwoParams(Catcheur catcheur, Team team){
+            this.catcheur = catcheur;
+            this.team = team;
+        }
+>>>>>>> jeremy
     }
 
-    private static class deleteAsyncTask extends AsyncTask<Void, Void, Void>{
+    public static  class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
+
+        private  CatcheurDao catcheurDao;
+
+        public insertTeamWithCatcheursAsyncTask(CatcheurDao catcheurDao){
+            this.catcheurDao = catcheurDao;
+        }
+
+        @Override
+        protected Void doInBackground(AsyncTaskTwoParams... asyncTaskTwoParams) {
+            catcheurDao.insertTeamWithCatcheurs(new TeamCatcheurCrossRef(asyncTaskTwoParams[0].team.getTeamId(), asyncTaskTwoParams[0].catcheur.getCatcheurId()));
+            return null;
+        }
+    }
+
+    public List<CatcheurWithTeams> getCatcheursWithTeams() throws ExecutionException, InterruptedException {return new getCatcheursWithTeamsAsyncTask(catcheurDao).execute().get();}
+
+    private static class getCatcheursWithTeamsAsyncTask extends AsyncTask<Void, Void, List<CatcheurWithTeams>>{
         private CatcheurDao catcheurDao;
 
-        deleteAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
+        getCatcheursWithTeamsAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected  List<CatcheurWithTeams> doInBackground(Void... voids){
+            return catcheurDao.getCatcheursWithTeams();
+        }
+    }
+
+    public Catcheur getCatcheurById(String id) throws ExecutionException, InterruptedException { return new getCatcheurByIdAsyncTask(catcheurDao).execute(id).get();}
+
+    private static class getCatcheurByIdAsyncTask extends AsyncTask<String, Void, Catcheur>{
+        private CatcheurDao catcheurDao;
+
+        getCatcheurByIdAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected  Catcheur doInBackground(String... strings){
+            return catcheurDao.getCatcheurById(strings[0]);
+        }
+    }
+
+
+    public void deleteAll(){
+        new deleteAllAsyncTask(catcheurDao).execute();
+    }
+
+    private static class deleteAllAsyncTask extends AsyncTask<Void, Void, Void>{
+        private CatcheurDao catcheurDao;
+
+        deleteAllAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
 
         @Override
         protected  Void doInBackground(Void... voids){
@@ -73,14 +136,21 @@ public class CatcheurRepository {
     }
 
     public void delete(Catcheur catcheur){
-        ExecutorService executorService = Executors.newSingleThreadExecutor();
-        Handler handler = new Handler(Looper.getMainLooper());
-
-        executorService.execute(new Runnable() {
-            @Override
-            public void run() {
-                catcheurDao.delete(catcheur);
-            }
-        });
+        new deleteAsyncTask(catcheurDao).execute(catcheur);
     }
+<<<<<<< HEAD
+=======
+
+    public static class deleteAsyncTask extends  AsyncTask<Catcheur, Void, Void>{
+        private CatcheurDao catcheurDao;
+        deleteAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected Void doInBackground(Catcheur... catcheurs) {
+            catcheurDao.delete(catcheurs[0]);
+            return null;
+        }
+    }
+
+>>>>>>> jeremy
 }

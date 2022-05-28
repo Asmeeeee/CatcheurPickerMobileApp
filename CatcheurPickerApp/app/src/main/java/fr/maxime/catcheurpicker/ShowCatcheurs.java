@@ -27,12 +27,9 @@ import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
 public class ShowCatcheurs extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
-    private List<Team> dataTeam = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
-    private CustomAdapterTeam customAdapterTeam;
     private CatcheurViewModel catcheurViewModel;
-    private TeamViewModel teamViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +38,17 @@ public class ShowCatcheurs extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_show_catcheurs);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
+<<<<<<< HEAD
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
         customAdapterTeam = new CustomAdapterTeam(dataTeam);
+=======
+        RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
+        linearLayoutManager = new LinearLayoutManager(this);
+        customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
+>>>>>>> jeremy
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -56,12 +59,12 @@ public class ShowCatcheurs extends AppCompatActivity {
                         .setMessage("Poids: "+catcheur.getTaille() + " Taille : "+catcheur.getTaille())
                         .show();
             }
-
             @Override
             public void onItemLongClick(int position, View view) {
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
         });
+<<<<<<< HEAD
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -72,12 +75,28 @@ public class ShowCatcheurs extends AppCompatActivity {
                         .setMessage("Nom de la team: "+team.getNomTeam())
                         .show();
             }
+=======
+        recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
+        recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
 
+>>>>>>> jeremy
+
+        catcheurViewModel.getNbCatcheursLD().observe(this, new Observer<Integer>(){
             @Override
-            public void onItemLongClick(int position, View view) {
-                teamViewModel.deleteOneTeam(dataTeam.get(position));
+            public void onChanged(Integer integer) {
+                TextView textView = findViewById(R.id.textViewNbLD);
+                textView.setText("nb Catcheurs LD: "+ integer);
             }
         });
+        catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
+            @Override
+            public void onChanged(List<Catcheur> catcheurs) {
+                dataCatcheur = catcheurs;
+                customAdapterCatcheur.setData(catcheurs);
+                customAdapterCatcheur.notifyDataSetChanged();
+            }
+        });
+<<<<<<< HEAD
         recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
         recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
 
@@ -97,6 +116,8 @@ public class ShowCatcheurs extends AppCompatActivity {
                 customAdapterCatcheur.notifyDataSetChanged();
             }
         });
+=======
+>>>>>>> jeremy
     }
 
     public void goToAddCatcheur(View view){
