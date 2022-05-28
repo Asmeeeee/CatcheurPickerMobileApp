@@ -14,6 +14,7 @@ import java.util.concurrent.Executors;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamCatcheurCrossRef;
 import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 
 public class TeamRepository {
@@ -27,6 +28,20 @@ public class TeamRepository {
         nbTeamLD = teamDao.nbTeamLD();
         allTeamsLD = teamDao.getAllTeamLD();
 
+    }
+
+    public TeamWithCatcheurs getTeamsWithCatcheursByTeam(int id) throws ExecutionException, InterruptedException{
+        return new getTeamsWithCatcheursByTeamAsyncTask(teamDao).execute(id).get();
+    }
+
+    public static class getTeamsWithCatcheursByTeamAsyncTask extends AsyncTask<Integer, Void, TeamWithCatcheurs>{
+        private TeamDao teamDao;
+        getTeamsWithCatcheursByTeamAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected TeamWithCatcheurs doInBackground(Integer... integers) {
+            return teamDao.getTeamsWithCatcheursByTeam(integers[0]);
+        }
     }
 
     public List<TeamWithCatcheurs> getTeamsWithCatcheurs() throws ExecutionException, InterruptedException {
@@ -43,17 +58,46 @@ public class TeamRepository {
         }
     }
 
-    public Team getTeamById(String id) throws  ExecutionException, InterruptedException{
+    public Team getTeamById(int id) throws  ExecutionException, InterruptedException{
         return new getTeamByIdAsyncTask(teamDao).execute().get();
     }
 
-    public static class getTeamByIdAsyncTask extends  AsyncTask<String, Void, Team>{
+    public static class getTeamByIdAsyncTask extends  AsyncTask<Integer, Void, Team>{
         private TeamDao teamDao;
         getTeamByIdAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
 
         @Override
-        protected Team doInBackground(String... strings) {
-            return teamDao.getTeamById(strings[0]);
+        protected Team doInBackground(Integer... integers) {
+            return teamDao.getTeamById(integers[0]);
+        }
+    }
+
+    public static class AsyncTaskTwoParams{
+        private Catcheur catcheur;
+        private Team team;
+
+        AsyncTaskTwoParams(Catcheur catcheur, Team team){
+            this.catcheur = catcheur;
+            this.team = team;
+        }
+    }
+
+    public void insertTeamWithCatcheurs(Catcheur catcheur, Team team){
+        new insertTeamWithCatcheursAsyncTask(teamDao).execute(new AsyncTaskTwoParams(catcheur, team));
+    }
+
+    public static  class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
+
+        private  TeamDao teamDao;
+
+        public insertTeamWithCatcheursAsyncTask(TeamDao teamDao){
+            this.teamDao = teamDao;
+        }
+
+        @Override
+        protected Void doInBackground(AsyncTaskTwoParams... asyncTaskTwoParams) {
+            teamDao.insertTeamWithCatcheurs(new TeamCatcheurCrossRef(asyncTaskTwoParams[0].team.getTeamId(), asyncTaskTwoParams[0].catcheur.getCatcheurId()));
+            return null;
         }
     }
 

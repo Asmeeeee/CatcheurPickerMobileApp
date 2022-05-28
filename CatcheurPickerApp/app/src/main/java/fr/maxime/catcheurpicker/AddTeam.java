@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
@@ -97,11 +98,15 @@ public class AddTeam extends AppCompatActivity {
         recyclerViewAddTeamCatcheursSelected.setLayoutManager(linearLayoutManager);
     }
 
-    public void addTeam(View view){
-        System.out.println("Je passe dans addTeam");
+    public void addTeam(View view)  throws ExecutionException, InterruptedException{
         EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
         String strNomTeam = fieldNomTeam.getText().toString();
-        teamViewModel.insert(new Team(strNomTeam, "image"));
+        Team team = new Team(strNomTeam, "image");
+        //team = teamViewModel.getTeamById(team.getTeamId());
+        teamViewModel.insert(team);
+        for(Catcheur catcheur : catcheursSelected){
+            teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
+        }
     }
 
     //-------------------------------------------------------------------------------------

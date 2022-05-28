@@ -47,7 +47,11 @@ public class CatcheurRepository {
         }
     }
 
-    public static  class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
+    public void insertTeamWithCatcheurs(Catcheur catcheur, Team team){
+        new insertTeamWithCatcheursAsyncTask(catcheurDao).execute(new AsyncTaskTwoParams(catcheur, team));
+    }
+
+    public static   class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
 
         private  CatcheurDao catcheurDao;
 

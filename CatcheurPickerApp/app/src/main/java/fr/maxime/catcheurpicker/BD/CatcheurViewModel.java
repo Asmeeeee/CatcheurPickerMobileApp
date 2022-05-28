@@ -10,6 +10,7 @@ import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
+import fr.maxime.catcheurpicker.Model.Team;
 
 public class CatcheurViewModel extends AndroidViewModel {
     private CatcheurRepository catcheurRepository;
@@ -46,4 +47,6 @@ public class CatcheurViewModel extends AndroidViewModel {
     public void insert(Catcheur catcheur){
         catcheurRepository.insert(catcheur);
     }
+
+    public void insertTeamWithCatcheursAsyncTask(Catcheur catcheur, Team team){ catcheurRepository.insertTeamWithCatcheurs(catcheur, team);}
 }
