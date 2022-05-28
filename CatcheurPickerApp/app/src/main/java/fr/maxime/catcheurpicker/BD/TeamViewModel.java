@@ -28,6 +28,8 @@ public class TeamViewModel extends AndroidViewModel {
 
     public Team getTeamById(int id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamById(id);}
 
+    public Integer getTeamIdMax() throws ExecutionException, InterruptedException{ return teamRepository.getTeamIdMax();}
+
     public LiveData<Integer> getNbTeamsLD() {
         return nbTeamsLD;
     }

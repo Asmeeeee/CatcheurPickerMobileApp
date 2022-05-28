@@ -102,8 +102,9 @@ public class AddTeam extends AppCompatActivity {
         EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
         String strNomTeam = fieldNomTeam.getText().toString();
         Team team = new Team(strNomTeam, "image");
-        //team = teamViewModel.getTeamById(team.getTeamId());
         teamViewModel.insert(team);
+        int idTeam = teamViewModel.getTeamIdMax();
+        team = teamViewModel.getTeamById(idTeam);
         for(Catcheur catcheur : catcheursSelected){
             teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
         }

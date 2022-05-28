@@ -53,4 +53,8 @@ public interface TeamDao{
     @Transaction
     @Insert(onConflict = REPLACE)
     void insertTeamWithCatcheurs(TeamCatcheurCrossRef teamCatcheurCrossRef);
+
+    @Transaction
+    @Query("SELECT max(teamId) FROM teamTable")
+    Integer getTeamIdMax();
 }

@@ -58,8 +58,22 @@ public class TeamRepository {
         }
     }
 
-    public Team getTeamById(int id) throws  ExecutionException, InterruptedException{
-        return new getTeamByIdAsyncTask(teamDao).execute().get();
+    public Integer getTeamIdMax() throws ExecutionException, InterruptedException{
+        return new getTeamIdMaxAsyncTask(teamDao).execute().get();
+    }
+
+    public static class getTeamIdMaxAsyncTask extends AsyncTask<Void, Void, Integer>{
+        private TeamDao teamDao;
+        getTeamIdMaxAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected Integer doInBackground(Void... voids) {
+            return teamDao.getTeamIdMax();
+        }
+    }
+
+    public Team getTeamById(int id) throws ExecutionException, InterruptedException{
+        return new getTeamByIdAsyncTask(teamDao).execute(id).get();
     }
 
     public static class getTeamByIdAsyncTask extends  AsyncTask<Integer, Void, Team>{
