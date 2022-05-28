@@ -50,10 +50,8 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
             public void onItemClick(int position, View v) {
                 Log.d("MesLogs","onItemClick MainActivity");
                 Catcheur catcheur = dataCatcheur.get(position);
-                new AlertDialog.Builder(v.getContext())
-                        .setTitle(catcheur.getNomScene())
-                        .setMessage("Poids: "+catcheur.getTaille() + " Taille : "+catcheur.getTaille())
-                        .show();
+                System.out.println("Click");
+                catcheursSelected.add(catcheur);
             }
             @Override
             public void onItemLongClick(int position, View view) {
@@ -81,7 +79,6 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
 
     public void goToAddTeam(View view){
         Intent intent = new Intent(this, AddTeam.class);
-        catcheursSelected.add(dataCatcheur.get(0));
         intent.putParcelableArrayListExtra("catcheursSelected", (ArrayList<? extends Parcelable>) catcheursSelected);
         startActivity(intent);
         finish();
