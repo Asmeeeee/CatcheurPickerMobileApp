@@ -24,10 +24,6 @@
         "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\mipmap-mdpi\\ic_launcher.png"
     },
     {
-        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_item_catcheurs_selected.xml.flat",
-        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/item_catcheurs_selected.xml"
-    },
-    {
         "merged": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\xml_backup_rules.xml.flat",
         "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\xml\\backup_rules.xml"
     },
@@ -60,6 +56,10 @@
         "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\mipmap-xxhdpi\\ic_launcher_round.png"
     },
     {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_item_catcheur.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/item_catcheur.xml"
+    },
+    {
         "merged": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\layout_activity_show_teams.xml.flat",
         "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\layout\\activity_show_teams.xml"
     },
@@ -88,12 +88,12 @@
         "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\layout\\activity_add_catcheur.xml"
     },
     {
-        "merged": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\mipmap-xxhdpi\\ic_launcher.png"
-    },
-    {
         "merged": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\layout_item_catcheur.xml.flat",
         "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\layout\\item_catcheur.xml"
+    },
+    {
+        "merged": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\mipmap-xxhdpi\\ic_launcher.png"
     },
     {
         "merged": "C:\\Users\\jerem\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\layout_item_team.xml.flat",
