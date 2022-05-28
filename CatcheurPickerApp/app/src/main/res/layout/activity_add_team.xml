@@ -88,7 +88,7 @@
                         android:layout_margin="20dp"
                         android:background="#8CADBC"
                         android:onClick="goToLinkCatcheursToTeam"
-                        android:text="+ Ajouter un catcheur"
+                        android:text="+ Ajouter des catcheurs"
                         android:textAlignment="textStart" />
                 </LinearLayout>
             </ScrollView>

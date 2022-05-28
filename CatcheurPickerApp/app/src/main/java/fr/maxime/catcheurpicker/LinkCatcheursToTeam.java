@@ -32,9 +32,7 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
     private List<Catcheur> catcheursSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
-    private CustomAdapterTeam customAdapterTeam;
     private CatcheurViewModel catcheurViewModel;
-    private TeamViewModel teamViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

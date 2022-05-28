@@ -2892,12 +2892,11 @@ int id progress_circular 0x7f080177
 int id progress_horizontal 0x7f080178
 int id radio 0x7f080179
 int id ratio 0x7f08017a
-int id rbFemelle 0x7f08017b
-int id rbMale 0x7f08017c
 int id rectangles 0x7f08017d
 int id recyclerViewAddTeamCatcheursSelected 0x7f08017e
 int id recyclerViewCatcheurs 0x7f08017f
 int id recyclerViewLinkCatcheursToTeam 0x7f080180
+int id recyclerViewLinkTeamsToCatcheur 0x7f080220
 int id recyclerViewTeams 0x7f080181
 int id reverseSawtooth 0x7f080182
 int id right 0x7f080183
@@ -2929,7 +2928,6 @@ int id search_voice_btn 0x7f08019c
 int id select_dialog_listview 0x7f08019d
 int id selected 0x7f08019e
 int id selection_type 0x7f08019f
-int id sexe 0x7f0801a0
 int id sharedValueSet 0x7f0801a1
 int id sharedValueUnset 0x7f0801a2
 int id shortcut 0x7f0801a3
@@ -3171,7 +3169,9 @@ int layout design_text_input_start_icon 0x7f0b002f
 int layout item_catcheur 0x7f0b0030
 int layout item_catcheurs_selected 0x7f0b0031
 int layout item_team 0x7f0b0032
+int layout item_team_selected 0x7f0b007e
 int layout link_catcheurs_to_team 0x7f0b0033
+int layout link_teams_to_catcheur 0x7f0b007f
 int layout m3_alert_dialog 0x7f0b0034
 int layout m3_alert_dialog_actions 0x7f0b0035
 int layout m3_alert_dialog_title 0x7f0b0036
