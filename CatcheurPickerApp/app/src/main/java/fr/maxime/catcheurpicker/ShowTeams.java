@@ -43,13 +43,16 @@ public class ShowTeams extends AppCompatActivity {
         customAdapterTeam = new CustomAdapterTeam(dataTeam);
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
-            public void onItemClick(int position, View v){
+            public void onItemClick(int position, View v) throws ExecutionException, InterruptedException {
                 Log.d("MesLogs","onItemClick MainActivity");
                 Team team = dataTeam.get(position);
                 TeamWithCatcheurs teamWithCatcheurs = teamViewModel.getTeamWithCatcheursById(team.getTeamId());
+                System.out.println("TeamWithCatcheurs");
+                System.out.println(teamWithCatcheurs.team);
+                System.out.println(teamWithCatcheurs.catcheurs);
                 new AlertDialog.Builder(v.getContext())
                         .setTitle(team.getNomTeam())
-                        .setMessage("Nom de la team: "+team.getNomTeam())
+                        .setMessage("Nom de la team: "+team.getNomTeam() + "\nCatcheurs associés: "+ teamWithCatcheurs.catcheurs)
                         .show();
             }
 

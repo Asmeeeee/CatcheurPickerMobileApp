@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.R;
@@ -52,7 +53,13 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
         @Override
         public void onClick(View v) {
             Log.d("MesLogs","onClick ViewHolder");
-            myGestionClick.onItemClick(getAdapterPosition(),v);
+            try {
+                myGestionClick.onItemClick(getAdapterPosition(),v);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override

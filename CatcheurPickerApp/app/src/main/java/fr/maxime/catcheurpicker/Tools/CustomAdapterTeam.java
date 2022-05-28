@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.BD.TeamRepository;
 import fr.maxime.catcheurpicker.Model.Team;
@@ -30,13 +31,12 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
 
     public static class MyViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener, View.OnLongClickListener{
-        private TextView tvNomTeam, tvImage, tvNbCatcheurs;
+        private TextView tvNomTeam, tvImage;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             tvNomTeam = itemView.findViewById(R.id.textViewNomTeam);
             tvImage = itemView.findViewById(R.id.textViewImage);
-            tvNbCatcheurs = itemView.findViewById(R.id.textViewNbCatcheurs);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
@@ -44,14 +44,18 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
         public void display(Team t){
             tvNomTeam.setText(t.getNomTeam());
             tvImage.setText(t.getImage());
-            //TeamRepository.getTeamsWithCatcheursByTeam(t.getTeamId());
-            //tvNbCatcheurs.setText(t.get);
         }
 
         @Override
         public void onClick(View v) {
             Log.d("MesLogs","onClick ViewHolder");
-            myGestionClick.onItemClick(getAdapterPosition(),v);
+            try {
+                myGestionClick.onItemClick(getAdapterPosition(),v);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override
