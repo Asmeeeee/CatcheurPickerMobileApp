@@ -60,6 +60,13 @@ public class CustomAdapterCatcheursSelected extends RecyclerView.Adapter<CustomA
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+            try {
+                myGestionClick.onItemClick(getAdapterPosition(),v);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override

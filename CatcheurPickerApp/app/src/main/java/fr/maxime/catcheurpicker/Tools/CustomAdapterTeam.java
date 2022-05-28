@@ -36,14 +36,14 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             tvNomTeam = itemView.findViewById(R.id.textViewNomTeam);
-            tvImage = itemView.findViewById(R.id.textViewImage);
+            //tvImage = itemView.findViewById(R.id.textViewImage);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
 
         public void display(Team t){
             tvNomTeam.setText(t.getNomTeam());
-            tvImage.setText(t.getImage());
+            //tvImage.setText(t.getImage());
         }
 
         @Override

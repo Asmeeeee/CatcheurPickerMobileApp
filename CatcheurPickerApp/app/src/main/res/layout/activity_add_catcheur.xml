@@ -33,7 +33,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="660dp"
+            android:layout_height="631dp"
             android:orientation="vertical">
 
             <TextView
@@ -160,11 +160,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#3F51B5"
+                android:onClick="addCatcheur"
                 android:text="Ajouter le catcheur"
                 android:textColor="@color/white"
-                android:textStyle="bold"
-                android:onClick="addCatcheur"
-                />
+                android:textStyle="bold" />
 
 
         </LinearLayout>
@@ -179,8 +178,7 @@
                 android:layout_width="400px"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
-                android:text="Ajouter un Catcheur
-                 + "
+                android:text="Ajouter un Catcheur \n+ "
                 android:textColor="@color/black" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -198,8 +196,7 @@
                 android:layout_width="400px"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-                android:text="Ajouter une Team
-                +"
+                android:text="Ajouter une Team \n+"
                 android:onClick="goToAddTeam"
                 />
 

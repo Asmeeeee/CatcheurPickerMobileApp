@@ -39,7 +39,7 @@ public class AddCatcheur extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_add_catcheur);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
-        //RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
+        // RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
 

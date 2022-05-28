@@ -54,8 +54,6 @@ public class AddTeam extends AppCompatActivity {
         try {
             Bundle bundle = this.getIntent().getExtras();
             catcheursSelected = (List<Catcheur>) bundle.get("catcheursSelected");
-            System.out.println("Resultat");
-            System.out.println(catcheursSelected);
             customAdapterCatcheursSelected.setData(catcheursSelected);
             customAdapterCatcheursSelected.notifyDataSetChanged();
         }
