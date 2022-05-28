@@ -6,6 +6,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
@@ -23,9 +24,9 @@ public class TeamViewModel extends AndroidViewModel {
         allTeamsLD = teamRepository.getAllTeamsLD();
     }
 
-    public List<TeamWithCatcheurs> getCatcheursWithTeam(){return teamRepository.getTeamsWithCatcheurs();}
+    public List<TeamWithCatcheurs> getCatcheursWithTeam() throws ExecutionException, InterruptedException {return teamRepository.getTeamsWithCatcheurs();}
 
-    public Team getTeamById(String id){ return teamRepository.getTeamById(id);}
+    public Team getTeamById(String id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamById(id);}
 
     public LiveData<Integer> getNbTeamsLD() {
         return nbTeamsLD;

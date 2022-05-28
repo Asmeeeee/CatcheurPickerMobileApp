@@ -1,5 +1,7 @@
 package fr.maxime.catcheurpicker.BD;
 
+import static androidx.room.OnConflictStrategy.REPLACE;
+
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -11,8 +13,7 @@ import java.util.List;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
-import fr.maxime.catcheurpicker.Model.Team;
-import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
+import fr.maxime.catcheurpicker.Model.TeamCatcheurCrossRef;
 
 @Dao
 public interface CatcheurDao {
@@ -21,7 +22,7 @@ public interface CatcheurDao {
     void delete(Catcheur catcheur);
 
     @Transaction
-    @Insert
+    @Insert(onConflict = REPLACE)
     void insert(Catcheur catcheur);
 
     @Transaction
@@ -46,5 +47,9 @@ public interface CatcheurDao {
 
     @Query("SELECT * FROM catcheurTable")
     List<Catcheur> getAllCatcheurs();
+
+    @Transaction
+    @Insert(onConflict = REPLACE)
+    void insertTeamWithCatcheurs(TeamCatcheurCrossRef teamCatcheurCrossRef);
 
 }

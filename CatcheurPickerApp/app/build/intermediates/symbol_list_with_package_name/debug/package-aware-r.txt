@@ -2620,6 +2620,7 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
+id button
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2895,7 +2896,9 @@ id ratio
 id rbFemelle
 id rbMale
 id rectangles
+id recyclerViewAddTeamCatcheursSelected
 id recyclerViewCatcheurs
+id recyclerViewLinkCatcheursToTeam
 id recyclerViewTeams
 id reverseSawtooth
 id right
@@ -3168,7 +3171,9 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout item_catcheur
+layout item_catcheurs_selected
 layout item_team
+layout link_catcheurs_to_team
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

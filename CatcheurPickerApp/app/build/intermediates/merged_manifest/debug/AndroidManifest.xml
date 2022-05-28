@@ -31,6 +31,9 @@
             android:name="fr.maxime.catcheurpicker.ShowTeams"
             android:exported="false" />
         <activity
+            android:name="fr.maxime.catcheurpicker.LinkCatcheursToTeam"
+            android:exported="false" />
+        <activity
             android:name="fr.maxime.catcheurpicker.ShowCatcheurs"
             android:exported="true" >
             <intent-filter>
