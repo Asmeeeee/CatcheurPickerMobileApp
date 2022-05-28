@@ -23,6 +23,7 @@ import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
+import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheursSelected;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
@@ -30,7 +31,7 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
     private List<Catcheur> catcheursSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
-    private CustomAdapterCatcheur customAdapterCatcheur;
+    private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
     private CustomAdapterTeam customAdapterTeam;
     private CatcheurViewModel catcheurViewModel;
     private TeamViewModel teamViewModel;
@@ -45,8 +46,8 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
         RecyclerView recyclerViewLinkCatcheursToTeam = findViewById(R.id.recyclerViewLinkCatcheursToTeam);
         linearLayoutManager = new LinearLayoutManager(this);
-        customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
-        CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
+        customAdapterCatcheursSelected = new CustomAdapterCatcheursSelected(dataCatcheur);
+        CustomAdapterCatcheursSelected.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
                 Log.d("MesLogs","onItemClick MainActivity");
@@ -61,15 +62,15 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
         });
-        recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterCatcheur);
+        recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterCatcheursSelected);
         recyclerViewLinkCatcheursToTeam.setLayoutManager(linearLayoutManager);
 
         catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
             @Override
             public void onChanged(List<Catcheur> catcheurs) {
                 dataCatcheur = catcheurs;
-                customAdapterCatcheur.setData(catcheurs);
-                customAdapterCatcheur.notifyDataSetChanged();
+                customAdapterCatcheursSelected.setData(catcheurs);
+                customAdapterCatcheursSelected.notifyDataSetChanged();
             }
         });
     }
