@@ -23,15 +23,9 @@ public class CatcheurViewModel extends AndroidViewModel {
         allCatcheursLD = catcheurRepository.getAllCatcheursLD();
     }
 
-<<<<<<< HEAD
-    public List<CatcheurWithTeams> getCatcheursWithTeams(){ return catcheurRepository.getCatcheursWithTeams();}
-
-    public Catcheur getCatcheurById(String id){ return catcheurRepository.getCatcheurById(id);}
-=======
     public List<CatcheurWithTeams> getCatcheursWithTeams() throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheursWithTeams();}
 
     public Catcheur getCatcheurById(String id) throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheurById(id);}
->>>>>>> jeremy
 
     public LiveData<Integer> getNbCatcheursLD() {
         return nbCatcheursLD;

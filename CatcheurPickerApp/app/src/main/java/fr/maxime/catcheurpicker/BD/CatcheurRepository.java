@@ -14,11 +14,8 @@ import java.util.concurrent.Executors;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
-<<<<<<< HEAD
-=======
 import fr.maxime.catcheurpicker.Model.Team;
 import fr.maxime.catcheurpicker.Model.TeamCatcheurCrossRef;
->>>>>>> jeremy
 
 public class CatcheurRepository {
     private CatcheurDao catcheurDao;
@@ -44,11 +41,6 @@ public class CatcheurRepository {
         return allCatcheursLD;
     }
 
-<<<<<<< HEAD
-
-    public void deleteAll(){
-        new deleteAsyncTask(catcheurDao).execute();
-=======
     public static class AsyncTaskTwoParams{
         private Catcheur catcheur;
         private Team team;
@@ -57,7 +49,6 @@ public class CatcheurRepository {
             this.catcheur = catcheur;
             this.team = team;
         }
->>>>>>> jeremy
     }
 
     public static  class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
@@ -138,8 +129,6 @@ public class CatcheurRepository {
     public void delete(Catcheur catcheur){
         new deleteAsyncTask(catcheurDao).execute(catcheur);
     }
-<<<<<<< HEAD
-=======
 
     public static class deleteAsyncTask extends  AsyncTask<Catcheur, Void, Void>{
         private CatcheurDao catcheurDao;
@@ -152,5 +141,4 @@ public class CatcheurRepository {
         }
     }
 
->>>>>>> jeremy
 }

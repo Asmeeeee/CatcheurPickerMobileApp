@@ -29,11 +29,6 @@ public class TeamRepository {
 
     }
 
-<<<<<<< HEAD
-    public List<TeamWithCatcheurs> getTeamsWithCatcheurs(){ return teamDao.getTeamsWithCatcheurs();}
-
-    public Team getTeamById(String id){return teamDao.getTeamById(id);}
-=======
     public List<TeamWithCatcheurs> getTeamsWithCatcheurs() throws ExecutionException, InterruptedException {
         return new getTeamsWithCatcheursAsyncTask(teamDao).execute().get();
     }
@@ -61,7 +56,6 @@ public class TeamRepository {
             return teamDao.getTeamById(strings[0]);
         }
     }
->>>>>>> jeremy
 
     public LiveData<Integer> getNbTeamLD(){return  this.nbTeamLD;}
 

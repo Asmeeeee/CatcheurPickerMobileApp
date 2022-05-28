@@ -24,15 +24,9 @@ public class TeamViewModel extends AndroidViewModel {
         allTeamsLD = teamRepository.getAllTeamsLD();
     }
 
-<<<<<<< HEAD
-    public List<TeamWithCatcheurs> getCatcheursWithTeam(){return teamRepository.getTeamsWithCatcheurs();}
-
-    public Team getTeamById(String id){ return teamRepository.getTeamById(id);}
-=======
     public List<TeamWithCatcheurs> getCatcheursWithTeam() throws ExecutionException, InterruptedException {return teamRepository.getTeamsWithCatcheurs();}
 
     public Team getTeamById(String id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamById(id);}
->>>>>>> jeremy
 
     public LiveData<Integer> getNbTeamsLD() {
         return nbTeamsLD;

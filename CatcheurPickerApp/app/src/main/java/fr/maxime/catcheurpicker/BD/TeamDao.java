@@ -22,11 +22,7 @@ public interface TeamDao{
     void delete(Team team);
 
     @Transaction
-<<<<<<< HEAD
-    @Insert
-=======
     @Insert(onConflict = REPLACE)
->>>>>>> jeremy
     void insert(Team catcheur);
 
     @Transaction
