@@ -49,8 +49,9 @@ public class LinkTeamsToCatcheur extends AppCompatActivity {
             public void onItemClick(int position, View v) {
                 Log.d("MesLogs","onItemClick MainActivity");
                 Team team = dataTeam.get(position);
-                System.out.println("Click");
-                teamsSelected.add(team);
+                if(!teamsSelected.contains(team)){
+                    teamsSelected.add(team);
+                }
             }
             @Override
             public void onItemLongClick(int position, View view) {
