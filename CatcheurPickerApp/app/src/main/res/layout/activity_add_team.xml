@@ -120,8 +120,7 @@
                 android:layout_width="400px"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-                android:text="Ajouter un Catcheur
-                 + "
+                android:text="Ajouter un Catcheur \n+ "
                 android:onClick="goToAddCatcheur"
                 android:textColor="@color/white" />
 
@@ -140,8 +139,7 @@
                 android:layout_width="400px"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
-                android:text="Ajouter une Team
-                +"
+                android:text="Ajouter une Team \n+"
 
                 android:textColor="@color/black" />
 

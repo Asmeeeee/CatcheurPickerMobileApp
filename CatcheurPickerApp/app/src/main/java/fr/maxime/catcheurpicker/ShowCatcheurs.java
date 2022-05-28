@@ -38,17 +38,9 @@ public class ShowCatcheurs extends AppCompatActivity {
         getSupportActionBar().hide();
         setContentView(R.layout.activity_show_catcheurs);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
-<<<<<<< HEAD
-        teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
-        customAdapterTeam = new CustomAdapterTeam(dataTeam);
-=======
-        RecyclerView recyclerViewCatcheurs = findViewById(R.id.recyclerViewCatcheurs);
-        linearLayoutManager = new LinearLayoutManager(this);
-        customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
->>>>>>> jeremy
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -64,39 +56,6 @@ public class ShowCatcheurs extends AppCompatActivity {
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
         });
-<<<<<<< HEAD
-        CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
-            @Override
-            public void onItemClick(int position, View v) {
-                Log.d("MesLogs","onItemClick MainActivity");
-                Team team = dataTeam.get(position);
-                new AlertDialog.Builder(v.getContext())
-                        .setTitle(team.getNomTeam())
-                        .setMessage("Nom de la team: "+team.getNomTeam())
-                        .show();
-            }
-=======
-        recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
-        recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
-
->>>>>>> jeremy
-
-        catcheurViewModel.getNbCatcheursLD().observe(this, new Observer<Integer>(){
-            @Override
-            public void onChanged(Integer integer) {
-                TextView textView = findViewById(R.id.textViewNbLD);
-                textView.setText("nb Catcheurs LD: "+ integer);
-            }
-        });
-        catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
-            @Override
-            public void onChanged(List<Catcheur> catcheurs) {
-                dataCatcheur = catcheurs;
-                customAdapterCatcheur.setData(catcheurs);
-                customAdapterCatcheur.notifyDataSetChanged();
-            }
-        });
-<<<<<<< HEAD
         recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
         recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
 
@@ -116,8 +75,6 @@ public class ShowCatcheurs extends AppCompatActivity {
                 customAdapterCatcheur.notifyDataSetChanged();
             }
         });
-=======
->>>>>>> jeremy
     }
 
     public void goToAddCatcheur(View view){

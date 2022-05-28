@@ -29,10 +29,6 @@ public class CatcheurRepository {
         allCatcheursLD = catcheurDao.getAllCatcheurLD();
     }
 
-    public List<CatcheurWithTeams> getCatcheursWithTeams(){return catcheurDao.getCatcheursWithTeams();}
-
-    public Catcheur getCatcheurById(String id){ return  catcheurDao.getCatcheurById(id);}
-
     public LiveData<Integer> getNbCatcheurLD() {
         return nbCatcheurLD;
     }
