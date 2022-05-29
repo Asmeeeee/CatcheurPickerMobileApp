@@ -70,7 +70,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewTeams"
             android:layout_width="match_parent"
-            android:layout_height="600dp" />
+            android:layout_height="613dp" />
 
 
         <LinearLayout
@@ -81,7 +81,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddCatcheur"
                 android:layout_width="0dp"
-                android:layout_weight="33.33"
+                android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
                 android:text="Ajouter un Catcheur \n+ "
@@ -91,7 +91,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/homeButton"
                 android:layout_width="0dp"
-                android:layout_weight="33.33"
+                android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
                 android:text="Accueil"
@@ -101,7 +101,7 @@
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddTeam"
                 android:layout_width="0dp"
-                android:layout_weight="33.33"
+                android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
                 android:text="Ajouter une Team \n+"

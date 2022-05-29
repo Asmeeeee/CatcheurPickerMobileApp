@@ -33,7 +33,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="646dp"
+            android:layout_height="660dp"
             android:orientation="vertical">
 
             <TextView
@@ -144,7 +144,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewAddTeamCatcheursSelected"
                 android:layout_width="match_parent"
-                android:layout_height="130dp" />
+                android:layout_height="142dp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
@@ -167,7 +167,8 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddCatcheur"
-                android:layout_width="140dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
                 android:text="Ajouter un Catcheur \n+ "
@@ -175,7 +176,8 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/homeButton"
-                android:layout_width="134dp"
+                android:layout_width="0dp"
+                android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
                 android:onClick="goToShowCatcheurs"
@@ -185,7 +187,8 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddTeam"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
+                android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
                 android:onClick="goToAddTeam"
