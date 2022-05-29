@@ -29,6 +29,33 @@ public class CatcheurRepository {
         allCatcheursLD = catcheurDao.getAllCatcheurLD();
     }
 
+    public CatcheurWithTeams getCatcheurWithTeamsById(int id) throws ExecutionException, InterruptedException{
+        return new getCatcheurWithTeamsByIdAsyncTask(catcheurDao).execute(id).get();
+    }
+
+    public static class getCatcheurWithTeamsByIdAsyncTask extends AsyncTask<Integer, Void, CatcheurWithTeams>{
+        private CatcheurDao catcheurDao;
+        getCatcheurWithTeamsByIdAsyncTask(CatcheurDao catcheurDao){ this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected CatcheurWithTeams doInBackground(Integer... integers){
+            return catcheurDao.getCatcheurWithTeamsById(integers[0]);
+        }
+    }
+
+
+    public Integer getCatcheurIdMax() throws ExecutionException, InterruptedException{
+        return new getCatcheurIdMaxAsyncTask(catcheurDao).execute().get();
+    }
+
+    public static class getCatcheurIdMaxAsyncTask extends AsyncTask<Void, Void, Integer>{
+        private CatcheurDao catcheurDao;
+        getCatcheurIdMaxAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected Integer doInBackground(Void... voids){ return catcheurDao.getCatcheurIdMax();}
+    }
+
     public LiveData<Integer> getNbCatcheurLD() {
         return nbCatcheurLD;
     }
@@ -47,7 +74,11 @@ public class CatcheurRepository {
         }
     }
 
-    public static  class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
+    public void insertTeamWithCatcheurs(Catcheur catcheur, Team team){
+        new insertTeamWithCatcheursAsyncTask(catcheurDao).execute(new AsyncTaskTwoParams(catcheur, team));
+    }
+
+    public static   class insertTeamWithCatcheursAsyncTask extends  AsyncTask<AsyncTaskTwoParams,Void,Void>{
 
         private  CatcheurDao catcheurDao;
 
@@ -75,16 +106,16 @@ public class CatcheurRepository {
         }
     }
 
-    public Catcheur getCatcheurById(String id) throws ExecutionException, InterruptedException { return new getCatcheurByIdAsyncTask(catcheurDao).execute(id).get();}
+    public Catcheur getCatcheurById(Integer id) throws ExecutionException, InterruptedException { return new getCatcheurByIdAsyncTask(catcheurDao).execute(id).get();}
 
-    private static class getCatcheurByIdAsyncTask extends AsyncTask<String, Void, Catcheur>{
+    private static class getCatcheurByIdAsyncTask extends AsyncTask<Integer, Void, Catcheur>{
         private CatcheurDao catcheurDao;
 
         getCatcheurByIdAsyncTask(CatcheurDao catcheurDao){this.catcheurDao = catcheurDao;}
 
         @Override
-        protected  Catcheur doInBackground(String... strings){
-            return catcheurDao.getCatcheurById(strings[0]);
+        protected  Catcheur doInBackground(Integer... integers){
+            return catcheurDao.getCatcheurById(integers[0]);
         }
     }
 

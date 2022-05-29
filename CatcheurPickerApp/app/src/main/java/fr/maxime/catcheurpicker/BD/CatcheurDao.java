@@ -39,11 +39,15 @@ public interface CatcheurDao {
 
     @Transaction
     @Query("SELECT * from catcheurTable where catcheurId = :id")
-    Catcheur getCatcheurById(String id);
+    Catcheur getCatcheurById(Integer id);
 
     @Transaction
     @Query("SELECT * FROM catcheurTable")
     List<CatcheurWithTeams> getCatcheursWithTeams();
+
+    @Transaction
+    @Query("SELECT * FROM catcheurTable where catcheurId = :idCatcheur")
+    CatcheurWithTeams getCatcheurWithTeamsById(int idCatcheur);
 
     @Query("SELECT * FROM catcheurTable")
     List<Catcheur> getAllCatcheurs();
@@ -51,5 +55,9 @@ public interface CatcheurDao {
     @Transaction
     @Insert(onConflict = REPLACE)
     void insertTeamWithCatcheurs(TeamCatcheurCrossRef teamCatcheurCrossRef);
+
+    @Transaction
+    @Query("SELECT max(catcheurId) FROM catcheurTable")
+    Integer getCatcheurIdMax();
 
 }
