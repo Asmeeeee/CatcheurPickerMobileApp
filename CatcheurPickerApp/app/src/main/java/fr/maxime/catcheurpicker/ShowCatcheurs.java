@@ -16,11 +16,14 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Catcheur;
+import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
@@ -43,12 +46,13 @@ public class ShowCatcheurs extends AppCompatActivity {
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
-            public void onItemClick(int position, View v) {
+            public void onItemClick(int position, View v) throws ExecutionException, InterruptedException {
                 Log.d("MesLogs","onItemClick MainActivity");
                 Catcheur catcheur = dataCatcheur.get(position);
+                CatcheurWithTeams catcheurWithTeams = catcheurViewModel.getCatcheurWithTeamsById(catcheur.getCatcheurId());
                 new AlertDialog.Builder(v.getContext())
                         .setTitle(catcheur.getNomScene())
-                        .setMessage("Poids: "+catcheur.getTaille() + " Taille : "+catcheur.getTaille())
+                        .setMessage("Poids: "+catcheur.getTaille() + " Taille : "+catcheur.getTaille()+"\nTeams associées: "+ catcheurWithTeams.teams)
                         .show();
             }
             @Override

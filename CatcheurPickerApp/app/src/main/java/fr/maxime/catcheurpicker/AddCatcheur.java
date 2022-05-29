@@ -15,6 +15,7 @@ import android.widget.EditText;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
@@ -22,14 +23,16 @@ import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
+import fr.maxime.catcheurpicker.Tools.CustomAdapterTeamSelected;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
 public class AddCatcheur extends AppCompatActivity {
 
     private List<Catcheur> dataCatcheur = new ArrayList<>();
-    private List<Team> dataTeam = new ArrayList<>();
+    private List<Team> teamsSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
+    private CustomAdapterTeamSelected customAdapterTeamSelected;
     private CatcheurViewModel catcheurViewModel;
 
     @Override
@@ -42,7 +45,17 @@ public class AddCatcheur extends AppCompatActivity {
         // RecyclerView recyclerView = findViewById(R.id.recyclerview); pour la liste de catcheur ou team
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheur = new CustomAdapterCatcheur(dataCatcheur);
+        customAdapterTeamSelected = new CustomAdapterTeamSelected(teamsSelected);
 
+        try {
+            Bundle bundle = this.getIntent().getExtras();
+            teamsSelected = (List<Team>) bundle.get("teamsSelected");
+            customAdapterTeamSelected.setData(teamsSelected);
+            customAdapterTeamSelected.notifyDataSetChanged();
+        }
+        catch (NullPointerException nullPointerException){
+            nullPointerException.printStackTrace();
+        }
 
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
         @Override
@@ -61,7 +74,7 @@ public class AddCatcheur extends AppCompatActivity {
         }
     });
 }
-        public void addCatcheur(View view) {
+        public void addCatcheur(View view) throws ExecutionException, InterruptedException {
         EditText fieldNomCatcheur = findViewById(R.id.fieldNomCatcheur);
         String strNomCatcheur = fieldNomCatcheur.getText().toString();
         EditText fieldPoidsCatcheur = findViewById(R.id.fieldPoids);
@@ -71,7 +84,13 @@ public class AddCatcheur extends AppCompatActivity {
         EditText fieldDateNaissance = findViewById(R.id.fieldDateNaiss);
         String strDateNaissance =  fieldDateNaissance.getText().toString();
         System.out.println(strNomCatcheur+" "+intPoidsCatcheur+" "+ floatTailleCatcheur+" "+ strDateNaissance);
-        catcheurViewModel.insert(new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, "image", strDateNaissance));
+        Catcheur catcheur = new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, "image", strDateNaissance);
+        catcheurViewModel.insert(catcheur);
+        int idCatcheur = catcheurViewModel.getCatcheurIdMax();
+        catcheur = catcheurViewModel.getCatcheurById(idCatcheur);
+        for(Team team : teamsSelected){
+            catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
+        }
     }
 //-------------------------------------------------------------------------------------
 
@@ -83,6 +102,12 @@ public class AddCatcheur extends AppCompatActivity {
 
     public void goToShowCatcheurs(View view){
         Intent intent = new Intent(this, ShowCatcheurs.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToLinkTeamsToCatcheur(View view) {
+        Intent intent = new Intent(this, LinkTeamsToCatcheur.class);
         startActivity(intent);
         finish();
     }

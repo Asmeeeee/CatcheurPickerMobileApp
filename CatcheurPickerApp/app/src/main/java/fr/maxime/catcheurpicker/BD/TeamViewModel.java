@@ -24,9 +24,13 @@ public class TeamViewModel extends AndroidViewModel {
         allTeamsLD = teamRepository.getAllTeamsLD();
     }
 
-    public List<TeamWithCatcheurs> getCatcheursWithTeam() throws ExecutionException, InterruptedException {return teamRepository.getTeamsWithCatcheurs();}
+    public List<TeamWithCatcheurs> getTeamsWithCatcheurs() throws ExecutionException, InterruptedException {return teamRepository.getTeamsWithCatcheurs();}
 
-    public Team getTeamById(String id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamById(id);}
+    public TeamWithCatcheurs getTeamWithCatcheursById(int id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamsWithCatcheursByTeam(id);}
+
+    public Team getTeamById(int id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamById(id);}
+
+    public Integer getTeamIdMax() throws ExecutionException, InterruptedException{ return teamRepository.getTeamIdMax();}
 
     public LiveData<Integer> getNbTeamsLD() {
         return nbTeamsLD;
@@ -48,4 +52,6 @@ public class TeamViewModel extends AndroidViewModel {
         System.out.println("Je passe dans ViewModel");
         teamRepository.insert(team);
     }
+
+    public void insertTeamWithCatcheursAsyncTask(Catcheur catcheur, Team team){ teamRepository.insertTeamWithCatcheurs(catcheur, team);}
 }

@@ -2893,12 +2893,11 @@ id progress_circular
 id progress_horizontal
 id radio
 id ratio
-id rbFemelle
-id rbMale
 id rectangles
 id recyclerViewAddTeamCatcheursSelected
 id recyclerViewCatcheurs
 id recyclerViewLinkCatcheursToTeam
+id recyclerViewLinkTeamsToCatcheur
 id recyclerViewTeams
 id reverseSawtooth
 id right
@@ -2930,7 +2929,6 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
-id sexe
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3000,7 +2998,6 @@ id textView2
 id textViewDateNaissance
 id textViewImage
 id textViewNbLD
-id textViewNbTeam
 id textViewNbTeamLD
 id textViewNomScene
 id textViewNomTeam
@@ -3173,7 +3170,9 @@ layout design_text_input_start_icon
 layout item_catcheur
 layout item_catcheurs_selected
 layout item_team
+layout item_team_selected
 layout link_catcheurs_to_team
+layout link_teams_to_catcheur
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
