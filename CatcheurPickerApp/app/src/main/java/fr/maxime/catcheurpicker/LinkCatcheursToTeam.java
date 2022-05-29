@@ -53,6 +53,9 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
                 if(!catcheursSelected.contains(catcheur)){
                     catcheursSelected.add(catcheur);
                 }
+                else{
+                    catcheursSelected.remove(catcheur);
+                }
             }
             @Override
             public void onItemLongClick(int position, View view) {
