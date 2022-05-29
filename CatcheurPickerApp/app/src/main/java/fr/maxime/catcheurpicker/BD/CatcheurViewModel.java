@@ -10,6 +10,8 @@ import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.CatcheurWithTeams;
+import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 
 public class CatcheurViewModel extends AndroidViewModel {
     private CatcheurRepository catcheurRepository;
@@ -25,7 +27,11 @@ public class CatcheurViewModel extends AndroidViewModel {
 
     public List<CatcheurWithTeams> getCatcheursWithTeams() throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheursWithTeams();}
 
-    public Catcheur getCatcheurById(String id) throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheurById(id);}
+    public CatcheurWithTeams getCatcheurWithTeamsById(int id) throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheurWithTeamsById(id);}
+
+    public Catcheur getCatcheurById(Integer id) throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheurById(id);}
+
+    public Integer getCatcheurIdMax() throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheurIdMax();}
 
     public LiveData<Integer> getNbCatcheursLD() {
         return nbCatcheursLD;
@@ -46,4 +52,6 @@ public class CatcheurViewModel extends AndroidViewModel {
     public void insert(Catcheur catcheur){
         catcheurRepository.insert(catcheur);
     }
+
+    public void insertTeamWithCatcheursAsyncTask(Catcheur catcheur, Team team){ catcheurRepository.insertTeamWithCatcheurs(catcheur, team);}
 }

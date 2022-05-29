@@ -6,7 +6,6 @@ import android.os.Parcelable;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
-import android.widget.TextView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -22,68 +21,68 @@ import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
-import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheur;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterCatcheursSelected;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
+import fr.maxime.catcheurpicker.Tools.CustomAdapterTeamSelected;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
-public class LinkCatcheursToTeam extends AppCompatActivity {
-    private List<Catcheur> dataCatcheur = new ArrayList<>();
-    private List<Catcheur> catcheursSelected = new ArrayList<>();
+public class LinkTeamsToCatcheur extends AppCompatActivity {
+    private List<Team> dataTeam = new ArrayList<>();
+    private List<Team> teamsSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
-    private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
-    private CatcheurViewModel catcheurViewModel;
+    private CustomAdapterTeamSelected customAdapterTeamSelected;
+    private TeamViewModel teamViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("j'arrive dans le LinkCatcheursToTeam");
+        System.out.println("j'arrive dans le LinkTeamsToCatcheur");
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
-        setContentView(R.layout.link_catcheurs_to_team);
-        catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
-        RecyclerView recyclerViewLinkCatcheursToTeam = findViewById(R.id.recyclerViewLinkCatcheursToTeam);
+        setContentView(R.layout.link_teams_to_catcheur);
+        teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
+        RecyclerView recyclerViewLinkCatcheursToTeam = findViewById(R.id.recyclerViewLinkTeamsToCatcheur);
         linearLayoutManager = new LinearLayoutManager(this);
-        customAdapterCatcheursSelected = new CustomAdapterCatcheursSelected(dataCatcheur);
-        CustomAdapterCatcheursSelected.setMyGestionClick(new InterfaceGestionClick() {
+        customAdapterTeamSelected = new CustomAdapterTeamSelected(dataTeam);
+        CustomAdapterTeamSelected.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
                 Log.d("MesLogs","onItemClick MainActivity");
-                Catcheur catcheur = dataCatcheur.get(position);
-                if(!catcheursSelected.contains(catcheur)){
-                    catcheursSelected.add(catcheur);
+                Team team = dataTeam.get(position);
+                if(!teamsSelected.contains(team)){
+                    teamsSelected.add(team);
                 }
                 else{
-                    catcheursSelected.remove(catcheur);
+                    teamsSelected.remove(team);
                 }
             }
             @Override
             public void onItemLongClick(int position, View view) {
-                catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
+                teamViewModel.deleteOneTeam(dataTeam.get(position));
             }
         });
-        recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterCatcheursSelected);
+        recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterTeamSelected);
         recyclerViewLinkCatcheursToTeam.setLayoutManager(linearLayoutManager);
 
-        catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {
+        teamViewModel.getAllTeamsLD().observe(this, new Observer<List<Team>>() {
             @Override
-            public void onChanged(List<Catcheur> catcheurs) {
-                dataCatcheur = catcheurs;
-                customAdapterCatcheursSelected.setData(catcheurs);
-                customAdapterCatcheursSelected.notifyDataSetChanged();
+            public void onChanged(List<Team> teams) {
+                dataTeam = teams;
+                customAdapterTeamSelected.setData(teams);
+                customAdapterTeamSelected.notifyDataSetChanged();
             }
         });
     }
 
     public void goToAddCatcheur(View view){
         Intent intent = new Intent(this, AddCatcheur.class);
+        intent.putParcelableArrayListExtra("teamsSelected", (ArrayList<? extends Parcelable>) teamsSelected);
         startActivity(intent);
         finish();
     }
 
     public void goToAddTeam(View view){
         Intent intent = new Intent(this, AddTeam.class);
-        intent.putParcelableArrayListExtra("catcheursSelected", (ArrayList<? extends Parcelable>) catcheursSelected);
         startActivity(intent);
         finish();
     }

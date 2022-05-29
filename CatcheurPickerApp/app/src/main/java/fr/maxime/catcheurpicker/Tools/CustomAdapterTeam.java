@@ -10,7 +10,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
+import fr.maxime.catcheurpicker.BD.TeamRepository;
 import fr.maxime.catcheurpicker.Model.Team;
 import fr.maxime.catcheurpicker.R;
 
@@ -34,20 +36,26 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
             tvNomTeam = itemView.findViewById(R.id.textViewNomTeam);
-            tvImage = itemView.findViewById(R.id.textViewImage);
+            //tvImage = itemView.findViewById(R.id.textViewImage);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
 
         public void display(Team t){
             tvNomTeam.setText(t.getNomTeam());
-            tvImage.setText(t.getImage());
+            //tvImage.setText(t.getImage());
         }
 
         @Override
         public void onClick(View v) {
             Log.d("MesLogs","onClick ViewHolder");
-            myGestionClick.onItemClick(getAdapterPosition(),v);
+            try {
+                myGestionClick.onItemClick(getAdapterPosition(),v);
+            } catch (ExecutionException e) {
+                e.printStackTrace();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
         @Override

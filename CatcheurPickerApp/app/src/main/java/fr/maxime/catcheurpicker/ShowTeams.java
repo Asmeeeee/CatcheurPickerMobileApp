@@ -16,10 +16,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutionException;
 
 
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 import fr.maxime.catcheurpicker.Tools.CustomAdapterTeam;
 import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 
@@ -30,23 +32,27 @@ public class ShowTeams extends AppCompatActivity {
     private TeamViewModel teamViewModel;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState){
+
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_show_teams);
+
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         RecyclerView recyclerViewTeams = findViewById(R.id.recyclerViewTeams);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterTeam = new CustomAdapterTeam(dataTeam);
+
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
-            public void onItemClick(int position, View v) {
+            public void onItemClick(int position, View v) throws ExecutionException, InterruptedException {
                 Log.d("MesLogs","onItemClick MainActivity");
                 Team team = dataTeam.get(position);
+                TeamWithCatcheurs teamWithCatcheurs = teamViewModel.getTeamWithCatcheursById(team.getTeamId());
                 new AlertDialog.Builder(v.getContext())
                         .setTitle(team.getNomTeam())
-                        .setMessage("Nom de la team: "+team.getNomTeam())
+                        .setMessage("Nom de la team: "+team.getNomTeam() + "\nCatcheurs associés: "+ teamWithCatcheurs.catcheurs)
                         .show();
             }
 
@@ -55,9 +61,9 @@ public class ShowTeams extends AppCompatActivity {
                 teamViewModel.deleteOneTeam(dataTeam.get(position));
             }
         });
+
         recyclerViewTeams.setAdapter(customAdapterTeam);
         recyclerViewTeams.setLayoutManager(linearLayoutManager);
-
 
         teamViewModel.getNbTeamsLD().observe(this, new Observer<Integer>(){
             @Override
@@ -75,7 +81,6 @@ public class ShowTeams extends AppCompatActivity {
                 customAdapterTeam.notifyDataSetChanged();
             }
         });
-
     }
 
     public void goToAddCatcheur(View view){

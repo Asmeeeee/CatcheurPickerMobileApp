@@ -12,42 +12,38 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-import fr.maxime.catcheurpicker.Model.Catcheur;
+import fr.maxime.catcheurpicker.BD.TeamRepository;
+import fr.maxime.catcheurpicker.Model.Team;
 import fr.maxime.catcheurpicker.R;
 
-public class CustomAdapterCatcheursSelected extends RecyclerView.Adapter<CustomAdapterCatcheursSelected.MyViewHolder> {
-    private List<Catcheur> data;
+public class CustomAdapterTeamSelected extends RecyclerView.Adapter<CustomAdapterTeamSelected.MyViewHolder>{
+    private List<Team> data;
     private static InterfaceGestionClick myGestionClick;
 
-    public CustomAdapterCatcheursSelected(List<Catcheur> data) {
+    public CustomAdapterTeamSelected(List<Team> data) {
         this.data = data;
     }
 
     public static void setMyGestionClick(InterfaceGestionClick myGestionClick) {
-        CustomAdapterCatcheursSelected.myGestionClick = myGestionClick;
+        CustomAdapterTeamSelected.myGestionClick = myGestionClick;
     }
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener, View.OnLongClickListener{
-        private TextView tvNomScene, tvPoids, tvTaille, tvImage, tvDateNaissance;
-
+        private TextView tvNomTeam, tvImage;
 
         public MyViewHolder(@NonNull View itemView){
             super(itemView);
-            tvNomScene = itemView.findViewById(R.id.textViewNomScene);
-            tvPoids = itemView.findViewById(R.id.textViewPoids);
-            tvTaille = itemView.findViewById(R.id.textViewTaille);
-            tvDateNaissance = itemView.findViewById(R.id.textViewDateNaissance);
+            tvNomTeam = itemView.findViewById(R.id.textViewNomTeam);
+            //tvImage = itemView.findViewById(R.id.textViewImage);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
         }
 
-        public void display(Catcheur c){
-            tvNomScene.setText(c.getNomScene());
-            tvPoids.setText(c.getPoids()+"");
-            tvTaille.setText(c.getTaille()+"");
-            tvDateNaissance.setText(c.getDateNaissance());
+        public void display(Team t){
+            tvNomTeam.setText(t.getNomTeam());
+            //tvImage.setText(t.getImage());
         }
 
         @Override
@@ -71,17 +67,16 @@ public class CustomAdapterCatcheursSelected extends RecyclerView.Adapter<CustomA
 
     @NonNull
     @Override
-    public CustomAdapterCatcheursSelected.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CustomAdapterTeamSelected.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.item_catcheurs_selected,parent,false);
-        return new CustomAdapterCatcheursSelected.MyViewHolder(view);
+                .inflate(R.layout.item_team_selected,parent,false);
+        return new MyViewHolder(view);
     }
 
-
     @Override
-    public void onBindViewHolder(@NonNull CustomAdapterCatcheursSelected.MyViewHolder holder, int position) {
-        Catcheur catcheur = data.get(position);
-        holder.display(catcheur);
+    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+        Team team = data.get(position);
+        holder.display(team);
     }
 
     @Override
@@ -89,5 +84,6 @@ public class CustomAdapterCatcheursSelected extends RecyclerView.Adapter<CustomA
         return data.size();
     }
 
-    public void setData(List<Catcheur> list){ this.data = list;}
+    public void setData(List<Team> list){ this.data = list;}
+
 }

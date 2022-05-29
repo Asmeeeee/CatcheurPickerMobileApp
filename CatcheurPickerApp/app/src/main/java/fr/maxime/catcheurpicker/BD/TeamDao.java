@@ -13,6 +13,7 @@ import java.util.List;
 
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.Model.Team;
+import fr.maxime.catcheurpicker.Model.TeamCatcheurCrossRef;
 import fr.maxime.catcheurpicker.Model.TeamWithCatcheurs;
 
 @Dao
@@ -39,9 +40,21 @@ public interface TeamDao{
 
     @Transaction
     @Query("SELECT * from teamTable where teamId = :id")
-    Team getTeamById(String id);
+    Team getTeamById(Integer id);
 
     @Transaction
     @Query("SELECT * FROM teamTable")
     List<TeamWithCatcheurs> getTeamsWithCatcheurs();
+
+    @Transaction
+    @Query("SELECT * FROM teamTable where teamId = :idTeam")
+    TeamWithCatcheurs getTeamsWithCatcheursByTeam(int idTeam);
+
+    @Transaction
+    @Insert(onConflict = REPLACE)
+    void insertTeamWithCatcheurs(TeamCatcheurCrossRef teamCatcheurCrossRef);
+
+    @Transaction
+    @Query("SELECT max(teamId) FROM teamTable")
+    Integer getTeamIdMax();
 }

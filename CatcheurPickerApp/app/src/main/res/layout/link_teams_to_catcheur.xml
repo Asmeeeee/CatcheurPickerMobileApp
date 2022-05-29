@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ShowTeams">
+    tools:context=".LinkTeamsToCatcheur">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,51 +31,26 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:onClick="goToShowCatcheurs"
-                    android:text="Catcheurs"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Team"
-                    android:textAlignment="center"
-                    android:textColor="@color/teal_700"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </ScrollView>
         <TextView
-            android:id="@+id/textViewNbTeamLD"
+            android:id="@+id/textViewNbLD"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView" />
+            android:text="Choississez des teams" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewTeams"
+            android:id="@+id/recyclerViewLinkTeamsToCatcheur"
             android:layout_width="match_parent"
-<<<<<<< HEAD
-            android:layout_height="600dp" />
-=======
-            android:layout_height="613dp" />
->>>>>>> jeremy
+            android:layout_height="603dp">
 
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="goToAddCatcheur"
+            android:text="Valider" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"
@@ -84,26 +59,17 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddCatcheur"
-                android:layout_width="0dp"
-<<<<<<< HEAD
-                android:layout_weight="33.33"
-=======
-                android:layout_weight="3"
->>>>>>> jeremy
+                android:layout_width="143dp"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-                android:text="Ajouter un Catcheur \n+ "
                 android:onClick="goToAddCatcheur"
+                android:text="Ajouter un Catcheur
+                 + "
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/homeButton"
-                android:layout_width="0dp"
-<<<<<<< HEAD
-                android:layout_weight="33.33"
-=======
-                android:layout_weight="3"
->>>>>>> jeremy
+                android:layout_width="290px"
                 android:layout_height="match_parent"
                 android:background="#FFEB3B"
                 android:text="Accueil"
@@ -112,15 +78,11 @@
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddTeam"
-                android:layout_width="0dp"
-<<<<<<< HEAD
-                android:layout_weight="33.33"
-=======
-                android:layout_weight="3"
->>>>>>> jeremy
+                android:layout_width="400px"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-                android:text="Ajouter une Team \n+"
+                android:text="Ajouter une Team
+                +"
                 android:onClick="goToAddTeam"
                 android:textColor="@color/white" />
 
