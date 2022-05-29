@@ -106,6 +106,7 @@ public class AddTeam extends AppCompatActivity {
         for(Catcheur catcheur : catcheursSelected){
             teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
         }
+        goToShowTeams(view);
     }
 
     //-------------------------------------------------------------------------------------
@@ -124,6 +125,12 @@ public class AddTeam extends AppCompatActivity {
 
     public void goToLinkCatcheursToTeam(View view) {
         Intent intent = new Intent(this, LinkCatcheursToTeam.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void goToShowTeams(View view){
+        Intent intent = new Intent(this, ShowTeams.class);
         startActivity(intent);
         finish();
     }

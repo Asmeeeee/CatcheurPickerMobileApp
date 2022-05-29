@@ -91,6 +91,7 @@ public class AddCatcheur extends AppCompatActivity {
         for(Team team : teamsSelected){
             catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
         }
+        goToShowCatcheurs(view);
     }
 //-------------------------------------------------------------------------------------
 
