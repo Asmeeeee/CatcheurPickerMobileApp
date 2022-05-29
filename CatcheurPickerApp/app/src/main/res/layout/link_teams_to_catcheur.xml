@@ -63,8 +63,7 @@
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
                 android:onClick="goToAddCatcheur"
-                android:text="Ajouter un Catcheur
-                 + "
+                android:text="Ajouter un Catcheur \n+ "
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
@@ -81,8 +80,7 @@
                 android:layout_width="400px"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-                android:text="Ajouter une Team
-                +"
+                android:text="Ajouter une Team \n+"
                 android:onClick="goToAddTeam"
                 android:textColor="@color/white" />
 
