@@ -191,10 +191,6 @@
                 android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-<<<<<<< HEAD
-                android:text="Ajouter une Team \n+"
-=======
->>>>>>> jeremy
                 android:onClick="goToAddTeam"
                 android:text="Ajouter une Team \n+" />
 
