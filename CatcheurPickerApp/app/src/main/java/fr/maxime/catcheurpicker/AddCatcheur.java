@@ -109,6 +109,11 @@ public class AddCatcheur extends AppCompatActivity {
         for(Team team : teamsSelected){
             catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
         }
+        fieldNomCatcheur.setText("");
+        fieldPoidsCatcheur.setText("");
+        fieldTailleCatcheur.setText("");
+        fieldDateNaissance.setText("");
+        teamsSelected.removeAll(teamsSelected);
     }
 //-------------------------------------------------------------------------------------
 

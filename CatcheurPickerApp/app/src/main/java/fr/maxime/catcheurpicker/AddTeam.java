@@ -106,6 +106,8 @@ public class AddTeam extends AppCompatActivity {
         for(Catcheur catcheur : catcheursSelected){
             teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
         }
+        fieldNomTeam.setText("");
+        catcheursSelected.removeAll(catcheursSelected);
     }
 
     //-------------------------------------------------------------------------------------
