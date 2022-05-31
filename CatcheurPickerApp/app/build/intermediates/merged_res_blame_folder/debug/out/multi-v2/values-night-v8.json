@@ -4,7 +4,6 @@
             "outputFile": "fr.maxime.catcheurpicker.app-mergeDebugResources-44:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\OneDrive\\Documents\\Cours DUT\\DUT 2e annee\\Android\\projet-android\\CatcheurPickerApp\\app\\src\\main\\res\\values-night\\themes.xml",
                     "from": {
                         "startLines": "2",
@@ -13,16 +12,6 @@
                         "endLines": "14",
                         "endColumns": "12",
                         "endOffsets": "823"
-=======
-                    "source": "D:\\Work\\projet-android2\\CatcheurPickerApp\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "102",
-                        "endLines": "14",
-                        "endColumns": "12",
-                        "endOffsets": "837"
->>>>>>> jeremy
                     },
                     "to": {
                         "startLines": "9",
@@ -34,11 +23,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\1217d3aa52fa78bda9a0244b3a55003a\\transformed\\material-1.6.0\\res\\values-night-v8\\values-night-v8.xml",
-=======
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\1217d3aa52fa78bda9a0244b3a55003a\\transformed\\material-1.6.0\\res\\values-night-v8\\values-night-v8.xml",
->>>>>>> jeremy
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -55,11 +40,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-night-v8\\values-night-v8.xml",
-=======
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-night-v8\\values-night-v8.xml",
->>>>>>> jeremy
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

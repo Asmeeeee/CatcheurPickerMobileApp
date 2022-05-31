@@ -4,7 +4,6 @@
             "outputFile": "fr.maxime.catcheurpicker.app-mergeDebugResources-44:/values-ro/values-ro.xml",
             "map": [
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\d52bab26e7b949240a89eb43d22d89ad\\transformed\\ui-1.0.1\\res\\values-ro\\values-ro.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12",
@@ -23,9 +22,6 @@
                 },
                 {
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\1217d3aa52fa78bda9a0244b3a55003a\\transformed\\material-1.6.0\\res\\values-ro\\values-ro.xml",
-=======
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\1217d3aa52fa78bda9a0244b3a55003a\\transformed\\material-1.6.0\\res\\values-ro\\values-ro.xml",
->>>>>>> jeremy
                     "from": {
                         "startLines": "2,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -44,11 +40,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-ro\\values-ro.xml",
-=======
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-ro\\values-ro.xml",
->>>>>>> jeremy
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -65,11 +57,7 @@
                     }
                 },
                 {
-<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\d8338c189490aee58604e111af57865f\\transformed\\core-1.7.0\\res\\values-ro\\values-ro.xml",
-=======
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\d8338c189490aee58604e111af57865f\\transformed\\core-1.7.0\\res\\values-ro\\values-ro.xml",
->>>>>>> jeremy
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -84,26 +72,6 @@
                         "endColumns": "100",
                         "endOffsets": "8518"
                     }
-<<<<<<< HEAD
-=======
-                },
-                {
-                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\d52bab26e7b949240a89eb43d22d89ad\\transformed\\ui-1.0.1\\res\\values-ro\\values-ro.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9,10,11,12",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,240,337,415,514,605,687,759,828,901",
-                        "endColumns": "98,85,96,77,98,90,81,71,68,72,66",
-                        "endOffsets": "149,235,332,410,509,600,682,754,823,896,963"
-                    },
-                    "to": {
-                        "startLines": "38,39,40,44,45,92,93,94,95,98,100",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "3465,3564,3650,3982,4060,7872,7963,8045,8117,8349,8523",
-                        "endColumns": "98,85,96,77,98,90,81,71,68,72,66",
-                        "endOffsets": "3559,3645,3742,4055,4154,7958,8040,8112,8181,8417,8585"
-                    }
->>>>>>> jeremy
                 }
             ]
         }
