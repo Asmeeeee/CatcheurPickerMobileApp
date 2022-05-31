@@ -60,4 +60,8 @@ public interface CatcheurDao {
     @Query("SELECT max(catcheurId) FROM catcheurTable")
     Integer getCatcheurIdMax();
 
+    @Transaction
+    @Query("SELECT * FROM catcheurTable where nomScene LIKE '%' || :value || '%'")
+    public List<Catcheur> searchCatcheur(String value);
+
 }

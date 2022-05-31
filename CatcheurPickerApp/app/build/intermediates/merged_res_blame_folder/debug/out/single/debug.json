@@ -1,13 +1,19 @@
 [
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-46:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-48:\\xml\\data_extraction_rules.xml"
+=======
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_activity_add_team.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/activity_add_team.xml"
+>>>>>>> jeremy
     },
     {
         "merged": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-46:\\layout_link_teams_to_catcheur.xml.flat",
         "source": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-48:\\layout\\link_teams_to_catcheur.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-46:\\mipmap-xhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-48:\\mipmap-xhdpi\\ic_launcher.png"
     },
@@ -118,5 +124,113 @@
     {
         "merged": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-46:\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\Maxime\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-48:\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+=======
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_link_catcheurs_to_team.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/link_catcheurs_to_team.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_link_teams_to_catcheur.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/link_teams_to_catcheur.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_item_catcheurs_selected.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/item_catcheurs_selected.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_activity_show_teams.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/activity_show_teams.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/xml_backup_rules.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/drawable-v24_ic_launcher_foreground.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_item_team.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/item_team.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/drawable_ic_launcher_background.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/xml_data_extraction_rules.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_item_catcheur.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/item_catcheur.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_item_team_selected.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/item_team_selected.xml"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_activity_add_catcheur.xml.flat",
+        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/activity_add_catcheur.xml"
+>>>>>>> jeremy
     }
 ]

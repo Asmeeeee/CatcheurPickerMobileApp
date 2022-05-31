@@ -6,6 +6,7 @@
 6
 7    <uses-sdk
 8        android:minSdkVersion="29"
+<<<<<<< HEAD
 8-->C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="32" />
 9-->C:\Users\Maxime\OneDrive\Documents\Cours DUT\DUT 2e annee\Android\projet-android\CatcheurPickerApp\app\src\main\AndroidManifest.xml
@@ -147,3 +148,139 @@
 82    </application>
 83
 84</manifest>
+=======
+8-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml
+10
+11    <application
+11-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:6:5-40:19
+12        android:allowBackup="true"
+12-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:7:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.7.0] C:\Users\jerem\.gradle\caches\transforms-3\d8338c189490aee58604e111af57865f\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+14        android:dataExtractionRules="@xml/data_extraction_rules"
+14-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:8:9-65
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:fullBackupContent="@xml/backup_rules"
+17-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:9:9-54
+18        android:icon="@mipmap/ic_launcher"
+18-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:10:9-43
+19        android:label="@string/app_name"
+19-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:11:9-41
+20        android:roundIcon="@mipmap/ic_launcher_round"
+20-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:12:9-54
+21        android:supportsRtl="true"
+21-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:13:9-35
+22        android:testOnly="true"
+23        android:theme="@style/Theme.CatcheurPicker" >
+23-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:14:9-52
+24        <activity
+24-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:16:9-18:40
+25            android:name="fr.maxime.catcheurpicker.AddTeam"
+25-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:17:13-36
+26            android:exported="false" />
+26-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:18:13-37
+27        <activity
+27-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:19:9-21:40
+28            android:name="fr.maxime.catcheurpicker.AddCatcheur"
+28-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:20:13-40
+29            android:exported="false" />
+29-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:21:13-37
+30        <activity
+30-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:22:9-24:40
+31            android:name="fr.maxime.catcheurpicker.ShowTeams"
+31-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:23:13-38
+32            android:exported="false" />
+32-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:24:13-37
+33        <activity
+33-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:25:9-27:40
+34            android:name="fr.maxime.catcheurpicker.LinkCatcheursToTeam"
+34-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:26:13-48
+35            android:exported="false" />
+35-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:27:13-37
+36        <activity
+36-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:28:9-30:40
+37            android:name="fr.maxime.catcheurpicker.LinkTeamsToCatcheur"
+37-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:29:13-48
+38            android:exported="false" />
+38-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:30:13-37
+39        <activity
+39-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:31:9-39:20
+40            android:name="fr.maxime.catcheurpicker.ShowCatcheurs"
+40-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:32:13-42
+41            android:exported="true" >
+41-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:33:13-36
+42            <intent-filter>
+42-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:34:13-38:29
+43                <action android:name="android.intent.action.MAIN" />
+43-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:35:17-69
+43-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:35:25-66
+44
+45                <category android:name="android.intent.category.LAUNCHER" />
+45-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:37:17-77
+45-->D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:37:27-74
+46            </intent-filter>
+47        </activity>
+48
+49        <service
+49-->[androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
+50            android:name="androidx.room.MultiInstanceInvalidationService"
+50-->[androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:26:13-74
+51            android:directBootAware="true"
+51-->[androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:27:13-43
+52            android:exported="false" />
+52-->[androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:28:13-37
+53
+54        <provider
+54-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+55            android:name="androidx.startup.InitializationProvider"
+55-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+56            android:authorities="fr.maxime.catcheurpicker.androidx-startup"
+56-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+57            android:exported="false" >
+57-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+58            <meta-data
+58-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+59                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+59-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+60                android:value="androidx.startup" />
+60-->[androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+61            <meta-data
+61-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\jerem\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+62                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+62-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\jerem\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+63                android:value="androidx.startup" />
+63-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\jerem\.gradle\caches\transforms-3\45759b04922bc547a81513b82a38ba1e\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+64            <meta-data
+64-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:31:13-33:52
+65                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+65-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:32:17-85
+66                android:value="androidx.startup" />
+66-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:33:17-49
+67        </provider>
+68
+69        <receiver
+69-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:36:9-45:20
+70            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+70-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:37:13-76
+71            android:directBootAware="false"
+71-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:38:13-44
+72            android:enabled="true"
+72-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:39:13-35
+73            android:exported="true"
+73-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:40:13-36
+74            android:permission="android.permission.DUMP" >
+74-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:41:13-57
+75            <intent-filter>
+75-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:42:13-44:29
+76                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+76-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:43:17-91
+76-->[androidx.profileinstaller:profileinstaller:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\7542ab5ad074b07daf5f3175640860a2\transformed\profileinstaller-1.0.1\AndroidManifest.xml:43:25-88
+77            </intent-filter>
+78        </receiver>
+79    </application>
+80
+81</manifest>
+>>>>>>> jeremy

@@ -24,6 +24,8 @@ public class TeamViewModel extends AndroidViewModel {
         allTeamsLD = teamRepository.getAllTeamsLD();
     }
 
+    public List<Team> searchTeam(String value) throws ExecutionException, InterruptedException { return teamRepository.searchTeam(value);}
+
     public List<TeamWithCatcheurs> getTeamsWithCatcheurs() throws ExecutionException, InterruptedException {return teamRepository.getTeamsWithCatcheurs();}
 
     public TeamWithCatcheurs getTeamWithCatcheursById(int id) throws ExecutionException, InterruptedException{ return teamRepository.getTeamsWithCatcheursByTeam(id);}

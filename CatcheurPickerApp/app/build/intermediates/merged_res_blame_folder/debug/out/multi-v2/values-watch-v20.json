@@ -4,7 +4,11 @@
             "outputFile": "fr.maxime.catcheurpicker.app-mergeDebugResources-44:/values-watch-v20/values-watch-v20.xml",
             "map": [
                 {
+<<<<<<< HEAD
                     "source": "C:\\Users\\Maxime\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-watch-v20\\values-watch-v20.xml",
+=======
+                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-watch-v20\\values-watch-v20.xml",
+>>>>>>> jeremy
                     "from": {
                         "startLines": "2,5,8",
                         "startColumns": "4,4,4",

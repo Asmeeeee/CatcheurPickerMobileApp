@@ -87,22 +87,12 @@ public class ShowCatcheurs extends AppCompatActivity {
         });
     }
 
-    public void searchCatcheur(View view) {
+    public void searchCatcheur(View view) throws ExecutionException, InterruptedException {
         EditText fieldRechercheCatcheur = findViewById(R.id.fieldRechercheCatcheur);
         String strFieldRechercheCatcheur = fieldRechercheCatcheur.getText().toString();
-        if(strFieldRechercheCatcheur.isEmpty()){
-            customAdapterCatcheur.setData(dataCatcheur);
-        }
-        else{
-            strFieldRechercheCatcheur = strFieldRechercheCatcheur.toUpperCase(Locale.ROOT);
-            List<Catcheur> listeFilter = new ArrayList<>();
-            for(Catcheur catcheur : dataCatcheur){
-                if(catcheur.getNomScene().toUpperCase(Locale.ROOT).contains(strFieldRechercheCatcheur)){
-                    listeFilter.add(catcheur);
-                }
-            }
-            customAdapterCatcheur.setData(listeFilter);
-        }
+        List<Catcheur> listeFilter = new ArrayList<>();
+        listeFilter = catcheurViewModel.searchCatcheur(strFieldRechercheCatcheur);
+        customAdapterCatcheur.setData(listeFilter);
         customAdapterCatcheur.notifyDataSetChanged();
     }
 
