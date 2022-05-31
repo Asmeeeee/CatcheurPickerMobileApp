@@ -2621,7 +2621,8 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id bouton
-id btnFind
+id btnFindCatcheurs
+id btnFindTeams
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2724,6 +2725,7 @@ id fieldNomCatcheur
 id fieldNomTeam
 id fieldPoids
 id fieldRechercheCatcheur
+id fieldRechercheTeam
 id fieldTaille
 id fill
 id fill_horizontal

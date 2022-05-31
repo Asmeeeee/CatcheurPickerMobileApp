@@ -36,10 +36,6 @@
         "source": "C:\\Users\\maxse\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\xml\\backup_rules.xml"
     },
     {
-        "merged": "fr.maxime.catcheurpicker.app-merged_res-45:/layout_activity_show_teams.xml.flat",
-        "source": "fr.maxime.catcheurpicker.app-main-47:/layout/activity_show_teams.xml"
-    },
-    {
         "merged": "C:\\Users\\maxse\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-merged_res-45:\\mipmap-xxxhdpi_ic_launcher.png.flat",
         "source": "C:\\Users\\maxse\\.gradle\\daemon\\7.3.3\\fr.maxime.catcheurpicker.app-main-47:\\mipmap-xxxhdpi\\ic_launcher.png"
     },

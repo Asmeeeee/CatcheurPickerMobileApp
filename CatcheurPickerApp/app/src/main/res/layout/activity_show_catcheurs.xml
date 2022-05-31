@@ -85,9 +85,10 @@
                 android:inputType="textPersonName" />
 
             <Button
-                android:id="@+id/btnFind"
+                android:id="@+id/btnFindCatcheurs"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:onClick="searchCatcheur"
                 android:layout_weight="1"
                 android:text="OK" />
         </LinearLayout>

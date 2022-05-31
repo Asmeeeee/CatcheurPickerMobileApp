@@ -12,10 +12,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
 
@@ -83,6 +85,25 @@ public class ShowTeams extends AppCompatActivity {
         });
     }
 
+    public void searchTeam(View view) {
+        EditText fieldRechercheTeam = findViewById(R.id.fieldRechercheTeam);
+        String strFieldRechercheTeam = fieldRechercheTeam.getText().toString();
+        if(strFieldRechercheTeam.isEmpty()){
+            customAdapterTeam.setData(dataTeam);
+        }
+        else{
+            strFieldRechercheTeam = strFieldRechercheTeam.toUpperCase(Locale.ROOT);
+            List<Team> listeFilter = new ArrayList<>();
+            for(Team team : dataTeam){
+                if(team.getNomTeam().toUpperCase(Locale.ROOT).contains(strFieldRechercheTeam)){
+                    listeFilter.add(team);
+                }
+            }
+            customAdapterTeam.setData(listeFilter);
+        }
+        customAdapterTeam.notifyDataSetChanged();
+    }
+
     public void goToAddCatcheur(View view){
         Intent intent = new Intent(this, AddCatcheur.class);
         startActivity(intent);
@@ -100,4 +121,5 @@ public class ShowTeams extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

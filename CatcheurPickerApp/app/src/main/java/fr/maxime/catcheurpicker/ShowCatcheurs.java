@@ -12,10 +12,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
@@ -79,6 +81,25 @@ public class ShowCatcheurs extends AppCompatActivity {
                 customAdapterCatcheur.notifyDataSetChanged();
             }
         });
+    }
+
+    public void searchCatcheur(View view) {
+        EditText fieldRechercheCatcheur = findViewById(R.id.fieldRechercheCatcheur);
+        String strFieldRechercheCatcheur = fieldRechercheCatcheur.getText().toString();
+        if(strFieldRechercheCatcheur.isEmpty()){
+            customAdapterCatcheur.setData(dataCatcheur);
+        }
+        else{
+            strFieldRechercheCatcheur = strFieldRechercheCatcheur.toUpperCase(Locale.ROOT);
+            List<Catcheur> listeFilter = new ArrayList<>();
+            for(Catcheur catcheur : dataCatcheur){
+                if(catcheur.getNomScene().toUpperCase(Locale.ROOT).contains(strFieldRechercheCatcheur)){
+                    listeFilter.add(catcheur);
+                }
+            }
+            customAdapterCatcheur.setData(listeFilter);
+        }
+        customAdapterCatcheur.notifyDataSetChanged();
     }
 
     public void goToAddCatcheur(View view){
