@@ -24,6 +24,7 @@ public class CatcheurViewModel extends AndroidViewModel {
         nbCatcheursLD = catcheurRepository.getNbCatcheurLD();
         allCatcheursLD = catcheurRepository.getAllCatcheursLD();
     }
+    public List<Catcheur> searchCatcheur(String value) throws ExecutionException, InterruptedException { return catcheurRepository.searchCatcheur(value);}
 
     public List<CatcheurWithTeams> getCatcheursWithTeams() throws ExecutionException, InterruptedException{ return catcheurRepository.getCatcheursWithTeams();}
 

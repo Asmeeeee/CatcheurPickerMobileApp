@@ -29,6 +29,20 @@ public class CatcheurRepository {
         allCatcheursLD = catcheurDao.getAllCatcheurLD();
     }
 
+    public List<Catcheur> searchCatcheur(String value) throws ExecutionException, InterruptedException {
+        return new searchCatcheurAsyncTask(catcheurDao).execute(value).get();
+    }
+
+    public static class searchCatcheurAsyncTask extends AsyncTask<String, Void, List<Catcheur>>{
+        private CatcheurDao catcheurDao;
+        searchCatcheurAsyncTask(CatcheurDao catcheurDao){ this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected List<Catcheur> doInBackground(String... strings){
+            return catcheurDao.searchCatcheur(strings[0]);
+        }
+    }
+
     public CatcheurWithTeams getCatcheurWithTeamsById(int id) throws ExecutionException, InterruptedException{
         return new getCatcheurWithTeamsByIdAsyncTask(catcheurDao).execute(id).get();
     }

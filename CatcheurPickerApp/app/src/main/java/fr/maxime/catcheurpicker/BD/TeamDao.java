@@ -57,4 +57,8 @@ public interface TeamDao{
     @Transaction
     @Query("SELECT max(teamId) FROM teamTable")
     Integer getTeamIdMax();
+
+    @Transaction
+    @Query("SELECT * FROM teamTable where nomTeam LIKE '%' || :value || '%'")
+    List<Team> searchTeam(String value);
 }

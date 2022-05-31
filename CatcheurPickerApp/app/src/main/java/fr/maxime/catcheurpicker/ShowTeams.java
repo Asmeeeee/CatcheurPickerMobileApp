@@ -85,22 +85,12 @@ public class ShowTeams extends AppCompatActivity {
         });
     }
 
-    public void searchTeam(View view) {
+    public void searchTeam(View view) throws ExecutionException, InterruptedException {
         EditText fieldRechercheTeam = findViewById(R.id.fieldRechercheTeam);
         String strFieldRechercheTeam = fieldRechercheTeam.getText().toString();
-        if(strFieldRechercheTeam.isEmpty()){
-            customAdapterTeam.setData(dataTeam);
-        }
-        else{
-            strFieldRechercheTeam = strFieldRechercheTeam.toUpperCase(Locale.ROOT);
-            List<Team> listeFilter = new ArrayList<>();
-            for(Team team : dataTeam){
-                if(team.getNomTeam().toUpperCase(Locale.ROOT).contains(strFieldRechercheTeam)){
-                    listeFilter.add(team);
-                }
-            }
-            customAdapterTeam.setData(listeFilter);
-        }
+        List<Team> listeFilter = new ArrayList<>();
+        listeFilter = teamViewModel.searchTeam(strFieldRechercheTeam);
+        customAdapterTeam.setData(listeFilter);
         customAdapterTeam.notifyDataSetChanged();
     }
 

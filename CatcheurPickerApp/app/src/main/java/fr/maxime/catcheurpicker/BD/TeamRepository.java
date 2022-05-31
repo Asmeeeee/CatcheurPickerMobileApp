@@ -30,6 +30,20 @@ public class TeamRepository {
 
     }
 
+    public List<Team> searchTeam(String value) throws ExecutionException, InterruptedException {
+        return new searchTeamAsyncTask(teamDao).execute(value).get();
+    }
+
+    public static class searchTeamAsyncTask extends AsyncTask<String, Void, List<Team>>{
+        private TeamDao teamDao;
+        searchTeamAsyncTask(TeamDao teamDao){this.teamDao = teamDao;}
+
+        @Override
+        protected List<Team> doInBackground(String... strings) {
+            return teamDao.searchTeam(strings[0]);
+        }
+    }
+
     public TeamWithCatcheurs getTeamsWithCatcheursByTeam(int id) throws ExecutionException, InterruptedException{
         return new getTeamsWithCatcheursByTeamAsyncTask(teamDao).execute(id).get();
     }
