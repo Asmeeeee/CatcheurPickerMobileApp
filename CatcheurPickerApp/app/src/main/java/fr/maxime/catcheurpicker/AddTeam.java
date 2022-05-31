@@ -31,7 +31,6 @@ public class AddTeam extends AppCompatActivity {
     private List<Team> dataTeam = new ArrayList<>();
     private List<Catcheur> catcheursSelected = new ArrayList<>();
     private LinearLayoutManager linearLayoutManager;
-    private CustomAdapterTeam customAdapterTeam;
     private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
     private TeamViewModel teamViewModel;
     private CatcheurViewModel catcheurViewModel;
@@ -48,7 +47,6 @@ public class AddTeam extends AppCompatActivity {
         teamViewModel = new ViewModelProvider(this).get(TeamViewModel.class);
         catcheurViewModel = new ViewModelProvider(this).get(CatcheurViewModel.class);
         linearLayoutManager = new LinearLayoutManager(this);
-        customAdapterTeam = new CustomAdapterTeam(dataTeam);
         customAdapterCatcheursSelected = new CustomAdapterCatcheursSelected(catcheursSelected);
 
         try {
@@ -60,22 +58,6 @@ public class AddTeam extends AppCompatActivity {
         catch (NullPointerException nullPointerException){
             nullPointerException.printStackTrace();
         }
-        CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
-            @Override
-            public void onItemClick(int position, View v) {
-                Log.d("MesLogs","onItemClick ShowTeams");
-                Team team = dataTeam.get(position);
-                new AlertDialog.Builder(v.getContext())
-                        .setTitle(team.getNomTeam())
-                        .setMessage("Nom de la team: "+team.getNomTeam())
-                        .show();
-            }
-
-            @Override
-            public void onItemLongClick(int position, View view) {
-                teamViewModel.deleteOneTeam(dataTeam.get(position));
-            }
-        });
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -91,7 +73,6 @@ public class AddTeam extends AppCompatActivity {
                 catcheurViewModel.deleteOneCatcheur(catcheursSelected.get(position));
             }
         });
-
         recyclerViewAddTeamCatcheursSelected.setAdapter(customAdapterCatcheursSelected);
         recyclerViewAddTeamCatcheursSelected.setLayoutManager(linearLayoutManager);
     }
