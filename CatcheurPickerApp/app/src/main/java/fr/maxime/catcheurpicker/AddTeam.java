@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -70,6 +72,8 @@ public class AddTeam extends AppCompatActivity {
             }
             @Override
             public void onItemLongClick(int position, View view) {
+                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v.vibrate(100);
                 catcheurViewModel.deleteOneCatcheur(catcheursSelected.get(position));
             }
         });
@@ -78,6 +82,8 @@ public class AddTeam extends AppCompatActivity {
     }
 
     public void addTeam(View view)  throws ExecutionException, InterruptedException{
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(100);
         EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
         String strNomTeam = fieldNomTeam.getText().toString();
         Team team = new Team(strNomTeam, "image");

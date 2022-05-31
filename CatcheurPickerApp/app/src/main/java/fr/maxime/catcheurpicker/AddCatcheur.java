@@ -6,8 +6,10 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.room.Transaction;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -70,11 +72,15 @@ public class AddCatcheur extends AppCompatActivity {
 
         @Override
         public void onItemLongClick(int position, View view) {
+            Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+            v.vibrate(100);
             catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
         }
     });
 }
         public void addCatcheur(View view) throws ExecutionException, InterruptedException {
+        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        v.vibrate(100);
         EditText fieldNomCatcheur = findViewById(R.id.fieldNomCatcheur);
         String strNomCatcheur = fieldNomCatcheur.getText().toString();
         if(strNomCatcheur.equals("")){
