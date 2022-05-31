@@ -107,8 +107,13 @@ public class AddCatcheur extends AppCompatActivity {
         if(strDateNaissance.equals("")){
             strDateNaissance = " / / ";
         }
+        EditText fieldImageCatcheur = findViewById(R.id.fieldImageCatcheur);
+        String strImage = fieldImageCatcheur.getText().toString();
+        if(strImage.equals("")){
+            strImage = "https://images.emojiterra.com/google/noto-emoji/v2.034/128px/2754.png";
+        }
         System.out.println(strNomCatcheur+" "+intPoidsCatcheur+" "+ floatTailleCatcheur+" "+ strDateNaissance);
-        Catcheur catcheur = new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, "image", strDateNaissance);
+        Catcheur catcheur = new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, strImage, strDateNaissance);
         catcheurViewModel.insert(catcheur);
         int idCatcheur = catcheurViewModel.getCatcheurIdMax();
         catcheur = catcheurViewModel.getCatcheurById(idCatcheur);

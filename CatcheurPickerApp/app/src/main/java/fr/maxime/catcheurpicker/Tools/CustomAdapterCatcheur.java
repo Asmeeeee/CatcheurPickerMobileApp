@@ -5,24 +5,27 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
+import fr.maxime.catcheurpicker.AddCatcheur;
 import fr.maxime.catcheurpicker.LinkCatcheursToTeam;
 import fr.maxime.catcheurpicker.Model.Catcheur;
 import fr.maxime.catcheurpicker.R;
+import fr.maxime.catcheurpicker.ShowCatcheurs;
 
 public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCatcheur.MyViewHolder> {
     private List<Catcheur> data;
     private static InterfaceGestionClick myGestionClick;
-    // private Context context;
 
     public CustomAdapterCatcheur(List<Catcheur> data) {
         this.data = data;
@@ -35,7 +38,8 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
 
     public static class MyViewHolder extends RecyclerView.ViewHolder
     implements View.OnClickListener, View.OnLongClickListener{
-        private TextView tvNomScene, tvPoids, tvTaille, imageCatcheur, tvDateNaissance;
+        private TextView tvNomScene, tvPoids, tvTaille, tvDateNaissance;
+        private ImageView imageCatcheur;
 
 
         public MyViewHolder(@NonNull View itemView){
@@ -51,10 +55,10 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
 
         public void display(Catcheur c){
             tvNomScene.setText(c.getNomScene()+"");
-            tvPoids.setText("Pèse :" + c.getPoids() + "kg");
-            tvTaille.setText("Mesure :" + c.getTaille()+"m");
+            tvPoids.setText("Pèse : " + c.getPoids() + "kg");
+            tvTaille.setText("Mesure : " + c.getTaille()+"m");
             tvDateNaissance.setText("Né le " + c.getDateNaissance());
-            // Glide.with(this.context).load(c.getImage()).into(this.imageCatcheur);
+            Glide.with(itemView).load("https://icon-library.com/images/loading-icon-animated-gif/loading-icon-animated-gif-15.jpg").diskCacheStrategy(DiskCacheStrategy.ALL).into(imageCatcheur);
 
         }
 
@@ -80,7 +84,6 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        // this.context = parent.getContext();
        View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_catcheur,parent,false);
         return new MyViewHolder(view);
