@@ -77,12 +77,30 @@ public class AddCatcheur extends AppCompatActivity {
         public void addCatcheur(View view) throws ExecutionException, InterruptedException {
         EditText fieldNomCatcheur = findViewById(R.id.fieldNomCatcheur);
         String strNomCatcheur = fieldNomCatcheur.getText().toString();
+        if(strNomCatcheur.equals("")){
+            strNomCatcheur = "undifined";
+        }
         EditText fieldPoidsCatcheur = findViewById(R.id.fieldPoids);
-        int intPoidsCatcheur = Integer.parseInt(fieldPoidsCatcheur.getText().toString());
+        int intPoidsCatcheur = 0;
+        try{
+            intPoidsCatcheur = Integer.parseInt(fieldPoidsCatcheur.getText().toString());
+        }
+        catch(Exception e) {
+            e.printStackTrace();
+        }
         EditText fieldTailleCatcheur = findViewById(R.id.fieldTaille);
-        Float floatTailleCatcheur =  Float.parseFloat(fieldTailleCatcheur.getText().toString());
+        Float floatTailleCatcheur = 0.0f;
+        try{
+              Float.parseFloat(fieldTailleCatcheur.getText().toString());
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
         EditText fieldDateNaissance = findViewById(R.id.fieldDateNaiss);
         String strDateNaissance =  fieldDateNaissance.getText().toString();
+        if(strDateNaissance.equals("")){
+            strDateNaissance = " / / ";
+        }
         System.out.println(strNomCatcheur+" "+intPoidsCatcheur+" "+ floatTailleCatcheur+" "+ strDateNaissance);
         Catcheur catcheur = new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, "image", strDateNaissance);
         catcheurViewModel.insert(catcheur);

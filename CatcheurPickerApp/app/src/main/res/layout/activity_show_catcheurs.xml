@@ -93,8 +93,8 @@
                 android:layout_weight="3"
                 android:layout_height="match_parent"
                 android:background="@color/teal_700"
-                android:text="Ajouter un Catcheur \n+ "
                 android:onClick="goToAddCatcheur"
+                android:text="Ajouter un Catcheur \n+ "
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
