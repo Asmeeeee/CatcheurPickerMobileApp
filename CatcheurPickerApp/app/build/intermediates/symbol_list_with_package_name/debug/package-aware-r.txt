@@ -2620,7 +2620,8 @@ id bounce
 id bounceBoth
 id bounceEnd
 id bounceStart
-id button
+id bouton
+id btnFind
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -2717,9 +2718,12 @@ id expand_activities_button
 id expanded_menu
 id fade
 id fieldDateNaiss
+id fieldImageCatcheur
+id fieldImageTeam
 id fieldNomCatcheur
 id fieldNomTeam
 id fieldPoids
+id fieldRechercheCatcheur
 id fieldTaille
 id fill
 id fill_horizontal
@@ -2760,8 +2764,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageButton
-id imageButton2
 id imageTeam
 id imageView
 id immediateStop
@@ -3003,6 +3005,7 @@ id textViewNomScene
 id textViewNomTeam
 id textViewPoids
 id textViewTaille
+id textViewTailleTeam
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon

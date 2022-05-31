@@ -51,18 +51,18 @@
                         android:text="Catcheurs"
                         android:textAlignment="center"
                         android:textColor="@color/teal_700"
-                        android:textSize="20dp"
+                        android:textSize="22dp"
                         android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:onClick="goToShowTeams"
                         android:text="Teams"
                         android:textAlignment="center"
-                        android:textColor="@color/black"
+                        android:textColor="@android:color/darker_gray"
                         android:textSize="20dp"
-                        android:onClick="goToShowTeams"
                         android:textStyle="bold" />
 
                 </LinearLayout>
@@ -71,16 +71,38 @@
 
         </ScrollView>
 
-        <TextView
-            android:id="@+id/textViewNbLD"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/fieldRechercheCatcheur"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Rechercher"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btnFind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OK" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewNbLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="115dp"
             android:text="TextView" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCatcheurs"
             android:layout_width="match_parent"
-            android:layout_height="611dp" />
+            android:layout_height="565dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"

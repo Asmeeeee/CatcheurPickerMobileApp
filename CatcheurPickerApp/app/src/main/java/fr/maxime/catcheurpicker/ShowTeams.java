@@ -69,7 +69,7 @@ public class ShowTeams extends AppCompatActivity {
             @Override
             public void onChanged(Integer integer) {
                 TextView textView = findViewById(R.id.textViewNbTeamLD);
-                textView.setText("nb Team LD: "+ integer);
+                textView.setText("Nombre de Teams : "+ integer);
             }
         });
 

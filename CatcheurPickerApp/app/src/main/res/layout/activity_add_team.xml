@@ -58,7 +58,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:hint="DX Génération"
+                />
 
             <TextView
                 android:id="@+id/imageTeam"
@@ -66,11 +68,14 @@
                 android:layout_height="wrap_content"
                 android:text="Image de la Team" />
 
-            <ImageButton
-                android:id="@+id/imageButton2"
+            <EditText
+                android:id="@+id/fieldImageTeam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="https://fr.wikipedia.org/wiki/Bobby_Lashley.jpg"
+                />
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -96,7 +101,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewAddTeamCatcheursSelected"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="331dp" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/validerTeam"
@@ -119,28 +124,28 @@
                 android:id="@+id/AddCatcheur"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:background="@color/teal_700"
                 android:layout_weight="3"
-                android:text="Ajouter un Catcheur \n+ "
+                android:background="@color/teal_700"
                 android:onClick="goToAddCatcheur"
+                android:text="Ajouter un Catcheur \n+ "
                 android:textColor="@color/white" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/homeButton"
                 android:layout_width="0dp"
-                android:layout_weight="3"
                 android:layout_height="match_parent"
+                android:layout_weight="3"
                 android:background="@color/teal_700"
-                android:text="Accueil"
                 android:onClick="goToShowCatcheurs"
+                android:text="Accueil"
                 android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/AddTeam"
                 android:layout_width="0dp"
-                android:layout_weight="3"
                 android:layout_height="match_parent"
+                android:layout_weight="3"
                 android:background="#FFEB3B"
                 android:text="Ajouter une Team \n+"
 

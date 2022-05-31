@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
@@ -9,28 +9,27 @@
     tools:context=".LinkTeamsToCatcheur">
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintTop_toBottomOf="parent">
+        android:layout_height="wrap_content"
+        android:background="#009688"
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
+        <TextView
+            android:id="@+id/Title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#009688"
-            android:orientation="vertical">
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="40sp"
+            android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/Title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="40sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="656dp"
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textViewNbLD"
@@ -41,52 +40,57 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewLinkTeamsToCatcheur"
             android:layout_width="match_parent"
-            android:layout_height="603dp">
+            android:layout_height="600dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <Button
-            android:id="@+id/button"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bouton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:background="#2196F3"
             android:onClick="goToAddCatcheur"
-            android:text="Valider" />
+            android:text="Valider la selection"
+            android:layout_marginBottom="5dp"
+            android:textColor="#FFFFFF" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/AddCatcheur"
-                android:layout_width="143dp"
-                android:layout_height="match_parent"
-                android:background="@color/teal_700"
-                android:onClick="goToAddCatcheur"
-                android:text="Ajouter un Catcheur \n+ "
-                android:textColor="@color/white" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/homeButton"
-                android:layout_width="290px"
-                android:layout_height="match_parent"
-                android:background="#FFEB3B"
-                android:text="Accueil"
-                android:textColor="@color/black"
-                android:textStyle="bold" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/AddCatcheur"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:background="#FFEB3B"
+            android:text="Ajouter un Catcheur \n+ "
+            android:textColor="@color/black" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/AddTeam"
-                android:layout_width="400px"
-                android:layout_height="match_parent"
-                android:background="@color/teal_700"
-                android:text="Ajouter une Team \n+"
-                android:onClick="goToAddTeam"
-                android:textColor="@color/white" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/homeButton"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:background="@color/teal_700"
+            android:onClick="goToShowCatcheurs"
+            android:text="Accueil"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
-        </LinearLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/AddTeam"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent"
+            android:background="@color/teal_700"
+            android:onClick="goToAddTeam"
+            android:text="Ajouter une Team \n+" />
 
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

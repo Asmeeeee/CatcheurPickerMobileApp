@@ -31,46 +31,64 @@
                 android:textStyle="bold" />
         </LinearLayout>
 
-        <ScrollView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <LinearLayout
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:onClick="goToShowCatcheurs"
+                android:text="Catcheurs"
+                android:textAlignment="center"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:text="Team"
+                android:textAlignment="center"
+                android:textColor="@color/teal_700"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/textView2"
-                    android:layout_width="200dp"
-                    android:layout_height="match_parent"
-                    android:onClick="goToShowCatcheurs"
-                    android:text="Catcheurs"
-                    android:textAlignment="center"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Team"
-                    android:textAlignment="center"
-                    android:textColor="@color/teal_700"
-                    android:textSize="20dp"
-                    android:textStyle="bold" />
-            </LinearLayout>
-        </ScrollView>
-        <TextView
-            android:id="@+id/textViewNbTeamLD"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/fieldRechercheCatcheur"
+                android:layout_width="328dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Rechercher"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/btnFind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="OK" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewNbTeamLD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="115dp"
             android:text="TextView" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewTeams"
             android:layout_width="match_parent"
-            android:layout_height="613dp" />
+            android:layout_height="562dp" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"

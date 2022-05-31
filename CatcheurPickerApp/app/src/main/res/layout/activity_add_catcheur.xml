@@ -58,7 +58,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:hint="Bobby Lashley"
+
+                />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -81,7 +84,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:hint="1,90"
+                        />
                 </LinearLayout>
 
                 <LinearLayout
@@ -100,7 +105,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:ems="10"
-                        android:inputType="number" />
+                        android:inputType="number"
+                        android:hint="120"
+                        />
                 </LinearLayout>
 
             </LinearLayout>
@@ -117,19 +124,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="date" />
+                android:inputType="date"
+                android:hint="25/05/1956"
+                />
 
             <TextView
                 android:id="@+id/ImageCatcheur"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Image du catcheur" />
+                android:text="URL Image du catcheur"
+                />
 
-            <ImageButton
-                android:id="@+id/imageButton"
+            <EditText
+                android:id="@+id/fieldImageCatcheur"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                tools:srcCompat="@tools:sample/avatars" />
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="https://fr.wikipedia.org/wiki/Bobby_Lashley.jpg"
+                />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/addCatcheurTeam"
@@ -144,7 +157,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerViewAddTeamCatcheursSelected"
                 android:layout_width="match_parent"
-                android:layout_height="142dp" />
+                android:layout_height="168dp" />
 
 
             <androidx.appcompat.widget.AppCompatButton
