@@ -86,7 +86,13 @@ public class CustomAdapterCatcheursSelected extends RecyclerView.Adapter<CustomA
 
     @Override
     public int getItemCount() {
-        return data.size();
+        try {
+            return data.size();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+            return 0;
+        }
     }
 
     public void setData(List<Catcheur> list){ this.data = list;}

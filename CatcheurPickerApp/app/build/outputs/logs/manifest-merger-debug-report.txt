@@ -5,8 +5,10 @@ INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidMani
 INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:2:1-46:12
 INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:2:1-46:12
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\jerem\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:2:1-12:12
+MERGED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:17:1-45:12
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\jerem\.gradle\caches\transforms-3\1217d3aa52fa78bda9a0244b3a55003a\transformed\material-1.6.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\jerem\.gradle\caches\transforms-3\d3afed95d73ad065506e7f132d41fe44\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\jerem\.gradle\caches\transforms-3\10293c53e74a98eebc04290cb8d808f4\transformed\preference-1.1.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\jerem\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0-alpha03] C:\Users\jerem\.gradle\caches\transforms-3\fefbaa5bdbc44fe7f5d705235b0352ee\transformed\lifecycle-viewmodel-compose-2.5.0-alpha03\AndroidManifest.xml:17:1-24:12
@@ -23,6 +25,7 @@ MERGED from [androidx.loader:loader:1.0.0] C:\Users\jerem\.gradle\caches\transfo
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.5.0-alpha03] C:\Users\jerem\.gradle\caches\transforms-3\66dc37afa25a32b1969dbad4243dfe61\transformed\lifecycle-viewmodel-2.5.0-alpha03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-alpha03] C:\Users\jerem\.gradle\caches\transforms-3\07524e9650c28c26b90b717892ec1ed8\transformed\lifecycle-viewmodel-savedstate-2.5.0-alpha03\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\jerem\.gradle\caches\transforms-3\35b97564275ceca5ee4544101e433682\transformed\recyclerview-1.2.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\jerem\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\ed826fb54ca96a616842741e739e9806\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.emoji2:emoji2:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\db233f3ba8947fb0f91cd701b83dfe6a\transformed\emoji2-1.0.0\AndroidManifest.xml:17:1-37:12
@@ -33,7 +36,6 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\jer
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\99b67211caf75454d8db8cffaa4c204a\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\jerem\.gradle\caches\transforms-3\4946f3740a2a6c91d59046632228d0a2\transformed\core-ktx-1.2.0\AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\d6f048992aa4c98c57a5f34754783a6f\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\0a48c48e7ac9cdb1931530cff684f072\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\c780b57cbd0250da86c997db48a63283\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.compose.ui:ui-text:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\da4cec404543adbc1b7832f68e47c0fe\transformed\ui-text-1.0.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.autofill:autofill:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\892f66105ae7c428529a0cb6b2d09554\transformed\autofill-1.0.0\AndroidManifest.xml:17:1-24:12
@@ -88,6 +90,8 @@ application
 ADDED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml:6:5-40:19
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\jerem\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\jerem\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:10:5-20
+MERGED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:30:5-43:19
+MERGED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:30:5-43:19
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\jerem\.gradle\caches\transforms-3\1217d3aa52fa78bda9a0244b3a55003a\transformed\material-1.6.0\AndroidManifest.xml:24:5-20
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\jerem\.gradle\caches\transforms-3\1217d3aa52fa78bda9a0244b3a55003a\transformed\material-1.6.0\AndroidManifest.xml:24:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\jerem\.gradle\caches\transforms-3\d3afed95d73ad065506e7f132d41fe44\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -188,10 +192,14 @@ INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidMani
 INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\jerem\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.github.bumptech.glide:glide:4.12.0] C:\Users\jerem\.gradle\caches\transforms-3\588fc5940a4f4744ecd40f55050912ca\transformed\glide-4.12.0\AndroidManifest.xml:6:5-8:41
+MERGED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:21:5-44
+MERGED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:21:5-44
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\jerem\.gradle\caches\transforms-3\1217d3aa52fa78bda9a0244b3a55003a\transformed\material-1.6.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.6.0] C:\Users\jerem\.gradle\caches\transforms-3\1217d3aa52fa78bda9a0244b3a55003a\transformed\material-1.6.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\jerem\.gradle\caches\transforms-3\d3afed95d73ad065506e7f132d41fe44\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\jerem\.gradle\caches\transforms-3\d3afed95d73ad065506e7f132d41fe44\transformed\constraintlayout-2.1.3\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\jerem\.gradle\caches\transforms-3\10293c53e74a98eebc04290cb8d808f4\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.preference:preference:1.1.1] C:\Users\jerem\.gradle\caches\transforms-3\10293c53e74a98eebc04290cb8d808f4\transformed\preference-1.1.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\jerem\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat:1.4.1] C:\Users\jerem\.gradle\caches\transforms-3\3b1bc201b3bca652ca8cba6f27421397\transformed\appcompat-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:20:5-22:41
@@ -224,6 +232,8 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-alpha03] C:
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.5.0-alpha03] C:\Users\jerem\.gradle\caches\transforms-3\07524e9650c28c26b90b717892ec1ed8\transformed\lifecycle-viewmodel-savedstate-2.5.0-alpha03\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.savedstate:savedstate:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\7cb098df1fba835853ed83d598cf82cc\transformed\savedstate-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\jerem\.gradle\caches\transforms-3\35b97564275ceca5ee4544101e433682\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.2.1] C:\Users\jerem\.gradle\caches\transforms-3\35b97564275ceca5ee4544101e433682\transformed\recyclerview-1.2.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\jerem\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.4.1] C:\Users\jerem\.gradle\caches\transforms-3\329434754253c4a32eb8e86e58307e53\transformed\appcompat-resources-1.4.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.emoji2:emoji2-views-helper:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\ed826fb54ca96a616842741e739e9806\transformed\emoji2-views-helper-1.0.0\AndroidManifest.xml:20:5-22:41
@@ -244,8 +254,6 @@ MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\jerem\.gradle\caches\transfo
 MERGED from [androidx.core:core-ktx:1.2.0] C:\Users\jerem\.gradle\caches\transforms-3\4946f3740a2a6c91d59046632228d0a2\transformed\core-ktx-1.2.0\AndroidManifest.xml:5:5-7:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\d6f048992aa4c98c57a5f34754783a6f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\jerem\.gradle\caches\transforms-3\d6f048992aa4c98c57a5f34754783a6f\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\0a48c48e7ac9cdb1931530cff684f072\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\0a48c48e7ac9cdb1931530cff684f072\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\c780b57cbd0250da86c997db48a63283\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.customview:customview:1.1.0] C:\Users\jerem\.gradle\caches\transforms-3\c780b57cbd0250da86c997db48a63283\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.compose.ui:ui-text:1.0.1] C:\Users\jerem\.gradle\caches\transforms-3\da4cec404543adbc1b7832f68e47c0fe\transformed\ui-text-1.0.1\AndroidManifest.xml:20:5-22:41
@@ -318,6 +326,40 @@ INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidMani
 		INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml
 		ADDED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml
 		INJECTED from D:\Work\projet-android2\CatcheurPickerApp\app\src\main\AndroidManifest.xml
+queries
+ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:23:5-28:15
+provider#com.android.car.ui.plugin.PluginNameProvider
+ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:24:9-27:67
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:26:13-60
+	tools:ignore
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:27:13-64
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:25:13-72
+provider#com.android.car.ui.core.CarUiInstaller
+ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:31:9-36:71
+	android:process
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:36:13-68
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:33:13-66
+	android:exported
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:35:13-37
+	android:directBootAware
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:32:13-66
+provider#com.android.car.ui.core.SearchResultsProvider
+ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:37:9-42:79
+	android:readPermission
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:42:13-76
+	android:process
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:41:13-68
+	android:authorities
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:39:13-73
+	android:exported
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:40:13-36
+	android:name
+		ADDED from [com.android.car.ui:car-ui-lib:2.2.1] C:\Users\jerem\.gradle\caches\transforms-3\c6f9513b3cacd9de00455fb7d7f99a68\transformed\car-ui-lib-2.2.1\AndroidManifest.xml:38:13-73
 service#androidx.room.MultiInstanceInvalidationService
 ADDED from [androidx.room:room-runtime:2.4.2] C:\Users\jerem\.gradle\caches\transforms-3\35f855c212e1e8f3366b56d5dc8e47b7\transformed\room-runtime-2.4.2\AndroidManifest.xml:25:9-28:40
 	android:exported

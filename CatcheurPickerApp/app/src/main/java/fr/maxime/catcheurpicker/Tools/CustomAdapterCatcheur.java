@@ -51,6 +51,12 @@ public class CustomAdapterCatcheur extends RecyclerView.Adapter<CustomAdapterCat
             imageCatcheur = itemView.findViewById(R.id.ImageCatcheur);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
+            itemView.findViewById(R.id.delCatcheur).setOnClickListener(view -> {
+                myGestionClick.onItemClickDelete(getAdapterPosition(), itemView);
+            });
+            itemView.findViewById(R.id.modifierCatcheur).setOnClickListener(view -> {
+                myGestionClick.onItemModifier(getAdapterPosition(), itemView);
+            });
         }
 
         public void display(Catcheur c){

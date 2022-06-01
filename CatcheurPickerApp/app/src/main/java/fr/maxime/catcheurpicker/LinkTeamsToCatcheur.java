@@ -60,6 +60,16 @@ public class LinkTeamsToCatcheur extends AppCompatActivity {
             public void onItemLongClick(int position, View view) {
                 teamViewModel.deleteOneTeam(dataTeam.get(position));
             }
+
+            @Override
+            public void onItemClickDelete(int position, View v) {
+
+            }
+
+            @Override
+            public void onItemModifier(int position, View v) {
+
+            }
         });
         recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterTeamSelected);
         recyclerViewLinkCatcheursToTeam.setLayoutManager(linearLayoutManager);

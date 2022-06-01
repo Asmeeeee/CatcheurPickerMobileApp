@@ -162,6 +162,21 @@ public class TeamRepository {
         }
     }
 
+    public void update(Team team){
+        new updateAsyncTask(teamDao).execute(team);
+    }
+
+    public static class updateAsyncTask extends AsyncTask<Team, Void, Void>{
+        private TeamDao teamDao;
+        updateAsyncTask(TeamDao teamDao){ this.teamDao= teamDao;}
+
+        @Override
+        protected Void doInBackground(Team... teams) {
+            teamDao.update(teams[0]);
+            return null;
+        }
+    }
+
     public void delete(Team team){
         new deleteAsyncTask(teamDao).execute(team);
     }

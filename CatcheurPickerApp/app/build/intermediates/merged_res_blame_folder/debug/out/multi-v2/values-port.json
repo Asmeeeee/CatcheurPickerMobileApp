@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "fr.maxime.catcheurpicker.app-mergeDebugResources-44:/values-port/values-port.xml",
+            "outputFile": "fr.maxime.catcheurpicker.app-mergeDebugResources-46:/values-port/values-port.xml",
             "map": [
                 {
                     "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\3b1bc201b3bca652ca8cba6f27421397\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
@@ -11,6 +11,23 @@
                         "startOffsets": "55",
                         "endColumns": "55",
                         "endOffsets": "106"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\jerem\\.gradle\\caches\\transforms-3\\c6f9513b3cacd9de00455fb7d7f99a68\\transformed\\car-ui-lib-2.2.1\\res\\values-port\\values.xml",
+                    "from": {
+                        "startLines": "4,7,8",
+                        "startColumns": "0,0,0",
+                        "startOffsets": "212,426,491",
+                        "endColumns": "59,64,62",
+                        "endOffsets": "271,490,553"
+                    },
+                    "to": {
+                        "startLines": "3,4,5",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "111,175,244",
+                        "endColumns": "63,68,66",
+                        "endOffsets": "170,239,306"
                     }
                 }
             ]

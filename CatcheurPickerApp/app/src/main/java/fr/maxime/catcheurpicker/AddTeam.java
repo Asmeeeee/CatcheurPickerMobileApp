@@ -32,6 +32,7 @@ public class AddTeam extends AppCompatActivity {
 
     private List<Team> dataTeam = new ArrayList<>();
     private List<Catcheur> catcheursSelected = new ArrayList<>();
+    private Team teamAModifier;
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
     private TeamViewModel teamViewModel;
@@ -60,6 +61,23 @@ public class AddTeam extends AppCompatActivity {
         catch (NullPointerException nullPointerException){
             nullPointerException.printStackTrace();
         }
+
+        try{
+            Bundle bundle2 = this.getIntent().getExtras();
+            teamAModifier = (Team) bundle2.get("team");
+            //Merttre les valeur de team dans les champs
+            EditText nomTeam = findViewById(R.id.fieldNomTeam);
+            nomTeam.setText(teamAModifier.getNomTeam());
+            EditText urlImage = findViewById(R.id.fieldImageTeam);
+            urlImage.setText(teamAModifier.getImage());
+            catcheursSelected = teamViewModel.getTeamWithCatcheursById(teamAModifier.getTeamId()).catcheurs;
+            customAdapterCatcheursSelected.setData(catcheursSelected);
+            customAdapterCatcheursSelected.notifyDataSetChanged();
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -76,6 +94,16 @@ public class AddTeam extends AppCompatActivity {
                 v.vibrate(100);
                 catcheurViewModel.deleteOneCatcheur(catcheursSelected.get(position));
             }
+
+            @Override
+            public void onItemClickDelete(int position, View v) {
+
+            }
+
+            @Override
+            public void onItemModifier(int position, View v) {
+
+            }
         });
         recyclerViewAddTeamCatcheursSelected.setAdapter(customAdapterCatcheursSelected);
         recyclerViewAddTeamCatcheursSelected.setLayoutManager(linearLayoutManager);
@@ -86,12 +114,26 @@ public class AddTeam extends AppCompatActivity {
         v.vibrate(100);
         EditText fieldNomTeam = findViewById(R.id.fieldNomTeam);
         String strNomTeam = fieldNomTeam.getText().toString();
-        Team team = new Team(strNomTeam, "image");
-        teamViewModel.insert(team);
-        int idTeam = teamViewModel.getTeamIdMax();
-        team = teamViewModel.getTeamById(idTeam);
-        for(Catcheur catcheur : catcheursSelected){
-            teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
+        EditText fieldImageTeam = findViewById(R.id.fieldImageTeam);
+        String strfieldImageTeam = fieldImageTeam.getText().toString();
+        if(teamAModifier == null){
+            Team team = new Team(strNomTeam, strfieldImageTeam);
+            teamViewModel.insert(team);
+            int idTeam = teamViewModel.getTeamIdMax();
+            team = teamViewModel.getTeamById(idTeam);
+            for(Catcheur catcheur : catcheursSelected){
+                teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
+            }
+        }
+        else{
+            teamAModifier.setNomTeam(strNomTeam);
+            teamAModifier.setImage(strfieldImageTeam);
+            teamViewModel.update(teamAModifier);
+            System.out.println("Update");
+            System.out.println(teamAModifier.getTeamId());
+            for(Catcheur catcheur : catcheursSelected){
+                catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, teamAModifier);
+            }
         }
         goToShowTeams(view);
     }

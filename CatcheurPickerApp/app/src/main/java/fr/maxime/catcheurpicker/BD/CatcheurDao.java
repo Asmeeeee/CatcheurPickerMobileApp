@@ -8,6 +8,7 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Transaction;
+import androidx.room.Update;
 
 import java.util.List;
 
@@ -24,6 +25,10 @@ public interface CatcheurDao {
     @Transaction
     @Insert(onConflict = REPLACE)
     void insert(Catcheur catcheur);
+
+    @Transaction
+    @Update()
+    void update(Catcheur catcheur);
 
     @Transaction
     @Query("DELETE from catcheurTable")

@@ -55,5 +55,9 @@ public class TeamViewModel extends AndroidViewModel {
         teamRepository.insert(team);
     }
 
+    public void update(Team team){
+        teamRepository.update(team);
+    }
+
     public void insertTeamWithCatcheursAsyncTask(Catcheur catcheur, Team team){ teamRepository.insertTeamWithCatcheurs(catcheur, team);}
 }

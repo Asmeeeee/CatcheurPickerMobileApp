@@ -2,6 +2,7 @@ package fr.maxime.catcheurpicker;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,8 +15,11 @@ import android.os.Vibrator;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +55,8 @@ public class ShowTeams extends AppCompatActivity {
         CustomAdapterTeam.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) throws ExecutionException, InterruptedException {
-                Log.d("MesLogs","onItemClick MainActivity");
                 Team team = dataTeam.get(position);
+                Log.d("MesLogs","onItemClick MainActivity");
                 TeamWithCatcheurs teamWithCatcheurs = teamViewModel.getTeamWithCatcheursById(team.getTeamId());
                 new AlertDialog.Builder(v.getContext())
                         .setTitle(team.getNomTeam())
@@ -62,10 +66,25 @@ public class ShowTeams extends AppCompatActivity {
 
             @Override
             public void onItemLongClick(int position, View view) {
-                Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-                v.vibrate(100);
-                teamViewModel.deleteOneTeam(dataTeam.get(position));
+                //Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                //v.vibrate(100);
+                //teamViewModel.deleteOneTeam(dataTeam.get(position));
             }
+
+            @Override
+            public void onItemClickDelete(int position, View v) {
+                Team team = dataTeam.get(position);
+                teamViewModel.deleteOneTeam(team);
+                Vibrator v2 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v2.vibrate(100);
+            }
+
+            @Override
+            public void onItemModifier(int position, View v) {
+                Team team = dataTeam.get(position);
+                goToAddTeamForModifier(v, team);
+            }
+
         });
 
         recyclerViewTeams.setAdapter(customAdapterTeam);
@@ -96,6 +115,18 @@ public class ShowTeams extends AppCompatActivity {
         listeFilter = teamViewModel.searchTeam(strFieldRechercheTeam);
         customAdapterTeam.setData(listeFilter);
         customAdapterTeam.notifyDataSetChanged();
+    }
+
+    public void deleteOneTeam(Team team){
+        teamViewModel.deleteOneTeam(team);
+    }
+
+
+    public void goToAddTeamForModifier(View view, Team team){
+        Intent intent = new Intent(this, AddTeam.class);
+        intent.putExtra("team", team);
+        startActivity(intent);
+        finish();
     }
 
     public void goToAddCatcheur(View view){

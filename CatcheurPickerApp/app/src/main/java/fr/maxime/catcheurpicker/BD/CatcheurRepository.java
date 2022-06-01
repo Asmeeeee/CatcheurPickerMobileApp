@@ -167,6 +167,21 @@ public class CatcheurRepository {
         }
     }
 
+    public void update(Catcheur catcheur){
+        new updateAsyncTask(catcheurDao).execute(catcheur);
+    }
+
+    public static class updateAsyncTask extends AsyncTask<Catcheur, Void, Void>{
+        private CatcheurDao catcheurDao;
+        updateAsyncTask(CatcheurDao catcheurDao){ this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected Void doInBackground(Catcheur... catcheurs) {
+            catcheurDao.update(catcheurs[0]);
+            return null;
+        }
+    }
+
     public void delete(Catcheur catcheur){
         new deleteAsyncTask(catcheurDao).execute(catcheur);
     }

@@ -65,6 +65,20 @@ public class ShowCatcheurs extends AppCompatActivity {
                 v.vibrate(100);
                 catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
             }
+
+            @Override
+            public void onItemClickDelete(int position, View v) {
+                Catcheur catcheur = dataCatcheur.get(position);
+                catcheurViewModel.deleteOneCatcheur(catcheur);
+                Vibrator v2 = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+                v2.vibrate(100);
+            }
+
+            @Override
+            public void onItemModifier(int position, View v) {
+                Catcheur catcheur = dataCatcheur.get(position);
+                goToAddCatcheurForModifier(v, catcheur);
+            }
         });
         recyclerViewCatcheurs.setAdapter(customAdapterCatcheur);
         recyclerViewCatcheurs.setLayoutManager(linearLayoutManager);
@@ -94,6 +108,13 @@ public class ShowCatcheurs extends AppCompatActivity {
         listeFilter = catcheurViewModel.searchCatcheur(strFieldRechercheCatcheur);
         customAdapterCatcheur.setData(listeFilter);
         customAdapterCatcheur.notifyDataSetChanged();
+    }
+
+    public void goToAddCatcheurForModifier(View view, Catcheur catcheur){
+        Intent intent = new Intent(this, AddCatcheur.class);
+        intent.putExtra("catcheur", catcheur);
+        startActivity(intent);
+        finish();
     }
 
     public void goToAddCatcheur(View view){

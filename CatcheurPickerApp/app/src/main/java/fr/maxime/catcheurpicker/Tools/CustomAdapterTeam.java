@@ -4,17 +4,21 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.widget.AppCompatButton;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 import fr.maxime.catcheurpicker.BD.TeamRepository;
+import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Team;
 import fr.maxime.catcheurpicker.R;
+import fr.maxime.catcheurpicker.ShowTeams;
 
 public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.MyViewHolder>{
     private List<Team> data;
@@ -32,13 +36,21 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
     public static class MyViewHolder extends RecyclerView.ViewHolder
             implements View.OnClickListener, View.OnLongClickListener{
         private TextView tvNomTeam, tvImage;
+        private CustomAdapterTeam customAdapterTeam;
 
-        public MyViewHolder(@NonNull View itemView){
+        public MyViewHolder(@NonNull View itemView, CustomAdapterTeam customAdapterTeam){
             super(itemView);
+            this.customAdapterTeam = customAdapterTeam;
             tvNomTeam = itemView.findViewById(R.id.textViewNomTeam);
             //tvImage = itemView.findViewById(R.id.textViewImage);
             itemView.setOnClickListener(this);
             itemView.setOnLongClickListener(this);
+            itemView.findViewById(R.id.delTeam).setOnClickListener(view -> {
+                myGestionClick.onItemClickDelete(getAdapterPosition(), itemView);
+            });
+            itemView.findViewById(R.id.modifierTeam).setOnClickListener(view -> {
+                myGestionClick.onItemModifier(getAdapterPosition(), itemView);
+            });
         }
 
         public void display(Team t){
@@ -70,7 +82,7 @@ public class CustomAdapterTeam extends RecyclerView.Adapter<CustomAdapterTeam.My
     public CustomAdapterTeam.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_team,parent,false);
-        return new MyViewHolder(view);
+        return new MyViewHolder(view, this);
     }
 
     @Override

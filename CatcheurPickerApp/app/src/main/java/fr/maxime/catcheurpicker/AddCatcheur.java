@@ -32,6 +32,7 @@ public class AddCatcheur extends AppCompatActivity {
 
     private List<Catcheur> dataCatcheur = new ArrayList<>();
     private List<Team> teamsSelected = new ArrayList<>();
+    private Catcheur catcheurAModifier;
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheur customAdapterCatcheur;
     private CustomAdapterTeamSelected customAdapterTeamSelected;
@@ -59,6 +60,28 @@ public class AddCatcheur extends AppCompatActivity {
             nullPointerException.printStackTrace();
         }
 
+        try{
+            Bundle bundle2 = this.getIntent().getExtras();
+            catcheurAModifier = (Catcheur) bundle2.get("catcheur");
+            //Merttre les valeur de team dans les champs
+            EditText nomCatcheur = findViewById(R.id.fieldNomCatcheur);
+            nomCatcheur.setText(catcheurAModifier.getNomScene());
+            EditText taille = findViewById(R.id.fieldTaille);
+            taille.setText(catcheurAModifier.getTaille()+"");
+            EditText poids = findViewById(R.id.fieldPoids);
+            poids.setText(catcheurAModifier.getPoids()+"");
+            EditText dateNaissance = findViewById(R.id.fieldDateNaiss);
+            dateNaissance.setText(catcheurAModifier.getDateNaissance());
+            EditText urlImageCatcheur = findViewById(R.id.fieldImageCatcheur);
+            urlImageCatcheur.setText(catcheurAModifier.getImage());
+            teamsSelected = catcheurViewModel.getCatcheurWithTeamsById(catcheurAModifier.getCatcheurId()).teams;
+            customAdapterTeamSelected.setData(teamsSelected);
+            customAdapterTeamSelected.notifyDataSetChanged();
+        }
+        catch (Exception exception){
+            exception.printStackTrace();
+        }
+
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
         @Override
         public void onItemClick(int position, View v) {
@@ -76,7 +99,17 @@ public class AddCatcheur extends AppCompatActivity {
             v.vibrate(100);
             catcheurViewModel.deleteOneCatcheur(dataCatcheur.get(position));
         }
-    });
+
+            @Override
+            public void onItemClickDelete(int position, View v) {
+
+            }
+
+            @Override
+            public void onItemModifier(int position, View v) {
+
+            }
+        });
 }
         public void addCatcheur(View view) throws ExecutionException, InterruptedException {
         Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
@@ -97,7 +130,7 @@ public class AddCatcheur extends AppCompatActivity {
         EditText fieldTailleCatcheur = findViewById(R.id.fieldTaille);
         Float floatTailleCatcheur = 0.0f;
         try{
-              Float.parseFloat(fieldTailleCatcheur.getText().toString());
+            floatTailleCatcheur = Float.parseFloat(fieldTailleCatcheur.getText().toString());
         }
         catch (Exception e){
             e.printStackTrace();
@@ -113,12 +146,26 @@ public class AddCatcheur extends AppCompatActivity {
             strImage = "https://images.emojiterra.com/google/noto-emoji/v2.034/128px/2754.png";
         }
         System.out.println(strNomCatcheur+" "+intPoidsCatcheur+" "+ floatTailleCatcheur+" "+ strDateNaissance);
-        Catcheur catcheur = new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, strImage, strDateNaissance);
-        catcheurViewModel.insert(catcheur);
-        int idCatcheur = catcheurViewModel.getCatcheurIdMax();
-        catcheur = catcheurViewModel.getCatcheurById(idCatcheur);
-        for(Team team : teamsSelected){
-            catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
+        //separation
+        if(catcheurAModifier == null){
+            Catcheur catcheur = new Catcheur(strNomCatcheur, intPoidsCatcheur, floatTailleCatcheur, strImage, strDateNaissance);
+            catcheurViewModel.insert(catcheur);
+            int idCatcheur = catcheurViewModel.getCatcheurIdMax();
+            catcheur = catcheurViewModel.getCatcheurById(idCatcheur);
+            for(Team team : teamsSelected){
+                catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, team);
+            }
+        }
+        else{
+            catcheurAModifier.setNomScene(strNomCatcheur);
+            catcheurAModifier.setPoids(intPoidsCatcheur);
+            catcheurAModifier.setTaille(floatTailleCatcheur);
+            catcheurAModifier.setImage(strImage);
+            catcheurAModifier.setDateNaissance(strDateNaissance);
+            catcheurViewModel.update(catcheurAModifier);
+            for(Team team : teamsSelected){
+                catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheurAModifier, team);
+            }
         }
         goToShowCatcheurs(view);
     }
