@@ -112,7 +112,7 @@ public class ShowCatcheurs extends AppCompatActivity {
 
     public void goToAddCatcheurForModifier(View view, Catcheur catcheur){
         Intent intent = new Intent(this, AddCatcheur.class);
-        intent.putExtra("catcheur", catcheur);
+        intent.putExtra("catcheurAModifier", catcheur);
         startActivity(intent);
         finish();
     }

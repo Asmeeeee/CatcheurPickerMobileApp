@@ -124,7 +124,7 @@ public class ShowTeams extends AppCompatActivity {
 
     public void goToAddTeamForModifier(View view, Team team){
         Intent intent = new Intent(this, AddTeam.class);
-        intent.putExtra("team", team);
+        intent.putExtra("teamAModifier", team);
         startActivity(intent);
         finish();
     }

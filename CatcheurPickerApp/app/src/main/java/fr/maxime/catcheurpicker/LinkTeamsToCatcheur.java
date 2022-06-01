@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.maxime.catcheurpicker.BD.CatcheurDao;
 import fr.maxime.catcheurpicker.BD.CatcheurViewModel;
 import fr.maxime.catcheurpicker.BD.TeamViewModel;
 import fr.maxime.catcheurpicker.Model.Catcheur;
@@ -29,6 +30,7 @@ import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 public class LinkTeamsToCatcheur extends AppCompatActivity {
     private List<Team> dataTeam = new ArrayList<>();
     private List<Team> teamsSelected = new ArrayList<>();
+    private Catcheur catcheurAModifier;
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterTeamSelected customAdapterTeamSelected;
     private TeamViewModel teamViewModel;
@@ -44,6 +46,16 @@ public class LinkTeamsToCatcheur extends AppCompatActivity {
         RecyclerView recyclerViewLinkCatcheursToTeam = findViewById(R.id.recyclerViewLinkTeamsToCatcheur);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterTeamSelected = new CustomAdapterTeamSelected(dataTeam);
+        try {
+            Bundle bundle = getIntent().getExtras();
+            catcheurAModifier = (Catcheur) bundle.get("catcheurAModifier");
+            System.out.println("Recoi la teamModifier");
+            System.out.println(catcheurAModifier);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
         CustomAdapterTeamSelected.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -87,6 +99,7 @@ public class LinkTeamsToCatcheur extends AppCompatActivity {
     public void goToAddCatcheur(View view){
         Intent intent = new Intent(this, AddCatcheur.class);
         intent.putParcelableArrayListExtra("teamsSelected", (ArrayList<? extends Parcelable>) teamsSelected);
+        intent.putExtra("catcheurAModifier", catcheurAModifier);
         startActivity(intent);
         finish();
     }

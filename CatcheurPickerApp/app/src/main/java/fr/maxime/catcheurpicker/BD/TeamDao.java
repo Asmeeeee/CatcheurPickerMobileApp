@@ -60,6 +60,10 @@ public interface TeamDao{
     void insertTeamWithCatcheurs(TeamCatcheurCrossRef teamCatcheurCrossRef);
 
     @Transaction
+    @Delete()
+    void deleteTeamWithCatcheurs(TeamCatcheurCrossRef teamCatcheurCrossRef);
+
+    @Transaction
     @Query("SELECT max(teamId) FROM teamTable")
     Integer getTeamIdMax();
 

@@ -30,13 +30,13 @@ import fr.maxime.catcheurpicker.Tools.InterfaceGestionClick;
 public class LinkCatcheursToTeam extends AppCompatActivity {
     private List<Catcheur> dataCatcheur = new ArrayList<>();
     private List<Catcheur> catcheursSelected = new ArrayList<>();
+    private Team teamAModifier;
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
     private CatcheurViewModel catcheurViewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        System.out.println("j'arrive dans le LinkCatcheursToTeam");
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getSupportActionBar().hide();
@@ -45,6 +45,17 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
         RecyclerView recyclerViewLinkCatcheursToTeam = findViewById(R.id.recyclerViewLinkCatcheursToTeam);
         linearLayoutManager = new LinearLayoutManager(this);
         customAdapterCatcheursSelected = new CustomAdapterCatcheursSelected(dataCatcheur);
+        try {
+            Bundle bundle = getIntent().getExtras();
+            teamAModifier = (Team) bundle.get("teamAModifier");
+            System.out.println("Recoi la teamModifier");
+            System.out.println(teamAModifier);
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+
+
         CustomAdapterCatcheursSelected.setMyGestionClick(new InterfaceGestionClick() {
             @Override
             public void onItemClick(int position, View v) {
@@ -72,6 +83,7 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
 
             }
         });
+
         recyclerViewLinkCatcheursToTeam.setAdapter(customAdapterCatcheursSelected);
         recyclerViewLinkCatcheursToTeam.setLayoutManager(linearLayoutManager);
 
@@ -94,6 +106,7 @@ public class LinkCatcheursToTeam extends AppCompatActivity {
     public void goToAddTeam(View view){
         Intent intent = new Intent(this, AddTeam.class);
         intent.putParcelableArrayListExtra("catcheursSelected", (ArrayList<? extends Parcelable>) catcheursSelected);
+        intent.putExtra("teamAModifier", teamAModifier);
         startActivity(intent);
         finish();
     }

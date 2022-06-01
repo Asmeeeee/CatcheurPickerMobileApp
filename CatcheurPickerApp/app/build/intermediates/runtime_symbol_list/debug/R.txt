@@ -3024,7 +3024,6 @@ int id bounceStart 0x7f090075
 int id bouton 0x7f090076
 int id btnFindCatcheurs 0x7f090077
 int id btnFindTeams 0x7f090078
-int id buttonFilter 0x7f090079
 int id buttonPanel 0x7f09007a
 int id cache_measures 0x7f09007b
 int id callMeasure 0x7f09007c

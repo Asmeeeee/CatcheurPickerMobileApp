@@ -107,6 +107,21 @@ public class CatcheurRepository {
         }
     }
 
+    public void deleteTeamWithCatcheurs(Catcheur catcheur, Team team){
+        new deleteTeamWithCatcheursAsyncTask(catcheurDao).execute(new AsyncTaskTwoParams(catcheur, team));
+    }
+
+    public static class deleteTeamWithCatcheursAsyncTask extends AsyncTask<AsyncTaskTwoParams, Void, Void>{
+        private CatcheurDao catcheurDao;
+        public deleteTeamWithCatcheursAsyncTask(CatcheurDao catcheurDao){ this.catcheurDao = catcheurDao;}
+
+        @Override
+        protected Void doInBackground(AsyncTaskTwoParams... asyncTaskTwoParams) {
+            catcheurDao.deleteTeamWithCatcheurs(new TeamCatcheurCrossRef(asyncTaskTwoParams[0].team.getTeamId(), asyncTaskTwoParams[0].catcheur.getCatcheurId()));
+            return null;
+        }
+    }
+
     public List<CatcheurWithTeams> getCatcheursWithTeams() throws ExecutionException, InterruptedException {return new getCatcheursWithTeamsAsyncTask(catcheurDao).execute().get();}
 
     private static class getCatcheursWithTeamsAsyncTask extends AsyncTask<Void, Void, List<CatcheurWithTeams>>{

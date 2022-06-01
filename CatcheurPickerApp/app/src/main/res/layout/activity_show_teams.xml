@@ -89,15 +89,10 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewTeams"
             android:layout_width="match_parent"
-            android:layout_height="493dp">
+            android:layout_height="551dp">
 
         </androidx.recyclerview.widget.RecyclerView>
 
-        <Button
-            android:id="@+id/buttonFilter"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Filtrer" />
 
         <LinearLayout
             android:id="@+id/linearLayout3"

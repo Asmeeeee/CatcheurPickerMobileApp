@@ -33,6 +33,7 @@ public class AddTeam extends AppCompatActivity {
     private List<Team> dataTeam = new ArrayList<>();
     private List<Catcheur> catcheursSelected = new ArrayList<>();
     private Team teamAModifier;
+    private Team teamAModifier2;
     private LinearLayoutManager linearLayoutManager;
     private CustomAdapterCatcheursSelected customAdapterCatcheursSelected;
     private TeamViewModel teamViewModel;
@@ -55,28 +56,41 @@ public class AddTeam extends AppCompatActivity {
         try {
             Bundle bundle = this.getIntent().getExtras();
             catcheursSelected = (List<Catcheur>) bundle.get("catcheursSelected");
+            System.out.println("Les catcheurs selected apres sélection");
+            System.out.println(catcheursSelected);
             customAdapterCatcheursSelected.setData(catcheursSelected);
             customAdapterCatcheursSelected.notifyDataSetChanged();
         }
         catch (NullPointerException nullPointerException){
             nullPointerException.printStackTrace();
         }
-
         try{
             Bundle bundle2 = this.getIntent().getExtras();
-            teamAModifier = (Team) bundle2.get("team");
+            teamAModifier = (Team) bundle2.get("teamAModifier");
+            System.out.println("teamAModifier");
+            System.out.println(teamAModifier);
             //Merttre les valeur de team dans les champs
             EditText nomTeam = findViewById(R.id.fieldNomTeam);
             nomTeam.setText(teamAModifier.getNomTeam());
             EditText urlImage = findViewById(R.id.fieldImageTeam);
             urlImage.setText(teamAModifier.getImage());
-            catcheursSelected = teamViewModel.getTeamWithCatcheursById(teamAModifier.getTeamId()).catcheurs;
+            //mettre a jour la liste de catcheur selectionné par rapport à la team.
+            if(catcheursSelected == null){
+                System.out.println("Liste remis comme avant");
+                catcheursSelected = teamViewModel.getTeamWithCatcheursById(teamAModifier.getTeamId()).catcheurs;
+            }
+            else{
+                catcheursSelected = (List<Catcheur>) bundle2.get("catcheursSelected");
+                System.out.println("Les catcheurs selected apres sélection");
+                System.out.println(catcheursSelected);
+            }
             customAdapterCatcheursSelected.setData(catcheursSelected);
             customAdapterCatcheursSelected.notifyDataSetChanged();
         }
         catch (Exception exception){
             exception.printStackTrace();
         }
+
 
         CustomAdapterCatcheur.setMyGestionClick(new InterfaceGestionClick() {
             @Override
@@ -131,8 +145,14 @@ public class AddTeam extends AppCompatActivity {
             teamViewModel.update(teamAModifier);
             System.out.println("Update");
             System.out.println(teamAModifier.getTeamId());
+            //Delete all insertion de team
+            List<Catcheur> listeTmp = teamViewModel.getTeamWithCatcheursById(teamAModifier.getTeamId()).catcheurs;
+            for(Catcheur catcheur : listeTmp){
+                teamViewModel.deleteTeamWithCatcheursAsyncTask(catcheur, teamAModifier);
+            }
+            //Création des nouvelle relations
             for(Catcheur catcheur : catcheursSelected){
-                catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheur, teamAModifier);
+                teamViewModel.insertTeamWithCatcheursAsyncTask(catcheur, teamAModifier);
             }
         }
         goToShowTeams(view);
@@ -154,6 +174,7 @@ public class AddTeam extends AppCompatActivity {
 
     public void goToLinkCatcheursToTeam(View view) {
         Intent intent = new Intent(this, LinkCatcheursToTeam.class);
+        intent.putExtra("teamAModifier", teamAModifier);
         startActivity(intent);
         finish();
     }

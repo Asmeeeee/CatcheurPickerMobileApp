@@ -129,6 +129,22 @@ public class TeamRepository {
         }
     }
 
+    public void deleteTeamWithCatcheurs(Catcheur catcheur, Team team){
+        new deleteTeamWithCatcheursAsyncTask(teamDao).execute(new AsyncTaskTwoParams(catcheur, team));
+    }
+
+    public static class deleteTeamWithCatcheursAsyncTask extends AsyncTask<AsyncTaskTwoParams, Void, Void>{
+        private TeamDao teamDao;
+        deleteTeamWithCatcheursAsyncTask(TeamDao teamDao){ this.teamDao = teamDao;}
+
+
+        @Override
+        protected Void doInBackground(AsyncTaskTwoParams... asyncTaskTwoParams) {
+            teamDao.deleteTeamWithCatcheurs(new TeamCatcheurCrossRef(asyncTaskTwoParams[0].team.getTeamId(), asyncTaskTwoParams[0].catcheur.getCatcheurId()));
+            return null;
+        }
+    }
+
     public LiveData<Integer> getNbTeamLD(){return  this.nbTeamLD;}
 
     public LiveData<List<Team>> getAllTeamsLD(){return this.allTeamsLD;}

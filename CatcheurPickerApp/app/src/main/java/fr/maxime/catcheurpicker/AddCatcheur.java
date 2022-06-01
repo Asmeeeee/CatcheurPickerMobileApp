@@ -62,7 +62,7 @@ public class AddCatcheur extends AppCompatActivity {
 
         try{
             Bundle bundle2 = this.getIntent().getExtras();
-            catcheurAModifier = (Catcheur) bundle2.get("catcheur");
+            catcheurAModifier = (Catcheur) bundle2.get("catcheurAModifier");
             //Merttre les valeur de team dans les champs
             EditText nomCatcheur = findViewById(R.id.fieldNomCatcheur);
             nomCatcheur.setText(catcheurAModifier.getNomScene());
@@ -74,7 +74,14 @@ public class AddCatcheur extends AppCompatActivity {
             dateNaissance.setText(catcheurAModifier.getDateNaissance());
             EditText urlImageCatcheur = findViewById(R.id.fieldImageCatcheur);
             urlImageCatcheur.setText(catcheurAModifier.getImage());
-            teamsSelected = catcheurViewModel.getCatcheurWithTeamsById(catcheurAModifier.getCatcheurId()).teams;
+            //Fin des donnée a jour
+            if(teamsSelected == null){
+                System.out.println("Liste remis comme avant");
+                teamsSelected = catcheurViewModel.getCatcheurWithTeamsById(catcheurAModifier.getCatcheurId()).teams;
+            }
+            else{
+                teamsSelected = (List<Team>) bundle2.get("teamsSelected");
+            }
             customAdapterTeamSelected.setData(teamsSelected);
             customAdapterTeamSelected.notifyDataSetChanged();
         }
@@ -163,6 +170,12 @@ public class AddCatcheur extends AppCompatActivity {
             catcheurAModifier.setImage(strImage);
             catcheurAModifier.setDateNaissance(strDateNaissance);
             catcheurViewModel.update(catcheurAModifier);
+            //Delete all insertion de team
+            List<Team> listeTmp = catcheurViewModel.getCatcheurWithTeamsById(catcheurAModifier.getCatcheurId()).teams;
+            for(Team team : listeTmp){
+                catcheurViewModel.deleteTeamWithCatcheursAsyncTask(catcheurAModifier, team);
+            }
+            //Création des nouvelle relations
             for(Team team : teamsSelected){
                 catcheurViewModel.insertTeamWithCatcheursAsyncTask(catcheurAModifier, team);
             }
@@ -185,6 +198,7 @@ public class AddCatcheur extends AppCompatActivity {
 
     public void goToLinkTeamsToCatcheur(View view) {
         Intent intent = new Intent(this, LinkTeamsToCatcheur.class);
+        intent.putExtra("catcheurAModifier", catcheurAModifier);
         startActivity(intent);
         finish();
     }
