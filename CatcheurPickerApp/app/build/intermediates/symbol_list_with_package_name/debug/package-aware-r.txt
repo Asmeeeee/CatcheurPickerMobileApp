@@ -3197,7 +3197,6 @@ id easeIn
 id easeInOut
 id easeOut
 id east
-id editCatcheur
 id edit_query
 id edittext_dropdown_editable
 id edittext_dropdown_noneditable

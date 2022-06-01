@@ -88,7 +88,7 @@ public class ShowCatcheurs extends AppCompatActivity {
             @Override
             public void onChanged(Integer integer) {
                 TextView textView = findViewById(R.id.textViewNbLD);
-                textView.setText("Nombre de catcheur : "+ integer);
+                textView.setText("Nombre de Catcheur : "+ integer);
             }
         });
         catcheurViewModel.getAllCatcheursLD().observe(this, new Observer<List<Catcheur>>() {

@@ -66,16 +66,6 @@
             android:layout_height="33dp"
             android:orientation="horizontal">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/editCatcheur"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="33.33"
-                android:background="#CFAE49"
-                android:text="Modifer"
-                android:textColor="#37474F"
-                android:textSize="10dp"
-                tools:ignore="TouchTargetSizeCheck" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/modifierCatcheur"
